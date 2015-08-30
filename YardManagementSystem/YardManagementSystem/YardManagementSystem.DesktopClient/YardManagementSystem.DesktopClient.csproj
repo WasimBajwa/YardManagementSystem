@@ -335,6 +335,12 @@
     <LightSwitchModel Include="Screens\PurchaseDetail.lsml" />
     <LightSwitchModel Include="Screens\SaleDetail.lsml" />
     <LightSwitchModel Include="Screens\SearchCompany.lsml" />
+    <LightSwitchModel Include="Screens\SearchEmployees.lsml" />
+    <LightSwitchModel Include="Screens\SearchExpenses.lsml" />
+    <LightSwitchModel Include="Screens\SearchExports.lsml" />
+    <LightSwitchModel Include="Screens\SearchItems.lsml" />
+    <LightSwitchModel Include="Screens\SearchPurchases.lsml" />
+    <LightSwitchModel Include="Screens\SearchSales.lsml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

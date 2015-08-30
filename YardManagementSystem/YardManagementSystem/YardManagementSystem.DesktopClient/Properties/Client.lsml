@@ -60,11 +60,28 @@
     <ApplicationCommand
       Name="ScreenCommandShowSearchCompany"
       Target="!module/Methods[ShowSearchCompany]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchEmployees"
+      Target="!module/Methods[ShowSearchEmployees]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchExpenses"
+      Target="!module/Methods[ShowSearchExpenses]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchExports"
+      Target="!module/Methods[ShowSearchExports]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchItems"
+      Target="!module/Methods[ShowSearchItems]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchPurchases"
+      Target="!module/Methods[ShowSearchPurchases]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchSales"
+      Target="!module/Methods[ShowSearchSales]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Administration"
-      DefaultItem="!module/NavigationItems[Administration]/Children[SearchCompany]">
+      Name="Administration">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="Administration" />
@@ -75,9 +92,6 @@
       <ApplicationNavigationLink
         Name="UsersScreen"
         Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
-      <ApplicationNavigationLink
-        Name="SearchCompany"
-        Command="!module/Commands[ScreenCommandShowSearchCompany]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group">
@@ -88,6 +102,9 @@
       <ApplicationNavigationLink
         Name="link"
         Command="!module/Commands[ScreenCommandShowAddItem]" />
+      <ApplicationNavigationLink
+        Name="link7"
+        Command="!module/Commands[ScreenCommandShowSearchItems]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group1">
@@ -98,6 +115,9 @@
       <ApplicationNavigationLink
         Name="link1"
         Command="!module/Commands[ScreenCommandShowAddCompany]" />
+      <ApplicationNavigationLink
+        Name="link8"
+        Command="!module/Commands[ScreenCommandShowSearchCompany]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group2">
@@ -108,6 +128,9 @@
       <ApplicationNavigationLink
         Name="link2"
         Command="!module/Commands[ScreenCommandShowAddEmployee]" />
+      <ApplicationNavigationLink
+        Name="link9"
+        Command="!module/Commands[ScreenCommandShowSearchEmployees]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group3">
@@ -118,6 +141,9 @@
       <ApplicationNavigationLink
         Name="link3"
         Command="!module/Commands[ScreenCommandShowAddExpense]" />
+      <ApplicationNavigationLink
+        Name="link10"
+        Command="!module/Commands[ScreenCommandShowSearchExpenses]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group4">
@@ -128,6 +154,9 @@
       <ApplicationNavigationLink
         Name="link4"
         Command="!module/Commands[ScreenCommandShowAddPurchase]" />
+      <ApplicationNavigationLink
+        Name="link11"
+        Command="!module/Commands[ScreenCommandShowSearchPurchases]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group5">
@@ -138,6 +167,9 @@
       <ApplicationNavigationLink
         Name="link5"
         Command="!module/Commands[ScreenCommandShowAddSale]" />
+      <ApplicationNavigationLink
+        Name="link12"
+        Command="!module/Commands[ScreenCommandShowSearchSales]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group6">
@@ -148,6 +180,9 @@
       <ApplicationNavigationLink
         Name="link6"
         Command="!module/Commands[ScreenCommandShowAddExport]" />
+      <ApplicationNavigationLink
+        Name="link13"
+        Command="!module/Commands[ScreenCommandShowSearchExports]" />
     </ApplicationNavigationGroup>
   </Application.NavigationItems>
 </Application>
