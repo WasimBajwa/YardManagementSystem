@@ -8,6 +8,14 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:Purchase" />
+      <DefaultScreen
+        Value="PurchaseDetail">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Purchase/Properties[Id]"
+            ScreenParameter="PurchaseDetail/Properties[PurchaseId]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
     </EntityType.Attributes>
     <EntityType.Properties>
       <EntityProperty>

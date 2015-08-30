@@ -8,6 +8,14 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:Export" />
+      <DefaultScreen
+        Value="ExportDetail">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Export/Properties[Id]"
+            ScreenParameter="ExportDetail/Properties[ExportId]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
     </EntityType.Attributes>
     <EntityType.Properties>
       <EntityProperty>

@@ -227,6 +227,48 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\AddCompany.lsml.cs">
+      <DependentUpon>AddCompany.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddEmployee.lsml.cs">
+      <DependentUpon>AddEmployee.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddExpense.lsml.cs">
+      <DependentUpon>AddExpense.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddExport.lsml.cs">
+      <DependentUpon>AddExport.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddItem.lsml.cs">
+      <DependentUpon>AddItem.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddPurchase.lsml.cs">
+      <DependentUpon>AddPurchase.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddSale.lsml.cs">
+      <DependentUpon>AddSale.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\CompanyDetail.lsml.cs">
+      <DependentUpon>CompanyDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\EmployeeDetail.lsml.cs">
+      <DependentUpon>EmployeeDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ExpenseDetail.lsml.cs">
+      <DependentUpon>ExpenseDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ExportDetail.lsml.cs">
+      <DependentUpon>ExportDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ItemDetail.lsml.cs">
+      <DependentUpon>ItemDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PurchaseDetail.lsml.cs">
+      <DependentUpon>PurchaseDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SaleDetail.lsml.cs">
+      <DependentUpon>SaleDetail.lsml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Client.lsml">
@@ -242,14 +284,28 @@
     <LightSwitchModel Include="Properties\ApplicationData\Purchases.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\PurchasePayments.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\Exports.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\Employees.lsml" />
+    <LightSwitchModel Include="Properties\ApplicationData\Expenses.lsml" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\OutOfBrowserSettings.xml" />
     <ClientResource Include="Properties\Config.xml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AddCompany.lsml" />
+    <LightSwitchModel Include="Screens\AddEmployee.lsml" />
+    <LightSwitchModel Include="Screens\AddExpense.lsml" />
+    <LightSwitchModel Include="Screens\AddExport.lsml" />
+    <LightSwitchModel Include="Screens\AddItem.lsml" />
+    <LightSwitchModel Include="Screens\AddPurchase.lsml" />
+    <LightSwitchModel Include="Screens\AddSale.lsml" />
+    <LightSwitchModel Include="Screens\CompanyDetail.lsml" />
+    <LightSwitchModel Include="Screens\EmployeeDetail.lsml" />
+    <LightSwitchModel Include="Screens\ExpenseDetail.lsml" />
+    <LightSwitchModel Include="Screens\ExportDetail.lsml" />
+    <LightSwitchModel Include="Screens\ItemDetail.lsml" />
+    <LightSwitchModel Include="Screens\PurchaseDetail.lsml" />
+    <LightSwitchModel Include="Screens\SaleDetail.lsml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <_ClientBuildFile Include="default.htm">
       <SubFolder>

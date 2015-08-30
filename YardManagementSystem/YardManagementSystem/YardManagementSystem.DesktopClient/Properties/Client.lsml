@@ -3,7 +3,6 @@
   Name="LightSwitchApplication.YardManagementSystem.DesktopClient"
   TargetPlatform="RichClient"
   Version="1.0.0.0"
-  DefaultNavigationItem="!module/NavigationItems[Tasks]"
   Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
   Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
   <Application.Attributes>
@@ -35,14 +34,30 @@
         Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Application.Commands>
+    <ApplicationCommand
+      Name="ScreenCommandShowAddCompany"
+      Target="!module/Methods[ShowAddCompany]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddEmployee"
+      Target="!module/Methods[ShowAddEmployee]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddExpense"
+      Target="!module/Methods[ShowAddExpense]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddExport"
+      Target="!module/Methods[ShowAddExport]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddItem"
+      Target="!module/Methods[ShowAddItem]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddPurchase"
+      Target="!module/Methods[ShowAddPurchase]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddSale"
+      Target="!module/Methods[ShowAddSale]" />
+  </Application.Commands>
   <Application.NavigationItems>
-    <ApplicationNavigationGroup
-      Name="Tasks">
-      <ApplicationNavigationGroup.Attributes>
-        <DisplayName
-          Value="Tasks" />
-      </ApplicationNavigationGroup.Attributes>
-    </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="Administration">
       <ApplicationNavigationGroup.Attributes>
@@ -55,6 +70,76 @@
       <ApplicationNavigationLink
         Name="UsersScreen"
         Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Item" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link"
+        Command="!module/Commands[ScreenCommandShowAddItem]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group1">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Company" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link1"
+        Command="!module/Commands[ScreenCommandShowAddCompany]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group2">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Employee" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowAddEmployee]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group3">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Expense" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link3"
+        Command="!module/Commands[ScreenCommandShowAddExpense]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group4">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Purchase" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link4"
+        Command="!module/Commands[ScreenCommandShowAddPurchase]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group5">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Sale" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link5"
+        Command="!module/Commands[ScreenCommandShowAddSale]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group6">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="Export" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link6"
+        Command="!module/Commands[ScreenCommandShowAddExport]" />
     </ApplicationNavigationGroup>
   </Application.NavigationItems>
 </Application>
