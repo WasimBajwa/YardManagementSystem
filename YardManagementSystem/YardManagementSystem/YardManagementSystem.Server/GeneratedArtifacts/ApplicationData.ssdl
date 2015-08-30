@@ -1,18 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="ApplicationDataStore">
-    <EntitySet Name="Items" EntityType="ApplicationDataStore.Item" store:Type="Tables" Schema="dbo" Table="Items" />
     <EntitySet Name="Companies" EntityType="ApplicationDataStore.Company" store:Type="Tables" Schema="dbo" Table="Companies" />
     <EntitySet Name="Employees" EntityType="ApplicationDataStore.Employee" store:Type="Tables" Schema="dbo" Table="Employees" />
     <EntitySet Name="Expenses" EntityType="ApplicationDataStore.Expense" store:Type="Tables" Schema="dbo" Table="Expenses" />
-    <EntitySet Name="Salaries" EntityType="ApplicationDataStore.Salary" store:Type="Tables" Schema="dbo" Table="Salaries" />
-    <EntitySet Name="PurchaseItems" EntityType="ApplicationDataStore.PurchaseItem" store:Type="Tables" Schema="dbo" Table="PurchaseItems" />
-    <EntitySet Name="SaleItems" EntityType="ApplicationDataStore.SaleItem" store:Type="Tables" Schema="dbo" Table="SaleItems" />
-    <EntitySet Name="Purchases" EntityType="ApplicationDataStore.Purchase" store:Type="Tables" Schema="dbo" Table="Purchases" />
-    <EntitySet Name="Sales" EntityType="ApplicationDataStore.Sale" store:Type="Tables" Schema="dbo" Table="Sales" />
-    <EntitySet Name="SalePayments" EntityType="ApplicationDataStore.SalePayment" store:Type="Tables" Schema="dbo" Table="SalePayments" />
-    <EntitySet Name="PurchasePayments" EntityType="ApplicationDataStore.PurchasePayment" store:Type="Tables" Schema="dbo" Table="PurchasePayments" />
     <EntitySet Name="Exports" EntityType="ApplicationDataStore.Export" store:Type="Tables" Schema="dbo" Table="Exports" />
+    <EntitySet Name="Items" EntityType="ApplicationDataStore.Item" store:Type="Tables" Schema="dbo" Table="Items" />
+    <EntitySet Name="PurchaseItems" EntityType="ApplicationDataStore.PurchaseItem" store:Type="Tables" Schema="dbo" Table="PurchaseItems" />
+    <EntitySet Name="PurchasePayments" EntityType="ApplicationDataStore.PurchasePayment" store:Type="Tables" Schema="dbo" Table="PurchasePayments" />
+    <EntitySet Name="Purchases" EntityType="ApplicationDataStore.Purchase" store:Type="Tables" Schema="dbo" Table="Purchases" />
+    <EntitySet Name="Salaries" EntityType="ApplicationDataStore.Salary" store:Type="Tables" Schema="dbo" Table="Salaries" />
+    <EntitySet Name="SaleItems" EntityType="ApplicationDataStore.SaleItem" store:Type="Tables" Schema="dbo" Table="SaleItems" />
+    <EntitySet Name="SalePayments" EntityType="ApplicationDataStore.SalePayment" store:Type="Tables" Schema="dbo" Table="SalePayments" />
+    <EntitySet Name="Sales" EntityType="ApplicationDataStore.Sale" store:Type="Tables" Schema="dbo" Table="Sales" />
+    <AssociationSet Name="Purchase_Company" Association="ApplicationDataStore.Purchase_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Purchase" EntitySet="Purchases" />
+    </AssociationSet>
+    <AssociationSet Name="Sale_Company" Association="ApplicationDataStore.Sale_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Sale" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="Export_Company" Association="ApplicationDataStore.Export_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Export" EntitySet="Exports" />
+    </AssociationSet>
     <AssociationSet Name="Salary_Employee" Association="ApplicationDataStore.Salary_Employee">
       <End Role="Employee" EntitySet="Employees" />
       <End Role="Salary" EntitySet="Salaries" />
@@ -25,17 +37,17 @@
       <End Role="Item" EntitySet="Items" />
       <End Role="SaleItem" EntitySet="SaleItems" />
     </AssociationSet>
-    <AssociationSet Name="Purchase_Company" Association="ApplicationDataStore.Purchase_Company">
-      <End Role="Company" EntitySet="Companies" />
-      <End Role="Purchase" EntitySet="Purchases" />
+    <AssociationSet Name="Export_Item" Association="ApplicationDataStore.Export_Item">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="Export" EntitySet="Exports" />
     </AssociationSet>
     <AssociationSet Name="Purchase_PurchaseItem" Association="ApplicationDataStore.Purchase_PurchaseItem">
       <End Role="Purchase" EntitySet="Purchases" />
       <End Role="PurchaseItem" EntitySet="PurchaseItems" />
     </AssociationSet>
-    <AssociationSet Name="Sale_Company" Association="ApplicationDataStore.Sale_Company">
-      <End Role="Company" EntitySet="Companies" />
-      <End Role="Sale" EntitySet="Sales" />
+    <AssociationSet Name="PurchasePayment_Purchase" Association="ApplicationDataStore.PurchasePayment_Purchase">
+      <End Role="Purchase" EntitySet="Purchases" />
+      <End Role="PurchasePayment" EntitySet="PurchasePayments" />
     </AssociationSet>
     <AssociationSet Name="Sale_SaleItem" Association="ApplicationDataStore.Sale_SaleItem">
       <End Role="Sale" EntitySet="Sales" />
@@ -45,32 +57,7 @@
       <End Role="Sale" EntitySet="Sales" />
       <End Role="SalePayment" EntitySet="SalePayments" />
     </AssociationSet>
-    <AssociationSet Name="PurchasePayment_Purchase" Association="ApplicationDataStore.PurchasePayment_Purchase">
-      <End Role="Purchase" EntitySet="Purchases" />
-      <End Role="PurchasePayment" EntitySet="PurchasePayments" />
-    </AssociationSet>
-    <AssociationSet Name="Export_Company" Association="ApplicationDataStore.Export_Company">
-      <End Role="Company" EntitySet="Companies" />
-      <End Role="Export" EntitySet="Exports" />
-    </AssociationSet>
-    <AssociationSet Name="Export_Item" Association="ApplicationDataStore.Export_Item">
-      <End Role="Item" EntitySet="Items" />
-      <End Role="Export" EntitySet="Exports" />
-    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Item">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="Description" Type="nvarchar" MaxLength="255" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-  </EntityType>
   <EntityType Name="Company">
     <Key>
       <PropertyRef Name="Id" />
@@ -118,112 +105,6 @@
     <Property Name="Modified" Type="datetimeoffset" />
     <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
   </EntityType>
-  <EntityType Name="Salary">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="SalaryDate" Type="datetime" Nullable="false" />
-    <Property Name="Amount" Type="float" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="Salary_Employee" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="PurchaseItem">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="GrossWeight" Type="float" Nullable="false" />
-    <Property Name="TearWeight" Type="float" Nullable="false" />
-    <Property Name="Rate" Type="float" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="PurchaseItem_Item" Type="int" Nullable="false" />
-    <Property Name="Purchase_PurchaseItem" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="SaleItem">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="GrossWeight" Type="float" Nullable="false" />
-    <Property Name="TearWeight" Type="float" Nullable="false" />
-    <Property Name="Rate" Type="float" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="SaleItem_Item" Type="int" Nullable="false" />
-    <Property Name="Sale_SaleItem" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Purchase">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
-    <Property Name="BookNo" Type="nvarchar" MaxLength="255" />
-    <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
-    <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="Purchase_Company" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Sale">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="SaleDate" Type="datetime" Nullable="false" />
-    <Property Name="BookNo" Type="nvarchar" MaxLength="255" />
-    <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
-    <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="Sale_Company" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="SalePayment">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Deposit" Type="float" Nullable="false" />
-    <Property Name="PaymentDate" Type="datetime" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="SalePayment_Sale" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="PurchasePayment">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Deposit" Type="float" Nullable="false" />
-    <Property Name="PaymentDate" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Created" Type="datetimeoffset" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
-    <Property Name="Modified" Type="datetimeoffset" />
-    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="PurchasePayment_Purchase" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="Export">
     <Key>
       <PropertyRef Name="Id" />
@@ -244,6 +125,167 @@
     <Property Name="Export_Company" Type="int" Nullable="false" />
     <Property Name="Export_Item" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PurchaseItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GrossWeight" Type="float" Nullable="false" />
+    <Property Name="TearWeight" Type="float" Nullable="false" />
+    <Property Name="Rate" Type="float" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="PurchaseItem_Item" Type="int" Nullable="false" />
+    <Property Name="Purchase_PurchaseItem" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchasePayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Deposit" Type="float" Nullable="false" />
+    <Property Name="PaymentDate" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="PurchasePayment_Purchase" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseDate" Type="datetime" Nullable="false" />
+    <Property Name="BookNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+    <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Purchase_Company" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SalaryDate" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="float" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Salary_Employee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GrossWeight" Type="float" Nullable="false" />
+    <Property Name="TearWeight" Type="float" Nullable="false" />
+    <Property Name="Rate" Type="float" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SaleItem_Item" Type="int" Nullable="false" />
+    <Property Name="Sale_SaleItem" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalePayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Deposit" Type="float" Nullable="false" />
+    <Property Name="PaymentDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="SalePayment_Sale" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SaleDate" Type="datetime" Nullable="false" />
+    <Property Name="BookNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+    <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Sale_Company" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Purchase_Company">
+    <End Role="Company" Type="ApplicationDataStore.Company" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Purchase" Type="ApplicationDataStore.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="Purchase_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sale_Company">
+    <End Role="Company" Type="ApplicationDataStore.Company" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Sale" Type="ApplicationDataStore.Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sale">
+        <PropertyRef Name="Sale_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Export_Company">
+    <End Role="Company" Type="ApplicationDataStore.Company" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Export" Type="ApplicationDataStore.Export" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Export">
+        <PropertyRef Name="Export_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="Salary_Employee">
     <End Role="Employee" Type="ApplicationDataStore.Employee" Multiplicity="1">
       <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -286,17 +328,17 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Purchase_Company">
-    <End Role="Company" Type="ApplicationDataStore.Company" Multiplicity="1">
+  <Association Name="Export_Item">
+    <End Role="Item" Type="ApplicationDataStore.Item" Multiplicity="1">
       <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
-    <End Role="Purchase" Type="ApplicationDataStore.Purchase" Multiplicity="*" />
+    <End Role="Export" Type="ApplicationDataStore.Export" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Company">
+      <Principal Role="Item">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Purchase">
-        <PropertyRef Name="Purchase_Company" />
+      <Dependent Role="Export">
+        <PropertyRef Name="Export_Item" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -314,17 +356,17 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Sale_Company">
-    <End Role="Company" Type="ApplicationDataStore.Company" Multiplicity="1">
+  <Association Name="PurchasePayment_Purchase">
+    <End Role="Purchase" Type="ApplicationDataStore.Purchase" Multiplicity="1">
       <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
-    <End Role="Sale" Type="ApplicationDataStore.Sale" Multiplicity="*" />
+    <End Role="PurchasePayment" Type="ApplicationDataStore.PurchasePayment" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Company">
+      <Principal Role="Purchase">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Sale">
-        <PropertyRef Name="Sale_Company" />
+      <Dependent Role="PurchasePayment">
+        <PropertyRef Name="PurchasePayment_Purchase" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -353,48 +395,6 @@
       </Principal>
       <Dependent Role="SalePayment">
         <PropertyRef Name="SalePayment_Sale" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="PurchasePayment_Purchase">
-    <End Role="Purchase" Type="ApplicationDataStore.Purchase" Multiplicity="1">
-      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="PurchasePayment" Type="ApplicationDataStore.PurchasePayment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Purchase">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="PurchasePayment">
-        <PropertyRef Name="PurchasePayment_Purchase" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Export_Company">
-    <End Role="Company" Type="ApplicationDataStore.Company" Multiplicity="1">
-      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="Export" Type="ApplicationDataStore.Export" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Company">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Export">
-        <PropertyRef Name="Export_Company" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="Export_Item">
-    <End Role="Item" Type="ApplicationDataStore.Item" Multiplicity="1">
-      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="Export" Type="ApplicationDataStore.Export" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Item">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Export">
-        <PropertyRef Name="Export_Item" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

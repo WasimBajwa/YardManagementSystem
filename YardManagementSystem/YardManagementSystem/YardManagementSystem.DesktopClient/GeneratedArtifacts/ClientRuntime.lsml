@@ -3,6 +3,7 @@
   Name="LightSwitchApplication.YardManagementSystem.DesktopClient"
   TargetPlatform="RichClient"
   Version="1.0.0.0"
+  DefaultNavigationItem="!module/NavigationItems[Administration]"
   Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
   Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
   <Application.Attributes>
@@ -177,6 +178,264 @@
         PropertyType=":Double">
         <EntityProperty.Attributes>
           <Computed />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Employee">
+    <EntityType.Attributes>
+      <CreatedModifiedPropertiesEnabled />
+      <DefaultScreen
+        Value="EmployeeDetail">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Employee/Properties[Id]"
+            ScreenParameter="EmployeeDetail/Properties[EmployeeId]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="HireDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailId"
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PhoneNo"
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SalaryType"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <SupportedValue
+            DisplayName="Weekly"
+            Value="Weekly" />
+          <SupportedValue
+            DisplayName="Monthly"
+            Value="Monthly" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Salaries"
+        Association="Salary_Employee"
+        FromEnd="Employee"
+        ToEnd="Salary" />
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Expense">
+    <EntityType.Attributes>
+      <CreatedModifiedPropertiesEnabled />
+      <DefaultScreen
+        Value="ExpenseDetail">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Expense/Properties[Id]"
+            ScreenParameter="ExpenseDetail/Properties[ExpenseId]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="ExpenseDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Title"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Amount"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Generated />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
@@ -451,8 +710,9 @@
       </EntityProperty>
       <EntityProperty
         Name="Stock"
-        PropertyType=":String">
+        PropertyType=":Double">
         <EntityProperty.Attributes>
+          <NotSearchable />
           <Computed />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -2082,264 +2342,6 @@
         EntitySet="Sales" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType
-    Name="Employee">
-    <EntityType.Attributes>
-      <CreatedModifiedPropertiesEnabled />
-      <DefaultScreen
-        Value="EmployeeDetail">
-        <DefaultScreen.Attributes>
-          <ScreenParameterMapping
-            KeyProperty="Employee/Properties[Id]"
-            ScreenParameter="EmployeeDetail/Properties[EmployeeId]" />
-        </DefaultScreen.Attributes>
-      </DefaultScreen>
-    </EntityType.Attributes>
-    <EntityType.Methods>
-      <EntityMethod
-        Name="Delete">
-        <EntityMethod.Attributes>
-          <Generated />
-        </EntityMethod.Attributes>
-      </EntityMethod>
-    </EntityType.Methods>
-    <EntityType.Properties>
-      <KeyProperty
-        Name="Id"
-        PropertyType=":Int32">
-        <KeyProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </KeyProperty.Attributes>
-      </KeyProperty>
-      <EntityProperty
-        Name="HireDate"
-        PropertyType=":Date">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Name"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="EmailId"
-        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="PhoneNo"
-        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Address"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="SalaryType"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-          <SupportedValue
-            DisplayName="Weekly"
-            Value="Weekly" />
-          <SupportedValue
-            DisplayName="Monthly"
-            Value="Monthly" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <NavigationProperty
-        Name="Salaries"
-        Association="Salary_Employee"
-        FromEnd="Employee"
-        ToEnd="Salary" />
-      <EntityProperty
-        Name="CreatedBy"
-        IsReadOnly="True"
-        PropertyType=":Person?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        IsReadOnly="True"
-        PropertyType=":DateTimeOffset?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ModifiedBy"
-        IsReadOnly="True"
-        PropertyType=":Person?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Modified"
-        IsReadOnly="True"
-        PropertyType=":DateTimeOffset?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RowVersion"
-        PropertyType=":RowVersion">
-        <EntityProperty.Attributes>
-          <Hidden />
-          <UseForConcurrency />
-          <Generated />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-    </EntityType.Properties>
-  </EntityType>
-  <EntityType
-    Name="Expense">
-    <EntityType.Attributes>
-      <CreatedModifiedPropertiesEnabled />
-      <DefaultScreen
-        Value="ExpenseDetail">
-        <DefaultScreen.Attributes>
-          <ScreenParameterMapping
-            KeyProperty="Expense/Properties[Id]"
-            ScreenParameter="ExpenseDetail/Properties[ExpenseId]" />
-        </DefaultScreen.Attributes>
-      </DefaultScreen>
-    </EntityType.Attributes>
-    <EntityType.Methods>
-      <EntityMethod
-        Name="Delete">
-        <EntityMethod.Attributes>
-          <Generated />
-        </EntityMethod.Attributes>
-      </EntityMethod>
-    </EntityType.Methods>
-    <EntityType.Properties>
-      <KeyProperty
-        Name="Id"
-        PropertyType=":Int32">
-        <KeyProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </KeyProperty.Attributes>
-      </KeyProperty>
-      <EntityProperty
-        Name="ExpenseDate"
-        PropertyType=":Date">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Title"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Description"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Amount"
-        PropertyType=":Double">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="CreatedBy"
-        IsReadOnly="True"
-        PropertyType=":Person?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        IsReadOnly="True"
-        PropertyType=":DateTimeOffset?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ModifiedBy"
-        IsReadOnly="True"
-        PropertyType=":Person?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Modified"
-        IsReadOnly="True"
-        PropertyType=":DateTimeOffset?">
-        <EntityProperty.Attributes>
-          <Generated />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RowVersion"
-        PropertyType=":RowVersion">
-        <EntityProperty.Attributes>
-          <Hidden />
-          <UseForConcurrency />
-          <Generated />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-    </EntityType.Properties>
-  </EntityType>
   <Association
     Name="Salary_Employee">
     <AssociationEnd
@@ -3663,7 +3665,7 @@
             <ContentItem
               Name="Stock"
               Kind="Value"
-              DataType=":String">
+              DataType=":Double">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -6442,7 +6444,7 @@
               <ContentItem
                 Name="Stock"
                 Kind="Value"
-                DataType=":String">
+                DataType=":Double">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -10111,6 +10113,317 @@
       </ScreenCollectionProperty>
     </Screen.Properties>
   </Screen>
+  <Screen
+    Name="SearchCompany">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ApplicationData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="grid"
+            Kind="Collection"
+            DataType="CollectionView$Company">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchCompany/Properties[Companies]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="RowTemplate"
+              Kind="Details"
+              DataType="Company">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression />
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Name"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[Name]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[ShowAsLink]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="True"
+                          ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="EmailId"
+                Kind="Value"
+                DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[EmailId]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="PhoneNo"
+                Kind="Value"
+                DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[PhoneNo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Address"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[Address]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="CreatedBy"
+                Kind="Value"
+                DataType=":Person?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[CreatedBy]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Created"
+                Kind="Value"
+                DataType=":DateTimeOffset?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[Created]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="ModifiedBy"
+                Kind="Value"
+                DataType=":Person?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[ModifiedBy]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Modified"
+                Kind="Value"
+                DataType=":DateTimeOffset?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[Modified]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="TotalPurchase"
+                Kind="Value"
+                DataType=":Double">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[TotalPurchase]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="TotalSale"
+                Kind="Value"
+                DataType=":Double">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Company/Properties[TotalSale]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[BrowseOnly]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="True"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:DataGrid/Properties[ShowVirtualRow]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="False"
+                      ResultType=":Boolean" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Collapsed"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Stretch"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SearchCompany/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SearchCompany/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Companies"
+        PageSize="45"
+        PropertyType="CollectionView$Company">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="CompaniesQuery"
+            ReturnType="Company*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="ApplicationData/Members[Companies]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="SearchCompany/Properties[Companies]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
   <Application.Commands>
     <ApplicationCommand
       Name="ScreenCommandShowAddCompany"
@@ -10133,6 +10446,9 @@
     <ApplicationCommand
       Name="ScreenCommandShowAddSale"
       Target="!module/Methods[ShowAddSale]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchCompany"
+      Target="!module/Methods[ShowSearchCompany]" />
   </Application.Commands>
   <Application.Methods>
     <ApplicationMethod
@@ -10254,10 +10570,18 @@
         Name="SaleId"
         ParameterType=":Int32" />
     </ApplicationMethod>
+    <ApplicationMethod
+      Name="ShowSearchCompany">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="SearchCompany" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
   </Application.Methods>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Administration">
+      Name="Administration"
+      DefaultItem="!module/NavigationItems[Administration]/Children[SearchCompany]">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="Administration" />
@@ -10268,6 +10592,9 @@
       <ApplicationNavigationLink
         Name="UsersScreen"
         Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+      <ApplicationNavigationLink
+        Name="SearchCompany"
+        Command="!module/Commands[ScreenCommandShowSearchCompany]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group">

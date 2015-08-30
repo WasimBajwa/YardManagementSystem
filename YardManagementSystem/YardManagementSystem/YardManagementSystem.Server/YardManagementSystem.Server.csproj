@@ -191,6 +191,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\ApplicationData\Company.lsml.cs">
+      <DependentUpon>Companies.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Export.lsml.cs">
+      <DependentUpon>Exports.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Item.lsml.cs">
+      <DependentUpon>Items.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Purchase.lsml.cs">
+      <DependentUpon>Purchases.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\PurchaseItem.lsml.cs">
+      <DependentUpon>PurchaseItems.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\PurchasePayment.lsml.cs">
+      <DependentUpon>PurchasePayments.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Salary.lsml.cs">
+      <DependentUpon>Salaries.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\Sale.lsml.cs">
+      <DependentUpon>Sales.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\SaleItem.lsml.cs">
+      <DependentUpon>SaleItems.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\ApplicationData\SalePayment.lsml.cs">
+      <DependentUpon>SalePayments.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

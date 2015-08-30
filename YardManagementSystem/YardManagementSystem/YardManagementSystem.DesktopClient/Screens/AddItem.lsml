@@ -113,7 +113,7 @@
             <ContentItem
               Name="Stock"
               Kind="Value"
-              DataType=":String">
+              DataType=":Double">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>

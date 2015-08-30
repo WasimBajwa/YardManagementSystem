@@ -260,7 +260,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Stock
+        public double Stock
         {
             get
             {
@@ -269,7 +269,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Stock_Compute(ref string result);
+        partial void Stock_Compute(ref double result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Stock_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -488,11 +488,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, string> Stock
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, double> Stock
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.Stock) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.Stock) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, double>;
                     }
                 }
                 
@@ -827,13 +827,13 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, string>.Entry
-                    Stock = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, double>.Entry
+                    Stock = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, double>.Entry(
                         "Stock",
                         global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._Stock_Stub,
                         global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._Stock_Validate,
                         global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._Stock_ComputeValue);
-                private static void _Stock_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Item.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, string>.Data> c, global::LightSwitchApplication.Item.DetailsClass d, object sf)
+                private static void _Stock_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Item.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, double>.Data> c, global::LightSwitchApplication.Item.DetailsClass d, object sf)
                 {
                     c(d, ref d._Stock, sf);
                 }
@@ -841,9 +841,9 @@ namespace LightSwitchApplication
                 {
                     e.Stock_Validate(r);
                 }
-                private static string _Stock_ComputeValue(global::LightSwitchApplication.Item e)
+                private static double _Stock_ComputeValue(global::LightSwitchApplication.Item e)
                 {
-                    string value = default(string);
+                    double value = default(double);
                     e.Stock_Compute(ref value);
                     return value;
                 }
@@ -935,7 +935,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, byte[]>.Data _RowVersion;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, string>.Data _Stock;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, double>.Data _Stock;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Data _PurchaseItems;

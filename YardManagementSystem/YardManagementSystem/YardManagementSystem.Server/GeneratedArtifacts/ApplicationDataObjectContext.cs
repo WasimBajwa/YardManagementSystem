@@ -19,17 +19,17 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Purchase_Company", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Company), "Purchase", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Purchase), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Sale_Company", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Company), "Sale", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Sale), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Export_Company", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Company), "Export", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Export), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "Salary_Employee", "Employee", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Employee), "Salary", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Salary), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "PurchaseItem_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Item), "PurchaseItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.PurchaseItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "SaleItem_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Item), "SaleItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.SaleItem), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Purchase_Company", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Company), "Purchase", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Purchase), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Export_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Item), "Export", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Export), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "Purchase_PurchaseItem", "Purchase", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Purchase), "PurchaseItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.PurchaseItem), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Sale_Company", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Company), "Sale", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Sale), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PurchasePayment_Purchase", "Purchase", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Purchase), "PurchasePayment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.PurchasePayment), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "Sale_SaleItem", "Sale", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Sale), "SaleItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.SaleItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "SalePayment_Sale", "Sale", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Sale), "SalePayment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.SalePayment), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PurchasePayment_Purchase", "Purchase", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Purchase), "PurchasePayment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.PurchasePayment), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Export_Company", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Company), "Export", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Export), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Export_Item", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Item), "Export", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Export), true)]
 
 #endregion
 
@@ -77,22 +77,6 @@ namespace LightSwitchApplication.Implementation
         #endregion
     
         #region ObjectSet Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Item> Items
-        {
-            get
-            {
-                if ((_Items == null))
-                {
-                    _Items = base.CreateObjectSet<Item>("Items");
-                }
-                return _Items;
-            }
-        }
-        private ObjectSet<Item> _Items;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -145,18 +129,34 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Salary> Salaries
+        public ObjectSet<Export> Exports
         {
             get
             {
-                if ((_Salaries == null))
+                if ((_Exports == null))
                 {
-                    _Salaries = base.CreateObjectSet<Salary>("Salaries");
+                    _Exports = base.CreateObjectSet<Export>("Exports");
                 }
-                return _Salaries;
+                return _Exports;
             }
         }
-        private ObjectSet<Salary> _Salaries;
+        private ObjectSet<Export> _Exports;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Item> Items
+        {
+            get
+            {
+                if ((_Items == null))
+                {
+                    _Items = base.CreateObjectSet<Item>("Items");
+                }
+                return _Items;
+            }
+        }
+        private ObjectSet<Item> _Items;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -177,18 +177,18 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<SaleItem> SaleItems
+        public ObjectSet<PurchasePayment> PurchasePayments
         {
             get
             {
-                if ((_SaleItems == null))
+                if ((_PurchasePayments == null))
                 {
-                    _SaleItems = base.CreateObjectSet<SaleItem>("SaleItems");
+                    _PurchasePayments = base.CreateObjectSet<PurchasePayment>("PurchasePayments");
                 }
-                return _SaleItems;
+                return _PurchasePayments;
             }
         }
-        private ObjectSet<SaleItem> _SaleItems;
+        private ObjectSet<PurchasePayment> _PurchasePayments;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -209,18 +209,34 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Sale> Sales
+        public ObjectSet<Salary> Salaries
         {
             get
             {
-                if ((_Sales == null))
+                if ((_Salaries == null))
                 {
-                    _Sales = base.CreateObjectSet<Sale>("Sales");
+                    _Salaries = base.CreateObjectSet<Salary>("Salaries");
                 }
-                return _Sales;
+                return _Salaries;
             }
         }
-        private ObjectSet<Sale> _Sales;
+        private ObjectSet<Salary> _Salaries;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<SaleItem> SaleItems
+        {
+            get
+            {
+                if ((_SaleItems == null))
+                {
+                    _SaleItems = base.CreateObjectSet<SaleItem>("SaleItems");
+                }
+                return _SaleItems;
+            }
+        }
+        private ObjectSet<SaleItem> _SaleItems;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -241,46 +257,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PurchasePayment> PurchasePayments
+        public ObjectSet<Sale> Sales
         {
             get
             {
-                if ((_PurchasePayments == null))
+                if ((_Sales == null))
                 {
-                    _PurchasePayments = base.CreateObjectSet<PurchasePayment>("PurchasePayments");
+                    _Sales = base.CreateObjectSet<Sale>("Sales");
                 }
-                return _PurchasePayments;
+                return _Sales;
             }
         }
-        private ObjectSet<PurchasePayment> _PurchasePayments;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Export> Exports
-        {
-            get
-            {
-                if ((_Exports == null))
-                {
-                    _Exports = base.CreateObjectSet<Export>("Exports");
-                }
-                return _Exports;
-            }
-        }
-        private ObjectSet<Export> _Exports;
+        private ObjectSet<Sale> _Sales;
 
         #endregion
 
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Items EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToItems(Item item)
-        {
-            base.AddObject("Items", item);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the Companies EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -307,11 +299,19 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Salaries EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Exports EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToSalaries(Salary salary)
+        public void AddToExports(Export export)
         {
-            base.AddObject("Salaries", salary);
+            base.AddObject("Exports", export);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Items EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToItems(Item item)
+        {
+            base.AddObject("Items", item);
         }
     
         /// <summary>
@@ -323,11 +323,11 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the SaleItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PurchasePayments EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToSaleItems(SaleItem saleItem)
+        public void AddToPurchasePayments(PurchasePayment purchasePayment)
         {
-            base.AddObject("SaleItems", saleItem);
+            base.AddObject("PurchasePayments", purchasePayment);
         }
     
         /// <summary>
@@ -339,11 +339,19 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Sales EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Salaries EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToSales(Sale sale)
+        public void AddToSalaries(Salary salary)
         {
-            base.AddObject("Sales", sale);
+            base.AddObject("Salaries", salary);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the SaleItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSaleItems(SaleItem saleItem)
+        {
+            base.AddObject("SaleItems", saleItem);
         }
     
         /// <summary>
@@ -355,19 +363,11 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the PurchasePayments EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Sales EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPurchasePayments(PurchasePayment purchasePayment)
+        public void AddToSales(Sale sale)
         {
-            base.AddObject("PurchasePayments", purchasePayment);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Exports EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToExports(Export export)
-        {
-            base.AddObject("Exports", export);
+            base.AddObject("Sales", sale);
         }
 
         #endregion

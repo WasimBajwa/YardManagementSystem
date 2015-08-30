@@ -1,20 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping CdmEntityContainer="ApplicationData" StorageEntityContainer="ApplicationDataStore">
-    <EntitySetMapping Name="Items">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Item)">
-        <MappingFragment StoreEntitySet="Items">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="Created" ColumnName="Created" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="Modified" ColumnName="Modified" />
-          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Companies">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Company)">
         <MappingFragment StoreEntitySet="Companies">
@@ -65,13 +51,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Salaries">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Salary)">
-        <MappingFragment StoreEntitySet="Salaries">
+    <EntitySetMapping Name="Exports">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Export)">
+        <MappingFragment StoreEntitySet="Exports">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="SalaryDate" ColumnName="SalaryDate" />
-          <ScalarProperty Name="Salary_Employee" ColumnName="Salary_Employee" />
-          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Export_Company" ColumnName="Export_Company" />
+          <ScalarProperty Name="Export_Item" ColumnName="Export_Item" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
+          <ScalarProperty Name="Container" ColumnName="Container" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Item)">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
@@ -97,15 +103,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SaleItems">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.SaleItem)">
-        <MappingFragment StoreEntitySet="SaleItems">
+    <EntitySetMapping Name="PurchasePayments">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.PurchasePayment)">
+        <MappingFragment StoreEntitySet="PurchasePayments">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="SaleItem_Item" ColumnName="SaleItem_Item" />
-          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
-          <ScalarProperty Name="TearWeight" ColumnName="TearWeight" />
-          <ScalarProperty Name="Rate" ColumnName="Rate" />
-          <ScalarProperty Name="Sale_SaleItem" ColumnName="Sale_SaleItem" />
+          <ScalarProperty Name="PurchasePayment_Purchase" ColumnName="PurchasePayment_Purchase" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
@@ -131,15 +135,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Sales">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Sale)">
-        <MappingFragment StoreEntitySet="Sales">
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Salary)">
+        <MappingFragment StoreEntitySet="Salaries">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
-          <ScalarProperty Name="BookNo" ColumnName="BookNo" />
-          <ScalarProperty Name="Sale_Company" ColumnName="Sale_Company" />
-          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
-          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="SalaryDate" ColumnName="SalaryDate" />
+          <ScalarProperty Name="Salary_Employee" ColumnName="Salary_Employee" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleItems">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.SaleItem)">
+        <MappingFragment StoreEntitySet="SaleItems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SaleItem_Item" ColumnName="SaleItem_Item" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="TearWeight" ColumnName="TearWeight" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Sale_SaleItem" ColumnName="Sale_SaleItem" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
@@ -163,34 +182,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PurchasePayments">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.PurchasePayment)">
-        <MappingFragment StoreEntitySet="PurchasePayments">
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Sale)">
+        <MappingFragment StoreEntitySet="Sales">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="PurchasePayment_Purchase" ColumnName="PurchasePayment_Purchase" />
-          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
-          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="Created" ColumnName="Created" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="Modified" ColumnName="Modified" />
-          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Exports">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Export)">
-        <MappingFragment StoreEntitySet="Exports">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Export_Company" ColumnName="Export_Company" />
-          <ScalarProperty Name="Export_Item" ColumnName="Export_Item" />
-          <ScalarProperty Name="Weight" ColumnName="Weight" />
-          <ScalarProperty Name="Rate" ColumnName="Rate" />
-          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
-          <ScalarProperty Name="LoadingDate" ColumnName="LoadingDate" />
-          <ScalarProperty Name="Container" ColumnName="Container" />
-          <ScalarProperty Name="Port" ColumnName="Port" />
-          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="BookNo" ColumnName="BookNo" />
+          <ScalarProperty Name="Sale_Company" ColumnName="Sale_Company" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />

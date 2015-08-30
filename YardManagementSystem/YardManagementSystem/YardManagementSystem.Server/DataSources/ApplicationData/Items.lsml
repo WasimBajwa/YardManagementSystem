@@ -45,9 +45,10 @@
       </EntityProperty>
       <EntityProperty
         Name="Stock"
-        PropertyType=":String">
+        PropertyType=":Double">
         <EntityProperty.Attributes>
           <Computed />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty

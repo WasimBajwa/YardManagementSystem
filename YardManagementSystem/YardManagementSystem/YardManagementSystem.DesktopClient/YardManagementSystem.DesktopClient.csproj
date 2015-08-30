@@ -226,6 +226,36 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Company.lsml.cs">
+      <Link>UserCode\Shared\Company.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Export.lsml.cs">
+      <Link>UserCode\Shared\Export.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Item.lsml.cs">
+      <Link>UserCode\Shared\Item.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Purchase.lsml.cs">
+      <Link>UserCode\Shared\Purchase.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\PurchaseItem.lsml.cs">
+      <Link>UserCode\Shared\PurchaseItem.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\PurchasePayment.lsml.cs">
+      <Link>UserCode\Shared\PurchasePayment.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Salary.lsml.cs">
+      <Link>UserCode\Shared\Salary.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Sale.lsml.cs">
+      <Link>UserCode\Shared\Sale.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\SaleItem.lsml.cs">
+      <Link>UserCode\Shared\SaleItem.lsml.cs</Link>
+    </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\SalePayment.lsml.cs">
+      <Link>UserCode\Shared\SalePayment.lsml.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screens\AddCompany.lsml.cs">
       <DependentUpon>AddCompany.lsml</DependentUpon>
@@ -304,6 +334,7 @@
     <LightSwitchModel Include="Screens\ItemDetail.lsml" />
     <LightSwitchModel Include="Screens\PurchaseDetail.lsml" />
     <LightSwitchModel Include="Screens\SaleDetail.lsml" />
+    <LightSwitchModel Include="Screens\SearchCompany.lsml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

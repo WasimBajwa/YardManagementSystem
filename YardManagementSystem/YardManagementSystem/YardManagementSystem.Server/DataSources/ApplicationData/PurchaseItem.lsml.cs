@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.LightSwitch;
+namespace LightSwitchApplication
+{
+    public partial class PurchaseItem
+    {
+        partial void Price_Compute(ref double result)
+        {
+            // Set result to the desired field value
+            if (Rate != 0 && GrossWeight != 0 && TearWeight != 0)
+            {
+                result = Convert.ToInt32((GrossWeight - TearWeight) * Rate);
+            }
+        }
+
+        partial void GrossWeight_Validate(EntityValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Error-Message>");
+            if (this.TearWeight != 0)
+            {
+                if (this.GrossWeight < this.TearWeight)
+                {
+                    results.AddPropertyError("Tear Weight can not exceed Gross weight.");
+                }
+            }
+        }
+    }
+}
