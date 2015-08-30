@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Users\Seemu Bajwa\Documents\Visual Studio 2013\Projects\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Properties\Client.lsml" Checksum="74A690B69B611F5D397C88DB90A3A0A257B2EC6745EEE964CB3788295510DEF8" />
+    <Document FullPath="C:\Users\Seemu Bajwa\Documents\Visual Studio 2013\Projects\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Properties\Proxies.lsml" Checksum="26DD1F600DF54069919E9C205AF2CD96DEBB427FF719BE4E22B7BC1D16824543" />
+    <Document FullPath="C:\Users\Seemu Bajwa\Documents\Visual Studio 2013\Projects\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Properties\ApplicationData\Items.lsml" Checksum="0786F0E4D01FE42C8A5AEC804D2EC07A0177C415BC15B58504D7B8F4D8ADD006" />
+  </Documents>
+</ModelDocumentManifest>

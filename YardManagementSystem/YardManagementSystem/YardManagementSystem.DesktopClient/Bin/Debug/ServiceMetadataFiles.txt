@@ -1,0 +1,3 @@
+YardManagementSystem.Server.Properties.Service.lsml
+YardManagementSystem.Server.Properties.DataSources.ApplicationData.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Items.lsml
