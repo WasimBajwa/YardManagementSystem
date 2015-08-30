@@ -35,3 +35,5 @@ E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSyst
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\DesktopClient\default.htm
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\DesktopClient\Silverlight.js
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\DesktopClient\web\YardManagementSystem.DesktopClient.xap
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\X360Lightning.Theme.Common.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\X360Lightning.Theme.Server.dll

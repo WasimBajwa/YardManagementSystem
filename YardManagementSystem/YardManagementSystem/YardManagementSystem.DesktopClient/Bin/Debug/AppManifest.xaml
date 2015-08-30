@@ -29,6 +29,7 @@
     <AssemblyPart x:Name="Microsoft.LightSwitch.Model.Xaml.Client" Source="Microsoft.LightSwitch.Model.Xaml.Client.dll" />
     <AssemblyPart x:Name="Microsoft.LightSwitch.RuntimeEditor.Internal" Source="Microsoft.LightSwitch.RuntimeEditor.Internal.dll" />
     <AssemblyPart x:Name="Microsoft.LightSwitch.SDKProxy" Source="Microsoft.LightSwitch.SDKProxy.dll" />
+    <AssemblyPart x:Name="PurchasePrint" Source="PurchasePrint.dll" />
     <AssemblyPart x:Name="System.ComponentModel.Composition" Source="System.ComponentModel.Composition.dll" />
     <AssemblyPart x:Name="System.ComponentModel.DataAnnotations" Source="System.ComponentModel.DataAnnotations.dll" />
     <AssemblyPart x:Name="System.ServiceModel.DomainServices.Client.Web" Source="System.ServiceModel.DomainServices.Client.Web.dll" />
@@ -43,9 +44,12 @@
     <AssemblyPart x:Name="System.Windows.Controls.Navigation" Source="System.Windows.Controls.Navigation.dll" />
     <AssemblyPart x:Name="System.Windows.Data" Source="System.Windows.Data.dll" />
     <AssemblyPart x:Name="System.Xml.Linq" Source="System.Xml.Linq.dll" />
+    <AssemblyPart x:Name="System.Xml.Serialization" Source="System.Xml.Serialization.dll" />
+    <AssemblyPart x:Name="X360Lightning.Theme.Client.Design" Source="X360Lightning.Theme.Client.Design.dll" />
+    <AssemblyPart x:Name="X360Lightning.Theme.Client" Source="X360Lightning.Theme.Client.dll" />
+    <AssemblyPart x:Name="X360Lightning.Theme.Common" Source="X360Lightning.Theme.Common.dll" />
     <AssemblyPart x:Name="System.ServiceModel.DomainServices.Client" Source="System.ServiceModel.DomainServices.Client.dll" />
     <AssemblyPart x:Name="Microsoft.Data.OData.SL" Source="Microsoft.Data.OData.SL.dll" />
-    <AssemblyPart x:Name="System.Xml.Serialization" Source="System.Xml.Serialization.dll" />
     <AssemblyPart x:Name="System.Spatial.SL" Source="System.Spatial.SL.dll" />
     <AssemblyPart x:Name="Microsoft.VisualStudio.Debugger.Runtime.Dll" Source="Microsoft.VisualStudio.Debugger.Runtime.Dll.dll" />
   </Deployment.Parts>

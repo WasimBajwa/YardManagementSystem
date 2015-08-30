@@ -6182,6 +6182,18 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Purchases_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
+        /// <summary>
+        /// Calls the Print screen method.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void Print()
+        {
+            this.Details.Methods.Print.CreateInvocation().Execute();
+        }
+        partial void Print_CanExecute(ref bool result);
+        partial void Print_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6192,6 +6204,8 @@ namespace LightSwitchApplication
             static DetailsClass()
             {
                 var initializePropertyEntry = global::LightSwitchApplication.SearchPurchases.DetailsClass.PropertySetProperties.Purchases;
+                var initializeCommandEntry = global::LightSwitchApplication.SearchPurchases.DetailsClass.CommandSetProperties.Print;
+                var initializeMethodEntry = global::LightSwitchApplication.SearchPurchases.DetailsClass.MethodSetProperties.Print;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -6277,6 +6291,12 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass, global::LightSwitchApplication.Purchase>.Data _Purchases;
 
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Data _PrintCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Data _PrintMethod;
+
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6300,6 +6320,15 @@ namespace LightSwitchApplication
             public sealed class CommandSet
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>
             {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass> Print
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>)base.GetItem(global::LightSwitchApplication.SearchPurchases.DetailsClass.CommandSetProperties.Print);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -6308,6 +6337,15 @@ namespace LightSwitchApplication
             public sealed class MethodSet
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>
             {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass> Print
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>)base.GetItem(global::LightSwitchApplication.SearchPurchases.DetailsClass.MethodSetProperties.Print);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -6357,6 +6395,21 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal sealed class CommandSetProperties
             {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Entry
+                    Print = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Entry(
+                        "Print",
+                        global::LightSwitchApplication.SearchPurchases.DetailsClass.CommandSetProperties._Print_Stub,
+                        global::LightSwitchApplication.SearchPurchases.DetailsClass.CommandSetProperties._Print_CreateExecutableObject);
+                private static void _Print_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchPurchases.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Data> c, global::LightSwitchApplication.SearchPurchases.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PrintCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _Print_CreateExecutableObject(global::LightSwitchApplication.SearchPurchases.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SearchPurchases.DetailsClass)d).Methods.Print.CreateInvocation();
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -6364,6 +6417,28 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal sealed class MethodSetProperties
             {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Entry
+                    Print = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Entry(
+                        "Print",
+                        global::LightSwitchApplication.SearchPurchases.DetailsClass.MethodSetProperties._Print_Stub,
+                        global::LightSwitchApplication.SearchPurchases.DetailsClass.MethodSetProperties._Print_CanInvoke,
+                        global::LightSwitchApplication.SearchPurchases.DetailsClass.MethodSetProperties._Print_InvokeMethod);
+                private static void _Print_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchPurchases.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SearchPurchases, global::LightSwitchApplication.SearchPurchases.DetailsClass>.Data> c, global::LightSwitchApplication.SearchPurchases.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PrintMethod, sf);
+                }
+                private static global::System.Exception _Print_CanInvoke(global::LightSwitchApplication.SearchPurchases.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.Print_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _Print_InvokeMethod(global::LightSwitchApplication.SearchPurchases.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.Print_Execute();
+                }
+
             }
         }
     }
@@ -6620,6 +6695,397 @@ namespace LightSwitchApplication
                 private static void _Sales_OnLoaded(global::LightSwitchApplication.SearchSales s, bool succeeded)
                 {
                     s.Sales_Loaded(succeeded);
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class PrintPurchase
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private PrintPurchase(int PurchaseId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:PrintPurchase")
+        {
+                this.PurchaseId = PurchaseId;
+            global::LightSwitchApplication.PrintPurchase.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static PrintPurchase CreateInstance(int PurchaseId)
+        {
+            return new global::LightSwitchApplication.PrintPurchase(
+                        PurchaseId
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintPurchase_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Purchase_Changed();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchase_Loaded(bool succeeded);
+
+        partial void PurchaseId_Changed();
+
+        partial void PurchaseItems_SelectionChanged();
+
+        partial void PurchaseItems_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Loaded(bool succeeded);
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Purchase Purchase
+        {
+            get
+            {
+                return global::LightSwitchApplication.PrintPurchase.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.Purchase);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchase_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int PurchaseId
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PrintPurchase.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.PurchaseId);
+            }
+            set
+            {
+                global::LightSwitchApplication.PrintPurchase.DetailsClass.SetValue(this, global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.PurchaseId, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Gets the PurchaseItems visual collection. The collection contains all records currently shown on the respective list or grid control.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PurchaseItem> PurchaseItems
+        {
+            get
+            {
+                return global::LightSwitchApplication.PrintPurchase.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.PurchaseItems);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySet, global::LightSwitchApplication.PrintPurchase.DetailsClass.CommandSet, global::LightSwitchApplication.PrintPurchase.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.Purchase;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>.Entry
+                __PrintPurchaseEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeSavingEvent,
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeSavedEvent,
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeClosingEvent,
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeCreated,
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeActivated,
+                    global::LightSwitchApplication.PrintPurchase.DetailsClass.__PrintPurchase_InvokeSaveErrorEvent);
+            private static void __PrintPurchase_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PrintPurchase s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.PrintPurchase_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __PrintPurchase_InvokeSavingEvent(global::LightSwitchApplication.PrintPurchase s)
+            {
+                bool handled = false;
+                s.PrintPurchase_Saving(ref handled);
+                return handled;
+            }
+            private static void __PrintPurchase_InvokeSavedEvent(global::LightSwitchApplication.PrintPurchase s)
+            {
+                s.PrintPurchase_Saved();
+            }
+            private static bool __PrintPurchase_InvokeClosingEvent(global::LightSwitchApplication.PrintPurchase s)
+            {
+                bool cancel = false;
+                s.PrintPurchase_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __PrintPurchase_InvokeCreated(global::LightSwitchApplication.PrintPurchase s)
+            {
+                s.PrintPurchase_Created();
+            }
+            private static void __PrintPurchase_InvokeActivated(global::LightSwitchApplication.PrintPurchase s)
+            {
+                s.PrintPurchase_Activated();
+            }
+            private static bool __PrintPurchase_InvokeSaveErrorEvent(global::LightSwitchApplication.PrintPurchase s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.PrintPurchase_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.PrintPurchase.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.PrintPurchase.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PurchaseItemsQuery()
+            {
+                if (this.Screen.Purchase == null)
+                {
+                    return null;
+                }
+
+                global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PurchaseItem> loader =
+                    (global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PurchaseItem>)((global::Microsoft.LightSwitch.Details.ILoadableProperty)this.Screen.Purchase.Details.Properties.PurchaseItems).Loader;
+                if (loader == null)
+                {
+                    return null;
+                }
+
+                return loader;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.Purchase>.Data _Purchase;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, int>.Data _PurchaseId;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Data _PurchaseItems;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.Purchase> Purchase
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.Purchase>)base.GetItem(global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.Purchase);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, int> PurchaseId
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.PurchaseId);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PurchaseItem> PurchaseItems
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PurchaseItem>)base.GetItem(global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties.PurchaseItems);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.Purchase>.Entry
+                    Purchase = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.Purchase>.Entry(
+                        "Purchase",
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._Purchase_Stub,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._Purchase_Validate,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._Purchase_CreateQuery,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._Purchase_OnValueChanged,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._Purchase_OnLoaded);
+                private static void _Purchase_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintPurchase.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.Purchase>.Data> c, global::LightSwitchApplication.PrintPurchase.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Purchase, sf);
+                }
+                private static void _Purchase_Validate(global::LightSwitchApplication.PrintPurchase s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Purchase_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Purchase_CreateQuery(global::LightSwitchApplication.PrintPurchase.DetailsClass d, object[] args)
+                {
+                    return null;
+                }
+                private static void _Purchase_OnValueChanged(global::LightSwitchApplication.PrintPurchase s)
+                {
+                    s.Purchase_Changed();
+                }
+
+                private static void _Purchase_OnLoaded(global::LightSwitchApplication.PrintPurchase s, bool succeeded)
+                {
+                    s.Purchase_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, int>.Entry
+                    PurchaseId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, int>.Entry(
+                        "PurchaseId",
+                        false,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseId_Stub,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseId_Validate,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseId_OnValueChanged);
+                private static void _PurchaseId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintPurchase.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, int>.Data> c, global::LightSwitchApplication.PrintPurchase.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PurchaseId, sf);
+                }
+                private static void _PurchaseId_Validate(global::LightSwitchApplication.PrintPurchase s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.PurchaseId_Validate(r);
+                }
+                private static void _PurchaseId_OnValueChanged(global::LightSwitchApplication.PrintPurchase s)
+                {
+                    s.PurchaseId_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Entry
+                    PurchaseItems = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Entry(
+                        "PurchaseItems",
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseItems_Stub,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseItems_Validate,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseItems_CreateQuery,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseItems_SelectionChanged,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseItems_OnCollectionChanged,
+                        global::LightSwitchApplication.PrintPurchase.DetailsClass.PropertySetProperties._PurchaseItems_OnLoaded);
+                private static void _PurchaseItems_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintPurchase.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Data> c, global::LightSwitchApplication.PrintPurchase.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PurchaseItems, sf);
+                }
+                private static void _PurchaseItems_Validate(global::LightSwitchApplication.PrintPurchase s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.PurchaseItems_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _PurchaseItems_CreateQuery(global::LightSwitchApplication.PrintPurchase.DetailsClass d, object[] args)
+                {
+                    return d.PurchaseItemsQuery();
+                }
+                private static void _PurchaseItems_SelectionChanged(global::LightSwitchApplication.PrintPurchase s)
+                {
+                    s.PurchaseItems_SelectionChanged();
+                }
+                private static void _PurchaseItems_OnCollectionChanged(global::LightSwitchApplication.PrintPurchase s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.PurchaseItems_Changed(e);
+                }
+                private static void _PurchaseItems_OnLoaded(global::LightSwitchApplication.PrintPurchase s, bool succeeded)
+                {
+                    s.PurchaseItems_Loaded(succeeded);
                 }
 
             }

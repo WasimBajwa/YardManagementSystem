@@ -18,6 +18,8 @@ C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.5\\Server\System.ServiceModel.PollingDuplex.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.5\\Server\System.Spatial.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\_Pvt_Extensions\X360Lightning.ThemePack1\Server\Reference\X360Lightning.Theme.Common.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\_Pvt_Extensions\X360Lightning.ThemePack1\Server\Reference\X360Lightning.Theme.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.5\Server\Microsoft.WindowsAzure.ServiceRuntime.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.5\Client\Microsoft.LightSwitch.xml
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.5\Server\Microsoft.LightSwitch.Server.xml

@@ -1,0 +1,47 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="PurchasePrint.Invoice"
+    mc:Ignorable="d" Width="588" Height="651">
+    
+	<Grid x:Name="LayoutRoot" Background="White" Margin="0,-83,-27,-142">
+		<TextBlock HorizontalAlignment="Left" Height="23" Margin="119,211,0,0" TextWrapping="Wrap" Text="{Binding Screen.Purchase.PurchaseDate}" VerticalAlignment="Top" Width="120"/>
+         <TextBlock HorizontalAlignment="Left" Margin="37,218,0,0" TextWrapping="Wrap" Text="Date :" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="37,239,0,0" TextWrapping="Wrap" Text="Company :" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="119,239,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="36,260,0,0" TextWrapping="Wrap" Text="Driver Name :" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="120,260,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="37,281,0,0" TextWrapping="Wrap" Text="Vehicle No :" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="119,285,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+
+		<sdk:DataGrid ItemsSource="{Binding Screen.PurchaseItems, Mode=OneWay}" HorizontalAlignment="Left" Height="159" Margin="36,333,0,0" VerticalAlignment="Top" Width="340" ClipboardCopyMode="IncludeHeader" RowDetailsVisibilityMode="Collapsed" AutoGenerateColumns="False">
+			 <sdk:DataGrid.Columns>
+                 <sdk:DataGridTextColumn Binding="{Binding Item.Title}"  DisplayIndex="0" 
+                        Visibility="Visible" Width="Auto" CanUserReorder="False" CanUserResize="False" Header="Item"/>
+				   <sdk:DataGridTextColumn Binding="{Binding GrossWeight}"  DisplayIndex="1"
+					 Width="Auto" Header="Gross Weight"/>
+				   <sdk:DataGridTextColumn Binding="{Binding TearWeight}" 
+					  Visibility="Visible" Width="Auto" Header="Tear Weight"/>
+                <sdk:DataGridTextColumn Binding="{Binding Rate, StringFormat=C}" CanUserSort="False" Header="Rate"
+					  Visibility="Visible" Width="Auto" IsReadOnly="True" CanUserReorder="False" CanUserResize="False"/>
+                <sdk:DataGridTextColumn Binding="{Binding Price}" CanUserSort="True" Header="Price"
+					   Visibility="Visible" Width="Auto"/>
+              </sdk:DataGrid.Columns>
+		</sdk:DataGrid>
+
+		<TextBlock HorizontalAlignment="Left" Margin="42,523,0,0" TextWrapping="Wrap" Text="Total Amount" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="147,523,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="46,544,0,0" TextWrapping="Wrap" Text="Paid Amount" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="147,544,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="46,565,0,0" TextWrapping="Wrap" Text="Due Amount" VerticalAlignment="Top"/>
+		<TextBlock HorizontalAlignment="Left" Margin="147,569,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+		<Button Content="Print" HorizontalAlignment="Left" Margin="498,680,0,0" VerticalAlignment="Top" Width="75" Click="PrintButton" />
+		<Viewbox HorizontalAlignment="Left" Height="74" Margin="80,112,0,0" VerticalAlignment="Top" Width="379">
+			<Image Source="image.jpg" Stretch="Fill" Height="75" Width="433"/>
+		</Viewbox>
+		
+	</Grid>
+</UserControl>

@@ -121,6 +121,11 @@
       <Client>MICROSOFT.LIGHTSWITCH.EXTENSIONS.CLIENT;MICROSOFT.LIGHTSWITCH.EXTENSIONS.DESIGN.CLIENT</Client>
       <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
     </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\X360Lightning.ThemePack1.lspkg">
+      <ExtensionId>X360Lightning.ThemePack1</ExtensionId>
+      <Client>X360LIGHTNING.THEME.CLIENT;X360LIGHTNING.THEME.COMMON;SYSTEM.XML.SERIALIZATION;X360LIGHTNING.THEME.CLIENT.DESIGN</Client>
+      <Server>X360LIGHTNING.THEME.COMMON;X360LIGHTNING.THEME.SERVER</Server>
+    </LightSwitchExtension>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
 </Project>

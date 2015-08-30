@@ -219,6 +219,17 @@
     <Reference Include="Microsoft.CSharp">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="System.Xml.Serialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="X360Lightning.Theme.Client">
+      <HintPath>..\_Pvt_Extensions\X360Lightning.ThemePack1\Client\Reference\X360Lightning.Theme.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="X360Lightning.Theme.Client.Design">
+      <HintPath>..\_Pvt_Extensions\X360Lightning.ThemePack1\Client\DebugOnlyRef\X360Lightning.Theme.Client.Design.dll</HintPath>
+      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
+    </Reference>
+    <Reference Include="X360Lightning.Theme.Common">
+      <HintPath>..\_Pvt_Extensions\X360Lightning.ThemePack1\Client\Reference\X360Lightning.Theme.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\YardManagementSystem.Server\YardManagementSystem.Server.csproj">
@@ -293,11 +304,17 @@
     <Compile Include="Screens\ItemDetail.lsml.cs">
       <DependentUpon>ItemDetail.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\PrintPurchase.lsml.cs">
+      <DependentUpon>PrintPurchase.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\PurchaseDetail.lsml.cs">
       <DependentUpon>PurchaseDetail.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\SaleDetail.lsml.cs">
       <DependentUpon>SaleDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SearchPurchases.lsml.cs">
+      <DependentUpon>SearchPurchases.lsml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -341,8 +358,14 @@
     <LightSwitchModel Include="Screens\SearchItems.lsml" />
     <LightSwitchModel Include="Screens\SearchPurchases.lsml" />
     <LightSwitchModel Include="Screens\SearchSales.lsml" />
+    <LightSwitchModel Include="Screens\PrintPurchase.lsml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\PurchasePrint\PurchasePrint.csproj">
+      <Project>{6b8b095a-cbe6-463c-b700-99b8002ab199}</Project>
+      <Name>PurchasePrint</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="default.htm">
       <SubFolder>

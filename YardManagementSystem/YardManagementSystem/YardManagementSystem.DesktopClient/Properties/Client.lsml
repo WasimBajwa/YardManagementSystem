@@ -5,7 +5,7 @@
   Version="1.0.0.0"
   DefaultNavigationItem="!module/NavigationItems[Administration]"
   Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
-  Theme="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  Theme="X360Lightning.ThemePack1:EasterEggTheme" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
   <Application.Attributes>
     <ModuleNamespace
       Namespace="LightSwitchApplication" />

@@ -189,6 +189,12 @@
       <Private>True</Private>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="X360Lightning.Theme.Common">
+      <HintPath>..\_Pvt_Extensions\X360Lightning.ThemePack1\Server\Reference\X360Lightning.Theme.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="X360Lightning.Theme.Server">
+      <HintPath>..\_Pvt_Extensions\X360Lightning.ThemePack1\Server\Reference\X360Lightning.Theme.Server.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSources\ApplicationData\Company.lsml.cs">
