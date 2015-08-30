@@ -50,6 +50,21 @@
           <Computed />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="PurchaseItems"
+        Association="PurchaseItem_Item"
+        FromEnd="Item"
+        ToEnd="PurchaseItem" />
+      <NavigationProperty
+        Name="SaleItems"
+        Association="SaleItem_Item"
+        FromEnd="Item"
+        ToEnd="SaleItem" />
+      <NavigationProperty
+        Name="Exports"
+        Association="Export_Item"
+        FromEnd="Item"
+        ToEnd="Export" />
       <EntityProperty
         Name="CreatedBy"
         IsReadOnly="True"
@@ -193,5 +208,152 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="PurchaseItem_Items"
+      Association="PurchaseItem_Item">
+      <AssociationSetEnd
+        Name="PurchaseItem"
+        EntitySet="PurchaseItems" />
+      <AssociationSetEnd
+        Name="Item"
+        EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet
+      Name="SaleItem_Items"
+      Association="SaleItem_Item">
+      <AssociationSetEnd
+        Name="SaleItem"
+        EntitySet="SaleItems" />
+      <AssociationSetEnd
+        Name="Item"
+        EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Export_Items"
+      Association="Export_Item">
+      <AssociationSetEnd
+        Name="Export"
+        EntitySet="Exports" />
+      <AssociationSetEnd
+        Name="Item"
+        EntitySet="Items" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="PurchaseItem_Item">
+    <AssociationEnd
+      Name="PurchaseItem"
+      Multiplicity="Many"
+      EntityType="PurchaseItem" />
+    <AssociationEnd
+      Name="Item"
+      Multiplicity="One"
+      EntityType="Item">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <AssociationSetMapping
+      AssociationSet="PurchaseItem_Items">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="PurchaseItem_Items" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[PurchaseItem_Items]/Members[PurchaseItem]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PurchaseItem_Item" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[PurchaseItem_Items]/Members[Item]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="SaleItem_Items">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="SaleItem_Items" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[SaleItem_Items]/Members[SaleItem]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="SaleItem_Item" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[SaleItem_Items]/Members[Item]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Export_Items">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Export_Items" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Export_Items]/Members[Export]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Export_Item" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Export_Items]/Members[Item]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+  <Association
+    Name="SaleItem_Item">
+    <AssociationEnd
+      Name="SaleItem"
+      Multiplicity="Many"
+      EntityType="SaleItem" />
+    <AssociationEnd
+      Name="Item"
+      Multiplicity="One"
+      EntityType="Item">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Export_Item">
+    <AssociationEnd
+      Name="Export"
+      Multiplicity="Many"
+      EntityType="Export" />
+    <AssociationEnd
+      Name="Item"
+      Multiplicity="One"
+      EntityType="Item">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
 </ServiceApplication>

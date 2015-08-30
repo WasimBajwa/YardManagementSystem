@@ -10,4 +10,82 @@
         Target="ServiceInterface:ApplicationData" />
     </EntityContainer.Attributes>
   </EntityContainer>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Employee" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Expense" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Salary_Employee" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:PurchaseItem_Item" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:SaleItem_Item" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Purchase_Company" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Purchase_PurchaseItem" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Sale_Company" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Sale_SaleItem" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:SalePayment_Sale" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:PurchasePayment_Purchase" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Export_Company" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:Export_Item" />
+    </Association.Attributes>
+  </Association>
 </Application>

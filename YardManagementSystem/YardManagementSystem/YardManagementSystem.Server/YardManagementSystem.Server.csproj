@@ -202,6 +202,17 @@
     <Content Include="Web.config" />
     <LightSwitchModel Include="Properties\DataSources\ApplicationData.lsml" />
     <LightSwitchModel Include="DataSources\ApplicationData\Items.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Companies.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Employees.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Expenses.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Salaries.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\PurchaseItems.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SaleItems.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Purchases.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Sales.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\SalePayments.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\PurchasePayments.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\Exports.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -96,6 +96,402 @@ namespace LightSwitchApplication
         partial void Items_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Item, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Inserting(global::LightSwitchApplication.Company entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Inserted(global::LightSwitchApplication.Company entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Updating(global::LightSwitchApplication.Company entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Updated(global::LightSwitchApplication.Company entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Deleting(global::LightSwitchApplication.Company entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Deleted(global::LightSwitchApplication.Company entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Validate(global::LightSwitchApplication.Company entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Companies_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Company, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Inserting(global::LightSwitchApplication.Employee entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Inserted(global::LightSwitchApplication.Employee entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Updating(global::LightSwitchApplication.Employee entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Updated(global::LightSwitchApplication.Employee entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Deleting(global::LightSwitchApplication.Employee entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Deleted(global::LightSwitchApplication.Employee entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Validate(global::LightSwitchApplication.Employee entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Employees_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Employee, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Inserting(global::LightSwitchApplication.Expense entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Inserted(global::LightSwitchApplication.Expense entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Updating(global::LightSwitchApplication.Expense entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Updated(global::LightSwitchApplication.Expense entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Deleting(global::LightSwitchApplication.Expense entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Deleted(global::LightSwitchApplication.Expense entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Validate(global::LightSwitchApplication.Expense entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Expenses_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Expense, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Inserting(global::LightSwitchApplication.Salary entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Inserted(global::LightSwitchApplication.Salary entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Updating(global::LightSwitchApplication.Salary entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Updated(global::LightSwitchApplication.Salary entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Deleting(global::LightSwitchApplication.Salary entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Deleted(global::LightSwitchApplication.Salary entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Validate(global::LightSwitchApplication.Salary entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Salaries_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Salary, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Inserting(global::LightSwitchApplication.PurchaseItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Inserted(global::LightSwitchApplication.PurchaseItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Updating(global::LightSwitchApplication.PurchaseItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Updated(global::LightSwitchApplication.PurchaseItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Deleting(global::LightSwitchApplication.PurchaseItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Deleted(global::LightSwitchApplication.PurchaseItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Validate(global::LightSwitchApplication.PurchaseItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchaseItems_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PurchaseItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Inserting(global::LightSwitchApplication.SaleItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Inserted(global::LightSwitchApplication.SaleItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Updating(global::LightSwitchApplication.SaleItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Updated(global::LightSwitchApplication.SaleItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Deleting(global::LightSwitchApplication.SaleItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Deleted(global::LightSwitchApplication.SaleItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Validate(global::LightSwitchApplication.SaleItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SaleItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Inserting(global::LightSwitchApplication.Purchase entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Inserted(global::LightSwitchApplication.Purchase entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Updating(global::LightSwitchApplication.Purchase entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Updated(global::LightSwitchApplication.Purchase entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Deleting(global::LightSwitchApplication.Purchase entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Deleted(global::LightSwitchApplication.Purchase entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Validate(global::LightSwitchApplication.Purchase entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Purchases_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Purchase, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Inserting(global::LightSwitchApplication.Sale entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Inserted(global::LightSwitchApplication.Sale entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Updating(global::LightSwitchApplication.Sale entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Updated(global::LightSwitchApplication.Sale entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Deleting(global::LightSwitchApplication.Sale entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Deleted(global::LightSwitchApplication.Sale entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Validate(global::LightSwitchApplication.Sale entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sales_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Sale, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Inserting(global::LightSwitchApplication.SalePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Inserted(global::LightSwitchApplication.SalePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Updating(global::LightSwitchApplication.SalePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Updated(global::LightSwitchApplication.SalePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Deleting(global::LightSwitchApplication.SalePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Deleted(global::LightSwitchApplication.SalePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Validate(global::LightSwitchApplication.SalePayment entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePayments_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SalePayment, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Inserting(global::LightSwitchApplication.PurchasePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Inserted(global::LightSwitchApplication.PurchasePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Updating(global::LightSwitchApplication.PurchasePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Updated(global::LightSwitchApplication.PurchasePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Deleting(global::LightSwitchApplication.PurchasePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Deleted(global::LightSwitchApplication.PurchasePayment entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Validate(global::LightSwitchApplication.PurchasePayment entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PurchasePayments_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PurchasePayment, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Inserting(global::LightSwitchApplication.Export entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Inserted(global::LightSwitchApplication.Export entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Updating(global::LightSwitchApplication.Export entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Updated(global::LightSwitchApplication.Export entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Deleting(global::LightSwitchApplication.Export entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Deleted(global::LightSwitchApplication.Export entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Validate(global::LightSwitchApplication.Export entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Exports_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Export, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -207,6 +603,842 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Item, bool>> filter = null;
                 d.Items_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Company>
+                __CompaniesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Company>(
+                    "Companies",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Companies_Filter);
+            private static bool __Companies_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Companies_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Companies_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Companies_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Companies_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Companies_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Companies_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Companies_CanRead(ref result);
+                return result;
+            }
+            private static void __Companies_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e)
+            {
+                d.Companies_Inserting(e);
+            }
+            private static void __Companies_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e)
+            {
+                d.Companies_Inserted(e);
+            }
+            private static void __Companies_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e)
+            {
+                d.Companies_Updating(e);
+            }
+            private static void __Companies_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e)
+            {
+                d.Companies_Updated(e);
+            }
+            private static void __Companies_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e)
+            {
+                d.Companies_Deleting(e);
+            }
+            private static void __Companies_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e)
+            {
+                d.Companies_Deleted(e);
+            }
+            private static void __Companies_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Company e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Companies_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Company, bool>> __Companies_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Company, bool>> filter = null;
+                d.Companies_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Employee>
+                __EmployeesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Employee>(
+                    "Employees",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Employees_Filter);
+            private static bool __Employees_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Employees_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Employees_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Employees_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Employees_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Employees_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Employees_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Employees_CanRead(ref result);
+                return result;
+            }
+            private static void __Employees_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e)
+            {
+                d.Employees_Inserting(e);
+            }
+            private static void __Employees_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e)
+            {
+                d.Employees_Inserted(e);
+            }
+            private static void __Employees_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e)
+            {
+                d.Employees_Updating(e);
+            }
+            private static void __Employees_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e)
+            {
+                d.Employees_Updated(e);
+            }
+            private static void __Employees_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e)
+            {
+                d.Employees_Deleting(e);
+            }
+            private static void __Employees_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e)
+            {
+                d.Employees_Deleted(e);
+            }
+            private static void __Employees_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Employee e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Employees_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Employee, bool>> __Employees_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Employee, bool>> filter = null;
+                d.Employees_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Expense>
+                __ExpensesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Expense>(
+                    "Expenses",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Expenses_Filter);
+            private static bool __Expenses_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Expenses_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Expenses_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Expenses_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Expenses_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Expenses_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Expenses_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Expenses_CanRead(ref result);
+                return result;
+            }
+            private static void __Expenses_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e)
+            {
+                d.Expenses_Inserting(e);
+            }
+            private static void __Expenses_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e)
+            {
+                d.Expenses_Inserted(e);
+            }
+            private static void __Expenses_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e)
+            {
+                d.Expenses_Updating(e);
+            }
+            private static void __Expenses_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e)
+            {
+                d.Expenses_Updated(e);
+            }
+            private static void __Expenses_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e)
+            {
+                d.Expenses_Deleting(e);
+            }
+            private static void __Expenses_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e)
+            {
+                d.Expenses_Deleted(e);
+            }
+            private static void __Expenses_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Expense e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Expenses_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Expense, bool>> __Expenses_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Expense, bool>> filter = null;
+                d.Expenses_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Salary>
+                __SalariesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Salary>(
+                    "Salaries",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Salaries_Filter);
+            private static bool __Salaries_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Salaries_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Salaries_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Salaries_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Salaries_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Salaries_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Salaries_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Salaries_CanRead(ref result);
+                return result;
+            }
+            private static void __Salaries_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e)
+            {
+                d.Salaries_Inserting(e);
+            }
+            private static void __Salaries_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e)
+            {
+                d.Salaries_Inserted(e);
+            }
+            private static void __Salaries_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e)
+            {
+                d.Salaries_Updating(e);
+            }
+            private static void __Salaries_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e)
+            {
+                d.Salaries_Updated(e);
+            }
+            private static void __Salaries_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e)
+            {
+                d.Salaries_Deleting(e);
+            }
+            private static void __Salaries_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e)
+            {
+                d.Salaries_Deleted(e);
+            }
+            private static void __Salaries_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Salary e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Salaries_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Salary, bool>> __Salaries_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Salary, bool>> filter = null;
+                d.Salaries_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.PurchaseItem>
+                __PurchaseItemsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.PurchaseItem>(
+                    "PurchaseItems",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchaseItems_Filter);
+            private static bool __PurchaseItems_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchaseItems_CanInsert(ref result);
+                return result;
+            }
+            private static bool __PurchaseItems_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchaseItems_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __PurchaseItems_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchaseItems_CanDelete(ref result);
+                return result;
+            }
+            private static bool __PurchaseItems_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchaseItems_CanRead(ref result);
+                return result;
+            }
+            private static void __PurchaseItems_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e)
+            {
+                d.PurchaseItems_Inserting(e);
+            }
+            private static void __PurchaseItems_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e)
+            {
+                d.PurchaseItems_Inserted(e);
+            }
+            private static void __PurchaseItems_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e)
+            {
+                d.PurchaseItems_Updating(e);
+            }
+            private static void __PurchaseItems_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e)
+            {
+                d.PurchaseItems_Updated(e);
+            }
+            private static void __PurchaseItems_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e)
+            {
+                d.PurchaseItems_Deleting(e);
+            }
+            private static void __PurchaseItems_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e)
+            {
+                d.PurchaseItems_Deleted(e);
+            }
+            private static void __PurchaseItems_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchaseItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.PurchaseItems_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PurchaseItem, bool>> __PurchaseItems_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PurchaseItem, bool>> filter = null;
+                d.PurchaseItems_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.SaleItem>
+                __SaleItemsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.SaleItem>(
+                    "SaleItems",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaleItems_Filter);
+            private static bool __SaleItems_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SaleItems_CanInsert(ref result);
+                return result;
+            }
+            private static bool __SaleItems_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SaleItems_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __SaleItems_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SaleItems_CanDelete(ref result);
+                return result;
+            }
+            private static bool __SaleItems_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SaleItems_CanRead(ref result);
+                return result;
+            }
+            private static void __SaleItems_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e)
+            {
+                d.SaleItems_Inserting(e);
+            }
+            private static void __SaleItems_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e)
+            {
+                d.SaleItems_Inserted(e);
+            }
+            private static void __SaleItems_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e)
+            {
+                d.SaleItems_Updating(e);
+            }
+            private static void __SaleItems_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e)
+            {
+                d.SaleItems_Updated(e);
+            }
+            private static void __SaleItems_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e)
+            {
+                d.SaleItems_Deleting(e);
+            }
+            private static void __SaleItems_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e)
+            {
+                d.SaleItems_Deleted(e);
+            }
+            private static void __SaleItems_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SaleItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.SaleItems_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SaleItem, bool>> __SaleItems_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SaleItem, bool>> filter = null;
+                d.SaleItems_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Purchase>
+                __PurchasesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Purchase>(
+                    "Purchases",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Purchases_Filter);
+            private static bool __Purchases_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Purchases_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Purchases_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Purchases_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Purchases_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Purchases_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Purchases_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Purchases_CanRead(ref result);
+                return result;
+            }
+            private static void __Purchases_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e)
+            {
+                d.Purchases_Inserting(e);
+            }
+            private static void __Purchases_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e)
+            {
+                d.Purchases_Inserted(e);
+            }
+            private static void __Purchases_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e)
+            {
+                d.Purchases_Updating(e);
+            }
+            private static void __Purchases_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e)
+            {
+                d.Purchases_Updated(e);
+            }
+            private static void __Purchases_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e)
+            {
+                d.Purchases_Deleting(e);
+            }
+            private static void __Purchases_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e)
+            {
+                d.Purchases_Deleted(e);
+            }
+            private static void __Purchases_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Purchase e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Purchases_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Purchase, bool>> __Purchases_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Purchase, bool>> filter = null;
+                d.Purchases_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Sale>
+                __SalesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Sale>(
+                    "Sales",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Sales_Filter);
+            private static bool __Sales_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Sales_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Sales_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Sales_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Sales_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Sales_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Sales_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Sales_CanRead(ref result);
+                return result;
+            }
+            private static void __Sales_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e)
+            {
+                d.Sales_Inserting(e);
+            }
+            private static void __Sales_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e)
+            {
+                d.Sales_Inserted(e);
+            }
+            private static void __Sales_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e)
+            {
+                d.Sales_Updating(e);
+            }
+            private static void __Sales_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e)
+            {
+                d.Sales_Updated(e);
+            }
+            private static void __Sales_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e)
+            {
+                d.Sales_Deleting(e);
+            }
+            private static void __Sales_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e)
+            {
+                d.Sales_Deleted(e);
+            }
+            private static void __Sales_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Sale e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Sales_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Sale, bool>> __Sales_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Sale, bool>> filter = null;
+                d.Sales_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.SalePayment>
+                __SalePaymentsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.SalePayment>(
+                    "SalePayments",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SalePayments_Filter);
+            private static bool __SalePayments_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SalePayments_CanInsert(ref result);
+                return result;
+            }
+            private static bool __SalePayments_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SalePayments_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __SalePayments_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SalePayments_CanDelete(ref result);
+                return result;
+            }
+            private static bool __SalePayments_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.SalePayments_CanRead(ref result);
+                return result;
+            }
+            private static void __SalePayments_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e)
+            {
+                d.SalePayments_Inserting(e);
+            }
+            private static void __SalePayments_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e)
+            {
+                d.SalePayments_Inserted(e);
+            }
+            private static void __SalePayments_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e)
+            {
+                d.SalePayments_Updating(e);
+            }
+            private static void __SalePayments_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e)
+            {
+                d.SalePayments_Updated(e);
+            }
+            private static void __SalePayments_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e)
+            {
+                d.SalePayments_Deleting(e);
+            }
+            private static void __SalePayments_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e)
+            {
+                d.SalePayments_Deleted(e);
+            }
+            private static void __SalePayments_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.SalePayment e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.SalePayments_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SalePayment, bool>> __SalePayments_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SalePayment, bool>> filter = null;
+                d.SalePayments_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.PurchasePayment>
+                __PurchasePaymentsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.PurchasePayment>(
+                    "PurchasePayments",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__PurchasePayments_Filter);
+            private static bool __PurchasePayments_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchasePayments_CanInsert(ref result);
+                return result;
+            }
+            private static bool __PurchasePayments_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchasePayments_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __PurchasePayments_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchasePayments_CanDelete(ref result);
+                return result;
+            }
+            private static bool __PurchasePayments_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.PurchasePayments_CanRead(ref result);
+                return result;
+            }
+            private static void __PurchasePayments_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e)
+            {
+                d.PurchasePayments_Inserting(e);
+            }
+            private static void __PurchasePayments_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e)
+            {
+                d.PurchasePayments_Inserted(e);
+            }
+            private static void __PurchasePayments_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e)
+            {
+                d.PurchasePayments_Updating(e);
+            }
+            private static void __PurchasePayments_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e)
+            {
+                d.PurchasePayments_Updated(e);
+            }
+            private static void __PurchasePayments_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e)
+            {
+                d.PurchasePayments_Deleting(e);
+            }
+            private static void __PurchasePayments_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e)
+            {
+                d.PurchasePayments_Deleted(e);
+            }
+            private static void __PurchasePayments_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.PurchasePayment e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.PurchasePayments_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PurchasePayment, bool>> __PurchasePayments_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PurchasePayment, bool>> filter = null;
+                d.PurchasePayments_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Export>
+                __ExportsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Export>(
+                    "Exports",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Exports_Filter);
+            private static bool __Exports_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Exports_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Exports_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Exports_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Exports_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Exports_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Exports_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.Exports_CanRead(ref result);
+                return result;
+            }
+            private static void __Exports_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e)
+            {
+                d.Exports_Inserting(e);
+            }
+            private static void __Exports_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e)
+            {
+                d.Exports_Inserted(e);
+            }
+            private static void __Exports_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e)
+            {
+                d.Exports_Updating(e);
+            }
+            private static void __Exports_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e)
+            {
+                d.Exports_Updated(e);
+            }
+            private static void __Exports_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e)
+            {
+                d.Exports_Deleting(e);
+            }
+            private static void __Exports_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e)
+            {
+                d.Exports_Deleted(e);
+            }
+            private static void __Exports_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.Export e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Exports_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Export, bool>> __Exports_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Export, bool>> filter = null;
+                d.Exports_Filter(ref filter);
                 return filter;
             }
             

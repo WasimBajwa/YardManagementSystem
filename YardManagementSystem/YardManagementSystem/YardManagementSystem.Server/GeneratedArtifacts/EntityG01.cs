@@ -289,6 +289,75 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RowVersion_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.PurchaseItem> PurchaseItems
+        {
+            get
+            {
+                return global::LightSwitchApplication.Item.DetailsClass.GetValue(this, global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.PurchaseItems);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PurchaseItem> PurchaseItemsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Item.DetailsClass.GetQuery(this, global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.PurchaseItems);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.SaleItem> SaleItems
+        {
+            get
+            {
+                return global::LightSwitchApplication.Item.DetailsClass.GetValue(this, global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.SaleItems);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SaleItem> SaleItemsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Item.DetailsClass.GetQuery(this, global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.SaleItems);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Export> Exports
+        {
+            get
+            {
+                return global::LightSwitchApplication.Item.DetailsClass.GetValue(this, global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.Exports);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Export> ExportsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Item.DetailsClass.GetQuery(this, global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.Exports);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -443,6 +512,30 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem> PurchaseItems
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.PurchaseItems) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.SaleItem> SaleItems
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.SaleItems) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.SaleItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.Export> Exports
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.Exports) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.Export>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -457,6 +550,9 @@ namespace LightSwitchApplication
                 new string ModifiedBy { get; }
                 new global::System.Nullable<global::System.DateTimeOffset> Modified { get; }
                 new byte[] RowVersion { get; set; }
+                new global::System.Collections.IEnumerable PurchaseItems { get; }
+                new global::System.Collections.IEnumerable SaleItems { get; }
+                new global::System.Collections.IEnumerable Exports { get; }
             }
             #pragma warning restore 109
     
@@ -768,6 +864,66 @@ namespace LightSwitchApplication
                     e.RowVersion_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Entry
+                    PurchaseItems = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Entry(
+                        "PurchaseItems",
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._PurchaseItems_Stub,
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._PurchaseItems_GetReferencedEntities,
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._PurchaseItems_GetEntityCollection);
+                private static void _PurchaseItems_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Item.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Data> c, global::LightSwitchApplication.Item.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PurchaseItems, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PurchaseItem> _PurchaseItems_GetReferencedEntities(global::LightSwitchApplication.Item.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass>(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.PurchaseItems, ref d._PurchaseItems);
+                }
+                private static global::System.Collections.IEnumerable _PurchaseItems_GetEntityCollection(global::LightSwitchApplication.Item.DetailsClass d)
+                {
+                    return d.ImplementationEntity.PurchaseItems;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.SaleItem>.Entry
+                    SaleItems = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.SaleItem>.Entry(
+                        "SaleItems",
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._SaleItems_Stub,
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._SaleItems_GetReferencedEntities,
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._SaleItems_GetEntityCollection);
+                private static void _SaleItems_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Item.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.SaleItem>.Data> c, global::LightSwitchApplication.Item.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SaleItems, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SaleItem> _SaleItems_GetReferencedEntities(global::LightSwitchApplication.Item.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.SaleItem, global::LightSwitchApplication.SaleItem.DetailsClass>(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.SaleItems, ref d._SaleItems);
+                }
+                private static global::System.Collections.IEnumerable _SaleItems_GetEntityCollection(global::LightSwitchApplication.Item.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SaleItems;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.Export>.Entry
+                    Exports = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.Export>.Entry(
+                        "Exports",
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._Exports_Stub,
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._Exports_GetReferencedEntities,
+                        global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties._Exports_GetEntityCollection);
+                private static void _Exports_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Item.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.Export>.Data> c, global::LightSwitchApplication.Item.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Exports, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Export> _Exports_GetReferencedEntities(global::LightSwitchApplication.Item.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass>(global::LightSwitchApplication.Item.DetailsClass.PropertySetProperties.Exports, ref d._Exports);
+                }
+                private static global::System.Collections.IEnumerable _Exports_GetEntityCollection(global::LightSwitchApplication.Item.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Exports;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -796,6 +952,15 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, byte[]>.Data _RowVersion;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.PurchaseItem>.Data _PurchaseItems;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.SaleItem>.Data _SaleItems;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Item, global::LightSwitchApplication.Item.DetailsClass, global::LightSwitchApplication.Export>.Data _Exports;
             
         }
     

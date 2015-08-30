@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="PurchaseItems" Relationship="LightSwitchApplication.PurchaseItem_Item" ToRole="PurchaseItem" FromRole="Item" />
+    <NavigationProperty Name="SaleItems" Relationship="LightSwitchApplication.SaleItem_Item" ToRole="SaleItem" FromRole="Item" />
+    <NavigationProperty Name="Exports" Relationship="LightSwitchApplication.Export_Item" ToRole="Export" FromRole="Item" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="EmailId" Type="Edm.String" MaxLength="255" />
+    <Property Name="PhoneNo" Type="Edm.String" MaxLength="255" />
+    <Property Name="Address" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Purchases" Relationship="LightSwitchApplication.Purchase_Company" ToRole="Purchase" FromRole="Company" />
+    <NavigationProperty Name="Sales" Relationship="LightSwitchApplication.Sale_Company" ToRole="Sale" FromRole="Company" />
+    <NavigationProperty Name="Exports" Relationship="LightSwitchApplication.Export_Company" ToRole="Export" FromRole="Company" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HireDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="EmailId" Type="Edm.String" MaxLength="255" />
+    <Property Name="PhoneNo" Type="Edm.String" MaxLength="255" />
+    <Property Name="Address" Type="Edm.String" MaxLength="255" />
+    <Property Name="SalaryType" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Salaries" Relationship="LightSwitchApplication.Salary_Employee" ToRole="Salary" FromRole="Employee" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="Edm.String" MaxLength="255" />
+    <Property Name="Amount" Type="Edm.Double" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalaryDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="Salary_Employee" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Amount" Type="Edm.Double" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Employee" Relationship="LightSwitchApplication.Salary_Employee" ToRole="Employee" FromRole="Salary" />
+  </EntityType>
+  <EntityType Name="PurchaseItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseItem_Item" Type="Edm.Int32" Nullable="false" />
+    <Property Name="GrossWeight" Type="Edm.Double" Nullable="false" />
+    <Property Name="TearWeight" Type="Edm.Double" Nullable="false" />
+    <Property Name="Rate" Type="Edm.Double" Nullable="false" />
+    <Property Name="Purchase_PurchaseItem" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Item" Relationship="LightSwitchApplication.PurchaseItem_Item" ToRole="Item" FromRole="PurchaseItem" />
+    <NavigationProperty Name="Purchase" Relationship="LightSwitchApplication.Purchase_PurchaseItem" ToRole="Purchase" FromRole="PurchaseItem" />
+  </EntityType>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaleItem_Item" Type="Edm.Int32" Nullable="false" />
+    <Property Name="GrossWeight" Type="Edm.Double" Nullable="false" />
+    <Property Name="TearWeight" Type="Edm.Double" Nullable="false" />
+    <Property Name="Rate" Type="Edm.Double" Nullable="false" />
+    <Property Name="Sale_SaleItem" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Item" Relationship="LightSwitchApplication.SaleItem_Item" ToRole="Item" FromRole="SaleItem" />
+    <NavigationProperty Name="Sale" Relationship="LightSwitchApplication.Sale_SaleItem" ToRole="Sale" FromRole="SaleItem" />
+  </EntityType>
+  <EntityType Name="Purchase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchaseDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="BookNo" Type="Edm.String" MaxLength="255" />
+    <Property Name="Purchase_Company" Type="Edm.Int32" Nullable="false" />
+    <Property Name="DriverName" Type="Edm.String" MaxLength="255" />
+    <Property Name="VehicleNo" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Company" Relationship="LightSwitchApplication.Purchase_Company" ToRole="Company" FromRole="Purchase" />
+    <NavigationProperty Name="PurchaseItems" Relationship="LightSwitchApplication.Purchase_PurchaseItem" ToRole="PurchaseItem" FromRole="Purchase" />
+    <NavigationProperty Name="PurchasePayments" Relationship="LightSwitchApplication.PurchasePayment_Purchase" ToRole="PurchasePayment" FromRole="Purchase" />
+  </EntityType>
+  <EntityType Name="Sale">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaleDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="BookNo" Type="Edm.String" MaxLength="255" />
+    <Property Name="Sale_Company" Type="Edm.Int32" Nullable="false" />
+    <Property Name="DriverName" Type="Edm.String" MaxLength="255" />
+    <Property Name="VehicleNo" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Company" Relationship="LightSwitchApplication.Sale_Company" ToRole="Company" FromRole="Sale" />
+    <NavigationProperty Name="SaleItems" Relationship="LightSwitchApplication.Sale_SaleItem" ToRole="SaleItem" FromRole="Sale" />
+    <NavigationProperty Name="SalePayments" Relationship="LightSwitchApplication.SalePayment_Sale" ToRole="SalePayment" FromRole="Sale" />
+  </EntityType>
+  <EntityType Name="SalePayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SalePayment_Sale" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Deposit" Type="Edm.Double" Nullable="false" />
+    <Property Name="PaymentDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Sale" Relationship="LightSwitchApplication.SalePayment_Sale" ToRole="Sale" FromRole="SalePayment" />
+  </EntityType>
+  <EntityType Name="PurchasePayment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PurchasePayment_Purchase" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Deposit" Type="Edm.Double" Nullable="false" />
+    <Property Name="PaymentDate" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Purchase" Relationship="LightSwitchApplication.PurchasePayment_Purchase" ToRole="Purchase" FromRole="PurchasePayment" />
+  </EntityType>
+  <EntityType Name="Export">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Export_Company" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Export_Item" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Weight" Type="Edm.Double" Nullable="false" />
+    <Property Name="Rate" Type="Edm.Double" Nullable="false" />
+    <Property Name="BookingDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="LoadingDate" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="Container" Type="Edm.String" MaxLength="255" />
+    <Property Name="Port" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Remarks" Type="Edm.String" MaxLength="255" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Company" Relationship="LightSwitchApplication.Export_Company" ToRole="Company" FromRole="Export" />
+    <NavigationProperty Name="Item" Relationship="LightSwitchApplication.Export_Item" ToRole="Item" FromRole="Export" />
+  </EntityType>
+  <Association Name="Salary_Employee">
+    <End Role="Employee" Type="LightSwitchApplication.Employee" Multiplicity="1" />
+    <End Role="Salary" Type="LightSwitchApplication.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="Salary_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PurchaseItem_Item">
+    <End Role="Item" Type="LightSwitchApplication.Item" Multiplicity="1" />
+    <End Role="PurchaseItem" Type="LightSwitchApplication.PurchaseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseItem">
+        <PropertyRef Name="PurchaseItem_Item" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SaleItem_Item">
+    <End Role="Item" Type="LightSwitchApplication.Item" Multiplicity="1" />
+    <End Role="SaleItem" Type="LightSwitchApplication.SaleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SaleItem">
+        <PropertyRef Name="SaleItem_Item" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Purchase_Company">
+    <End Role="Company" Type="LightSwitchApplication.Company" Multiplicity="1" />
+    <End Role="Purchase" Type="LightSwitchApplication.Purchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Purchase">
+        <PropertyRef Name="Purchase_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Purchase_PurchaseItem">
+    <End Role="Purchase" Type="LightSwitchApplication.Purchase" Multiplicity="1" />
+    <End Role="PurchaseItem" Type="LightSwitchApplication.PurchaseItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purchase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseItem">
+        <PropertyRef Name="Purchase_PurchaseItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sale_Company">
+    <End Role="Company" Type="LightSwitchApplication.Company" Multiplicity="1" />
+    <End Role="Sale" Type="LightSwitchApplication.Sale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sale">
+        <PropertyRef Name="Sale_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Sale_SaleItem">
+    <End Role="Sale" Type="LightSwitchApplication.Sale" Multiplicity="1" />
+    <End Role="SaleItem" Type="LightSwitchApplication.SaleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sale">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SaleItem">
+        <PropertyRef Name="Sale_SaleItem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SalePayment_Sale">
+    <End Role="Sale" Type="LightSwitchApplication.Sale" Multiplicity="1" />
+    <End Role="SalePayment" Type="LightSwitchApplication.SalePayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sale">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SalePayment">
+        <PropertyRef Name="SalePayment_Sale" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PurchasePayment_Purchase">
+    <End Role="Purchase" Type="LightSwitchApplication.Purchase" Multiplicity="1" />
+    <End Role="PurchasePayment" Type="LightSwitchApplication.PurchasePayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Purchase">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchasePayment">
+        <PropertyRef Name="PurchasePayment_Purchase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Export_Company">
+    <End Role="Company" Type="LightSwitchApplication.Company" Multiplicity="1" />
+    <End Role="Export" Type="LightSwitchApplication.Export" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Export">
+        <PropertyRef Name="Export_Company" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Export_Item">
+    <End Role="Item" Type="LightSwitchApplication.Item" Multiplicity="1" />
+    <End Role="Export" Type="LightSwitchApplication.Export" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Export">
+        <PropertyRef Name="Export_Item" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApplicationData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Items" EntityType="LightSwitchApplication.Item" />
+    <EntitySet Name="Companies" EntityType="LightSwitchApplication.Company" />
+    <EntitySet Name="Employees" EntityType="LightSwitchApplication.Employee" />
+    <EntitySet Name="Expenses" EntityType="LightSwitchApplication.Expense" />
+    <EntitySet Name="Salaries" EntityType="LightSwitchApplication.Salary" />
+    <EntitySet Name="PurchaseItems" EntityType="LightSwitchApplication.PurchaseItem" />
+    <EntitySet Name="SaleItems" EntityType="LightSwitchApplication.SaleItem" />
+    <EntitySet Name="Purchases" EntityType="LightSwitchApplication.Purchase" />
+    <EntitySet Name="Sales" EntityType="LightSwitchApplication.Sale" />
+    <EntitySet Name="SalePayments" EntityType="LightSwitchApplication.SalePayment" />
+    <EntitySet Name="PurchasePayments" EntityType="LightSwitchApplication.PurchasePayment" />
+    <EntitySet Name="Exports" EntityType="LightSwitchApplication.Export" />
+    <AssociationSet Name="Salary_Employee" Association="LightSwitchApplication.Salary_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Salary" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="PurchaseItem_Item" Association="LightSwitchApplication.PurchaseItem_Item">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="PurchaseItem" EntitySet="PurchaseItems" />
+    </AssociationSet>
+    <AssociationSet Name="SaleItem_Item" Association="LightSwitchApplication.SaleItem_Item">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="SaleItem" EntitySet="SaleItems" />
+    </AssociationSet>
+    <AssociationSet Name="Purchase_Company" Association="LightSwitchApplication.Purchase_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Purchase" EntitySet="Purchases" />
+    </AssociationSet>
+    <AssociationSet Name="Purchase_PurchaseItem" Association="LightSwitchApplication.Purchase_PurchaseItem">
+      <End Role="Purchase" EntitySet="Purchases" />
+      <End Role="PurchaseItem" EntitySet="PurchaseItems" />
+    </AssociationSet>
+    <AssociationSet Name="Sale_Company" Association="LightSwitchApplication.Sale_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Sale" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="Sale_SaleItem" Association="LightSwitchApplication.Sale_SaleItem">
+      <End Role="Sale" EntitySet="Sales" />
+      <End Role="SaleItem" EntitySet="SaleItems" />
+    </AssociationSet>
+    <AssociationSet Name="SalePayment_Sale" Association="LightSwitchApplication.SalePayment_Sale">
+      <End Role="Sale" EntitySet="Sales" />
+      <End Role="SalePayment" EntitySet="SalePayments" />
+    </AssociationSet>
+    <AssociationSet Name="PurchasePayment_Purchase" Association="LightSwitchApplication.PurchasePayment_Purchase">
+      <End Role="Purchase" EntitySet="Purchases" />
+      <End Role="PurchasePayment" EntitySet="PurchasePayments" />
+    </AssociationSet>
+    <AssociationSet Name="Export_Company" Association="LightSwitchApplication.Export_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Export" EntitySet="Exports" />
+    </AssociationSet>
+    <AssociationSet Name="Export_Item" Association="LightSwitchApplication.Export_Item">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="Export" EntitySet="Exports" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

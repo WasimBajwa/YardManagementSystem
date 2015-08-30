@@ -1,3 +1,14 @@
 YardManagementSystem.Server.Properties.Service.lsml
 YardManagementSystem.Server.Properties.DataSources.ApplicationData.lsml
 YardManagementSystem.Server.DataSources.ApplicationData.Items.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Companies.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Employees.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Expenses.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Salaries.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.PurchaseItems.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.SaleItems.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Purchases.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Sales.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.SalePayments.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.PurchasePayments.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.Exports.lsml

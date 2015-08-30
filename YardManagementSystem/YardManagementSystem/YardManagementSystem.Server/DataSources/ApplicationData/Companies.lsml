@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Company">
+    <EntityType.Attributes>
+      <CreatedModifiedPropertiesEnabled />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailId"
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PhoneNo"
+        PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalPurchase"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Computed />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalSale"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Computed />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Purchases"
+        Association="Purchase_Company"
+        FromEnd="Company"
+        ToEnd="Purchase" />
+      <NavigationProperty
+        Name="Sales"
+        Association="Sale_Company"
+        FromEnd="Company"
+        ToEnd="Sale" />
+      <NavigationProperty
+        Name="Exports"
+        Association="Export_Company"
+        FromEnd="Company"
+        ToEnd="Export" />
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Person?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        IsReadOnly="True"
+        PropertyType=":DateTimeOffset?">
+        <EntityProperty.Attributes>
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Generated />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="ApplicationData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Companies"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Company" />
+    <QueryOperation
+      Name="Companies_Single"
+      ReturnType="Company">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Companies" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Companies_SingleOrDefault"
+      ReturnType="Company">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Companies" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="Purchase_Companies"
+      Association="Purchase_Company">
+      <AssociationSetEnd
+        Name="Purchase"
+        EntitySet="Purchases" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Sale_Companies"
+      Association="Sale_Company">
+      <AssociationSetEnd
+        Name="Sale"
+        EntitySet="Sales" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet
+      Name="Export_Companies"
+      Association="Export_Company">
+      <AssociationSetEnd
+        Name="Export"
+        EntitySet="Exports" />
+      <AssociationSetEnd
+        Name="Company"
+        EntitySet="Companies" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association
+    Name="Purchase_Company">
+    <AssociationEnd
+      Name="Purchase"
+      Multiplicity="Many"
+      EntityType="Purchase" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <DataService
+    Name="ApplicationDataMapping">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <AssociationSetMapping
+      AssociationSet="Purchase_Companies">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Purchase_Companies" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Purchase_Companies]/Members[Purchase]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Purchase_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Purchase_Companies]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Sale_Companies">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Sale_Companies" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Sale_Companies]/Members[Sale]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Sale_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Sale_Companies]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="Export_Companies">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="Export_Companies" />
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Export_Companies]/Members[Export]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Export_Company" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ApplicationData/Members[Export_Companies]/Members[Company]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+  <Association
+    Name="Sale_Company">
+    <AssociationEnd
+      Name="Sale"
+      Multiplicity="Many"
+      EntityType="Sale" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="Export_Company">
+    <AssociationEnd
+      Name="Export"
+      Multiplicity="Many"
+      EntityType="Export" />
+    <AssociationEnd
+      Name="Company"
+      Multiplicity="One"
+      EntityType="Company">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+</ServiceApplication>
