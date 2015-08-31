@@ -117,6 +117,8 @@
     <Property Name="Container" Type="nvarchar" MaxLength="255" />
     <Property Name="Port" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Remarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="Country" Type="nvarchar" MaxLength="255" />
+    <Property Name="ExportDate" Type="datetime" Nullable="false" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
     <Property Name="Created" Type="datetimeoffset" />
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
@@ -160,7 +162,7 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Deposit" Type="float" Nullable="false" />
-    <Property Name="PaymentDate" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="PaymentDate" Type="datetime" Nullable="false" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
     <Property Name="Created" Type="datetimeoffset" />
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />

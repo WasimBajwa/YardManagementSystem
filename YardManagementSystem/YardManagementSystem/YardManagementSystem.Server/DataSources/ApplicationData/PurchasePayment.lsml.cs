@@ -32,5 +32,15 @@ namespace LightSwitchApplication
             result = 0;
             result = TotalAmount - this.PaidAmount;
         }
+
+
+        partial void Deposit_Validate(EntityValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Error-Message>");
+            if(this.Deposit>this.DueAmount)
+            {
+                results.AddPropertyError("Invalid payment.");
+            }
+        }
     }
 }

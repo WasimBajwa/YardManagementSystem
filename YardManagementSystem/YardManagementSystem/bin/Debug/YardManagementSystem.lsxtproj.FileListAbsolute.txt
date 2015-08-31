@@ -29,11 +29,11 @@ E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSyst
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\System.ServiceModel.DomainServices.Hosting.OData.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\System.ServiceModel.DomainServices.Server.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\System.Spatial.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\X360Lightning.Theme.Common.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\X360Lightning.Theme.Server.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\Microsoft.WindowsAzure.ServiceRuntime.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\packages.config
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\ApplicationData.svc
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\DesktopClient\default.htm
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\DesktopClient\Silverlight.js
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\DesktopClient\web\YardManagementSystem.DesktopClient.xap
-E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\X360Lightning.Theme.Common.dll
-E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\X360Lightning.Theme.Server.dll

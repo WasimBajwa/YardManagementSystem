@@ -28,7 +28,7 @@ namespace LightSwitchApplication
                 dynamic arr = this.DataWorkspace.ApplicationData.Sales.Where(x => x.Company.Id == this.Id).Select(x => x);
                 foreach (dynamic a in arr)
                 {
-                    result += a.TotalPayment;
+                    result += a.TotalAmount;
                 }
             }
         }

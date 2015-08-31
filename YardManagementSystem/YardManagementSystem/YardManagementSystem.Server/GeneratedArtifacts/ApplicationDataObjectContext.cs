@@ -1384,8 +1384,9 @@ namespace LightSwitchApplication.Implementation
         /// <param name="bookingDate">Initial value of the BookingDate property.</param>
         /// <param name="loadingDate">Initial value of the LoadingDate property.</param>
         /// <param name="port">Initial value of the Port property.</param>
+        /// <param name="exportDate">Initial value of the ExportDate property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static Export CreateExport(global::System.Int32 id, global::System.Int32 export_Company, global::System.Int32 export_Item, global::System.Double weight, global::System.Double rate, global::System.DateTime bookingDate, global::System.DateTime loadingDate, global::System.String port, global::System.Byte[] rowVersion)
+        public static Export CreateExport(global::System.Int32 id, global::System.Int32 export_Company, global::System.Int32 export_Item, global::System.Double weight, global::System.Double rate, global::System.DateTime bookingDate, global::System.DateTime loadingDate, global::System.String port, global::System.DateTime exportDate, global::System.Byte[] rowVersion)
         {
             Export export = new Export();
             export.Id = id;
@@ -1396,6 +1397,7 @@ namespace LightSwitchApplication.Implementation
             export.BookingDate = bookingDate;
             export.LoadingDate = loadingDate;
             export.Port = port;
+            export.ExportDate = exportDate;
             export.RowVersion = rowVersion;
             return export;
         }
@@ -1646,6 +1648,54 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Remarks;
         partial void OnRemarksChanging(global::System.String value);
         partial void OnRemarksChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Country
+        {
+            get
+            {
+                return _Country;
+            }
+            set
+            {
+                OnCountryChanging(value);
+                ReportPropertyChanging("Country");
+                _Country = value;
+                ReportPropertyChanged("Country");
+                OnCountryChanged();
+            }
+        }
+        private global::System.String _Country;
+        partial void OnCountryChanging(global::System.String value);
+        partial void OnCountryChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime ExportDate
+        {
+            get
+            {
+                return _ExportDate;
+            }
+            set
+            {
+                OnExportDateChanging(value);
+                ReportPropertyChanging("ExportDate");
+                _ExportDate = value;
+                ReportPropertyChanged("ExportDate");
+                OnExportDateChanged();
+            }
+        }
+        private global::System.DateTime _ExportDate;
+        partial void OnExportDateChanging(global::System.DateTime value);
+        partial void OnExportDateChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2947,7 +2997,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="deposit">Initial value of the Deposit property.</param>
         /// <param name="paymentDate">Initial value of the PaymentDate property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static PurchasePayment CreatePurchasePayment(global::System.Int32 id, global::System.Int32 purchasePayment_Purchase, global::System.Double deposit, global::System.String paymentDate, global::System.Byte[] rowVersion)
+        public static PurchasePayment CreatePurchasePayment(global::System.Int32 id, global::System.Int32 purchasePayment_Purchase, global::System.Double deposit, global::System.DateTime paymentDate, global::System.Byte[] rowVersion)
         {
             PurchasePayment purchasePayment = new PurchasePayment();
             purchasePayment.Id = id;
@@ -3042,7 +3092,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String PaymentDate
+        public global::System.DateTime PaymentDate
         {
             get
             {
@@ -3057,8 +3107,8 @@ namespace LightSwitchApplication.Implementation
                 OnPaymentDateChanged();
             }
         }
-        private global::System.String _PaymentDate;
-        partial void OnPaymentDateChanging(global::System.String value);
+        private global::System.DateTime _PaymentDate;
+        partial void OnPaymentDateChanging(global::System.DateTime value);
         partial void OnPaymentDateChanged();
     
         /// <summary>

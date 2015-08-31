@@ -65,6 +65,8 @@
     <Property Name="Container" Type="Edm.String" MaxLength="255" />
     <Property Name="Port" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="Remarks" Type="Edm.String" MaxLength="255" />
+    <Property Name="Country" Type="Edm.String" MaxLength="255" />
+    <Property Name="ExportDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
     <Property Name="Created" Type="Edm.DateTimeOffset" />
     <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
@@ -114,7 +116,7 @@
     <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PurchasePayment_Purchase" Type="Edm.Int32" Nullable="false" />
     <Property Name="Deposit" Type="Edm.Double" Nullable="false" />
-    <Property Name="PaymentDate" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="PaymentDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
     <Property Name="Created" Type="Edm.DateTimeOffset" />
     <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />

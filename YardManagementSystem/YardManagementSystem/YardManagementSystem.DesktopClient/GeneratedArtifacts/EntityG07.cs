@@ -131,7 +131,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string PaymentDate
+        public global::System.DateTime PaymentDate
         {
             get
             {
@@ -431,11 +431,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string> PaymentDate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, global::System.DateTime> PaymentDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties.PaymentDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties.PaymentDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
@@ -519,7 +519,7 @@ namespace LightSwitchApplication
             {
                 new int Id { get; set; }
                 new double Deposit { get; set; }
-                new string PaymentDate { get; set; }
+                new global::System.DateTime PaymentDate { get; set; }
                 new string CreatedBy { get; }
                 new global::System.Nullable<global::System.DateTimeOffset> Created { get; }
                 new string ModifiedBy { get; }
@@ -610,8 +610,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string>.Entry
-                    PaymentDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, global::System.DateTime>.Entry
+                    PaymentDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, global::System.DateTime>.Entry(
                         "PaymentDate",
                         global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties._PaymentDate_Stub,
                         global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties._PaymentDate_ComputeIsReadOnly,
@@ -619,7 +619,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties._PaymentDate_GetImplementationValue,
                         global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties._PaymentDate_SetImplementationValue,
                         global::LightSwitchApplication.PurchasePayment.DetailsClass.PropertySetProperties._PaymentDate_OnValueChanged);
-                private static void _PaymentDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PurchasePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string>.Data> c, global::LightSwitchApplication.PurchasePayment.DetailsClass d, object sf)
+                private static void _PaymentDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PurchasePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.PurchasePayment.DetailsClass d, object sf)
                 {
                     c(d, ref d._PaymentDate, sf);
                 }
@@ -633,13 +633,13 @@ namespace LightSwitchApplication
                 {
                     e.PaymentDate_Validate(r);
                 }
-                private static string _PaymentDate_GetImplementationValue(global::LightSwitchApplication.PurchasePayment.DetailsClass d)
+                private static global::System.DateTime _PaymentDate_GetImplementationValue(global::LightSwitchApplication.PurchasePayment.DetailsClass d)
                 {
                     return d.ImplementationEntity.PaymentDate;
                 }
-                private static void _PaymentDate_SetImplementationValue(global::LightSwitchApplication.PurchasePayment.DetailsClass d, string v)
+                private static void _PaymentDate_SetImplementationValue(global::LightSwitchApplication.PurchasePayment.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.PaymentDate = v;
+                    d.ImplementationEntity.PaymentDate = global::LightSwitchApplication.PurchasePayment.DetailsClass.TruncateDate(v);
                 }
                 private static void _PaymentDate_OnValueChanged(global::LightSwitchApplication.PurchasePayment e)
                 {
@@ -937,7 +937,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, double>.Data _Deposit;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string>.Data _PaymentDate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, global::System.DateTime>.Data _PaymentDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchasePayment, global::LightSwitchApplication.PurchasePayment.DetailsClass, string>.Data _CreatedBy;

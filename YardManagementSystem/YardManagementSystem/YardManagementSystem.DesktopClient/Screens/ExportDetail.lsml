@@ -31,6 +31,19 @@
               </ScreenExpressionTree>
             </ContentItem.DataSource>
             <ContentItem
+              Name="ExportDate"
+              Kind="Value"
+              DataType=":Date">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Export/Properties[ExportDate]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="Company"
               Kind="Details"
               DataType="Company">
@@ -155,6 +168,19 @@
               </ContentItem.DataSource>
             </ContentItem>
             <ContentItem
+              Name="Country"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Export/Properties[Country]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="Remarks"
               Kind="Value"
               DataType=":String?">
@@ -168,19 +194,6 @@
               </ContentItem.DataSource>
             </ContentItem>
             <ContentItem
-              Name="CreatedBy"
-              Kind="Value"
-              DataType=":Person?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Export/Properties[CreatedBy]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
               Name="Created"
               Kind="Value"
               DataType=":DateTimeOffset?">
@@ -189,32 +202,6 @@
                   <ChainExpression>
                     <MemberExpression
                       Member="Export/Properties[Created]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="ModifiedBy"
-              Kind="Value"
-              DataType=":Person?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Export/Properties[ModifiedBy]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Modified"
-              Kind="Value"
-              DataType=":DateTimeOffset?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Export/Properties[Modified]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>

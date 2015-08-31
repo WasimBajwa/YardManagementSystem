@@ -32,7 +32,7 @@ namespace LightSwitchApplication
 
                 foreach (dynamic a in arr)
                 {
-                    result += a.CurrentPayment;
+                    result += a.Deposit;
                 }
             }
         }

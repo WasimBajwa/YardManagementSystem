@@ -304,8 +304,14 @@
     <Compile Include="Screens\ItemDetail.lsml.cs">
       <DependentUpon>ItemDetail.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\PaySalary.lsml.cs">
+      <DependentUpon>PaySalary.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\PrintPurchase.lsml.cs">
       <DependentUpon>PrintPurchase.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PrintSale.lsml.cs">
+      <DependentUpon>PrintSale.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\PurchaseDetail.lsml.cs">
       <DependentUpon>PurchaseDetail.lsml</DependentUpon>
@@ -313,9 +319,16 @@
     <Compile Include="Screens\SaleDetail.lsml.cs">
       <DependentUpon>SaleDetail.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\SearchEmployees.lsml.cs">
+      <DependentUpon>SearchEmployees.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\SearchPurchases.lsml.cs">
       <DependentUpon>SearchPurchases.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\SearchSales.lsml.cs">
+      <DependentUpon>SearchSales.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="UserCode\Application.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Client.lsml">
@@ -359,11 +372,17 @@
     <LightSwitchModel Include="Screens\SearchPurchases.lsml" />
     <LightSwitchModel Include="Screens\SearchSales.lsml" />
     <LightSwitchModel Include="Screens\PrintPurchase.lsml" />
+    <LightSwitchModel Include="Screens\PrintSale.lsml" />
+    <LightSwitchModel Include="Screens\PaySalary.lsml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PurchasePrint\PurchasePrint.csproj">
       <Project>{6b8b095a-cbe6-463c-b700-99b8002ab199}</Project>
       <Name>PurchasePrint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SalePrint\SalePrint.csproj">
+      <Project>{126e0614-f40f-4e96-a821-998f4c49f6d7}</Project>
+      <Name>SalePrint</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -375,6 +394,9 @@
       <SubFolder>
       </SubFolder>
     </_ClientBuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images %282%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />

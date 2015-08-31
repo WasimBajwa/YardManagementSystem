@@ -363,6 +363,16 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Remarks");
         }
         
+        partial void OnCountryChanged()
+        {
+            this.___OnPropertyChanged("Country");
+        }
+        
+        partial void OnExportDateChanged()
+        {
+            this.___OnPropertyChanged("ExportDate");
+        }
+        
         partial void OnCreatedByChanged()
         {
             this.___OnPropertyChanged("CreatedBy");

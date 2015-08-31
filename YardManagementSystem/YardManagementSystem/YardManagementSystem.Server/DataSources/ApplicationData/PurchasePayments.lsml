@@ -62,11 +62,10 @@
       </EntityProperty>
       <EntityProperty
         Name="PaymentDate"
-        PropertyType=":String">
+        PropertyType=":Date">
         <EntityProperty.Attributes>
           <Required />
-          <MaxLength
-            Value="255" />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

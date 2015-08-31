@@ -66,3 +66,6 @@ E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSyst
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Bin\Debug\X360Lightning.Theme.Client.Design.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Bin\Debug\X360Lightning.Theme.Client.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Bin\Debug\X360Lightning.Theme.Common.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Bin\Debug\SalePrint.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\Bin\Debug\SalePrint.pdb
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.DesktopClient\obj\Debug\YardManagementSystem.DesktopClient.g.resources

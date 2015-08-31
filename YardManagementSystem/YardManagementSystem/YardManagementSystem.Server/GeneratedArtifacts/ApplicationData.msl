@@ -64,6 +64,8 @@
           <ScalarProperty Name="Container" ColumnName="Container" />
           <ScalarProperty Name="Port" ColumnName="Port" />
           <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="ExportDate" ColumnName="ExportDate" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
