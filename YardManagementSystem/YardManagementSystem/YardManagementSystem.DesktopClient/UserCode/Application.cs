@@ -11,10 +11,5 @@ namespace LightSwitchApplication
 {
     public partial class Application
     {
-        partial void PaySalary_Run(ref bool handled)
-        {
-            // Set handled to 'true' to stop further processing.
-
-        }
     }
 }

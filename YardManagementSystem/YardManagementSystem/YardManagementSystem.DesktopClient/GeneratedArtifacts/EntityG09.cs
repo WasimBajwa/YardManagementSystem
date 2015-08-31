@@ -260,24 +260,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string SalaryType
-        {
-            get
-            {
-                return global::LightSwitchApplication.Salary.DetailsClass.GetValue(this, global::LightSwitchApplication.Salary.DetailsClass.PropertySetProperties.SalaryType);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SalaryType_Compute(ref string result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SalaryType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.Employee Employee
         {
             get
@@ -440,14 +422,6 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Salary.DetailsClass.PropertySetProperties.RowVersion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, byte[]>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, string> SalaryType
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Salary.DetailsClass.PropertySetProperties.SalaryType) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, string>;
                     }
                 }
                 
@@ -764,28 +738,6 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, string>.Entry
-                    SalaryType = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, string>.Entry(
-                        "SalaryType",
-                        global::LightSwitchApplication.Salary.DetailsClass.PropertySetProperties._SalaryType_Stub,
-                        global::LightSwitchApplication.Salary.DetailsClass.PropertySetProperties._SalaryType_Validate,
-                        global::LightSwitchApplication.Salary.DetailsClass.PropertySetProperties._SalaryType_ComputeValue);
-                private static void _SalaryType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Salary.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, string>.Data> c, global::LightSwitchApplication.Salary.DetailsClass d, object sf)
-                {
-                    c(d, ref d._SalaryType, sf);
-                }
-                private static void _SalaryType_Validate(global::LightSwitchApplication.Salary e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.SalaryType_Validate(r);
-                }
-                private static string _SalaryType_ComputeValue(global::LightSwitchApplication.Salary e)
-                {
-                    string value = default(string);
-                    e.SalaryType_Compute(ref value);
-                    return value;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, global::LightSwitchApplication.Employee>.Entry
                     Employee = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, global::LightSwitchApplication.Employee>.Entry(
                         "Employee",
@@ -857,9 +809,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, byte[]>.Data _RowVersion;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, string>.Data _SalaryType;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Salary, global::LightSwitchApplication.Salary.DetailsClass, global::LightSwitchApplication.Employee>.Data _Employee;

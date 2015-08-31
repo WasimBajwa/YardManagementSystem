@@ -16,5 +16,18 @@ namespace LightSwitchApplication
             // Write your code here.
             this.Application.ShowPrintPurchase(this.Purchases.SelectedItem.Id);
         }
+
+        partial void Payment_Execute()
+        {
+            // Write your code here.
+            if(this.Purchases.SelectedItem.Status=="Cleared")
+            {
+                this.ShowMessageBox("Payment for this purchase has been cleared.");
+            }
+            else
+            {
+                this.Application.ShowMakePurchasePayment(this.Purchases.SelectedItem.Id);
+            }
+        }
     }
 }

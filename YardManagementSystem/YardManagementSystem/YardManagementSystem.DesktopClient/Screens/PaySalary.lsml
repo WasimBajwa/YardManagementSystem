@@ -69,6 +69,19 @@
               </ContentItem>
             </ContentItem>
             <ContentItem
+              Name="SalaryType"
+              Kind="Value"
+              DataType=":String">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="PaySalary/Properties[SalaryType]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="Amount"
               Kind="Value"
               DataType=":Double">
@@ -77,71 +90,6 @@
                   <ChainExpression>
                     <MemberExpression
                       Member="Salary/Properties[Amount]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="CreatedBy"
-              Kind="Value"
-              DataType=":Person?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Salary/Properties[CreatedBy]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Created"
-              Kind="Value"
-              DataType=":DateTimeOffset?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Salary/Properties[Created]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="ModifiedBy"
-              Kind="Value"
-              DataType=":Person?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Salary/Properties[ModifiedBy]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Modified"
-              Kind="Value"
-              DataType=":DateTimeOffset?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Salary/Properties[Modified]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="SalaryType"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Salary/Properties[SalaryType]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -234,6 +182,21 @@
       <ScreenProperty
         Name="SalaryProperty"
         PropertyType="Salary" />
+      <ScreenProperty
+        Name="SalaryType"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="EmployeeId"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
     </Screen.Properties>
   </Screen>
   <Application.Methods>
@@ -243,6 +206,9 @@
         <ShowScreenMethod
           TargetScreen="PaySalary" />
       </ApplicationMethod.Attributes>
+      <ApplicationMethodParameter
+        Name="EmployeeId"
+        ParameterType=":Int32" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

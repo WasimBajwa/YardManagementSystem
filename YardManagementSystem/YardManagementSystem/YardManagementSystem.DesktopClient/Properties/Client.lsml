@@ -79,14 +79,10 @@
     <ApplicationCommand
       Name="ScreenCommandShowSearchSales"
       Target="!module/Methods[ShowSearchSales]" />
-    <ApplicationCommand
-      Name="ScreenCommandShowPaySalary"
-      Target="!module/Methods[ShowPaySalary]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Administration"
-      DefaultItem="!module/NavigationItems[Administration]/Children[PaySalary]">
+      Name="Administration">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
           Value="Administration" />
@@ -97,9 +93,6 @@
       <ApplicationNavigationLink
         Name="UsersScreen"
         Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
-      <ApplicationNavigationLink
-        Name="PaySalary"
-        Command="!module/Commands[ScreenCommandShowPaySalary]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group">

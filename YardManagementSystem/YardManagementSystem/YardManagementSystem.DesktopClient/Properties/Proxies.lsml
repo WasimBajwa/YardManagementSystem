@@ -76,4 +76,10 @@
         Target="ServiceInterface:Export_Item" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Salary" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

@@ -14,7 +14,7 @@ namespace LightSwitchApplication
         partial void PaySalary_Execute()
         {
             // Write your code here.
-            this.Application.ShowPaySalary();
+            this.Application.ShowPaySalary(this.Employees.SelectedItem.Id);
         }
     }
 }

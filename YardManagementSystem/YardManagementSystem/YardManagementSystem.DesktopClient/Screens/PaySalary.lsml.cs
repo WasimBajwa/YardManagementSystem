@@ -28,7 +28,10 @@ namespace LightSwitchApplication
         partial void PaySalary_Activated()
         {
             // Write your code here.
-
+            int Id= this.EmployeeId;
+            Employee obj = this.DataWorkspace.ApplicationData.Employees.Where(x => x.Id == Id).Select(x => x).First();
+            this.SalaryProperty.Employee = obj;
+            this.SalaryType = obj.SalaryType;
         }
     }
 }

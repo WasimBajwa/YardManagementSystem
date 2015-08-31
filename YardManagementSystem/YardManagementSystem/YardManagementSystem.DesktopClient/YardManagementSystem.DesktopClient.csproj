@@ -289,6 +289,9 @@
     <Compile Include="Screens\AddSale.lsml.cs">
       <DependentUpon>AddSale.lsml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\AddSalePayment.lsml.cs">
+      <DependentUpon>AddSalePayment.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\CompanyDetail.lsml.cs">
       <DependentUpon>CompanyDetail.lsml</DependentUpon>
     </Compile>
@@ -303,6 +306,9 @@
     </Compile>
     <Compile Include="Screens\ItemDetail.lsml.cs">
       <DependentUpon>ItemDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MakePurchasePayment.lsml.cs">
+      <DependentUpon>MakePurchasePayment.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\PaySalary.lsml.cs">
       <DependentUpon>PaySalary.lsml</DependentUpon>
@@ -336,7 +342,6 @@
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\ApplicationData\Items.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\Companies.lsml" />
-    <LightSwitchModel Include="Properties\ApplicationData\Salaries.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\PurchaseItems.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\SaleItems.lsml" />
     <LightSwitchModel Include="Properties\ApplicationData\SalePayments.lsml" />
@@ -374,6 +379,8 @@
     <LightSwitchModel Include="Screens\PrintPurchase.lsml" />
     <LightSwitchModel Include="Screens\PrintSale.lsml" />
     <LightSwitchModel Include="Screens\PaySalary.lsml" />
+    <LightSwitchModel Include="Screens\MakePurchasePayment.lsml" />
+    <LightSwitchModel Include="Screens\AddSalePayment.lsml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PurchasePrint\PurchasePrint.csproj">

@@ -40,13 +40,6 @@
         FromEnd="Salary"
         ToEnd="Employee" />
       <EntityProperty
-        Name="SalaryType"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Computed />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Amount"
         PropertyType=":Double">
         <EntityProperty.Attributes>

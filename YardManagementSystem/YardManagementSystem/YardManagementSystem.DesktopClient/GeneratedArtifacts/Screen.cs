@@ -3788,6 +3788,353 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class PaySalary
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private PaySalary(int EmployeeId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:PaySalary")
+        {
+                this.EmployeeId = EmployeeId;
+            global::LightSwitchApplication.PaySalary.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static PaySalary CreateInstance(int EmployeeId)
+        {
+            return new global::LightSwitchApplication.PaySalary(
+                        EmployeeId
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PaySalary_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void SalaryProperty_Changed();
+
+        partial void SalaryType_Changed();
+
+        partial void EmployeeId_Changed();
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Salary SalaryProperty
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PaySalary.DetailsClass.GetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty);
+            }
+            set
+            {
+                global::LightSwitchApplication.PaySalary.DetailsClass.SetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalaryProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string SalaryType
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PaySalary.DetailsClass.GetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryType);
+            }
+            set
+            {
+                global::LightSwitchApplication.PaySalary.DetailsClass.SetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryType, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalaryType_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int EmployeeId
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PaySalary.DetailsClass.GetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.EmployeeId);
+            }
+            set
+            {
+                global::LightSwitchApplication.PaySalary.DetailsClass.SetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.EmployeeId, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmployeeId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySet, global::LightSwitchApplication.PaySalary.DetailsClass.CommandSet, global::LightSwitchApplication.PaySalary.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>.Entry
+                __PaySalaryEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeSavingEvent,
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeSavedEvent,
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeClosingEvent,
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeCreated,
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeActivated,
+                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeSaveErrorEvent);
+            private static void __PaySalary_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PaySalary s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.PaySalary_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __PaySalary_InvokeSavingEvent(global::LightSwitchApplication.PaySalary s)
+            {
+                bool handled = false;
+                s.PaySalary_Saving(ref handled);
+                return handled;
+            }
+            private static void __PaySalary_InvokeSavedEvent(global::LightSwitchApplication.PaySalary s)
+            {
+                s.PaySalary_Saved();
+            }
+            private static bool __PaySalary_InvokeClosingEvent(global::LightSwitchApplication.PaySalary s)
+            {
+                bool cancel = false;
+                s.PaySalary_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __PaySalary_InvokeCreated(global::LightSwitchApplication.PaySalary s)
+            {
+                s.PaySalary_Created();
+            }
+            private static void __PaySalary_InvokeActivated(global::LightSwitchApplication.PaySalary s)
+            {
+                s.PaySalary_Activated();
+            }
+            private static bool __PaySalary_InvokeSaveErrorEvent(global::LightSwitchApplication.PaySalary s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.PaySalary_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.PaySalary.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.PaySalary.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.PaySalary.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Data _SalaryProperty;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, string>.Data _SalaryType;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, int>.Data _EmployeeId;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary> SalaryProperty
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>)base.GetItem(global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, string> SalaryType
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryType);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, int> EmployeeId
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.EmployeeId);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Entry
+                    SalaryProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Entry(
+                        "SalaryProperty",
+                        false,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryProperty_Stub,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryProperty_Validate,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryProperty_OnValueChanged);
+                private static void _SalaryProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PaySalary.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Data> c, global::LightSwitchApplication.PaySalary.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SalaryProperty, sf);
+                }
+                private static void _SalaryProperty_Validate(global::LightSwitchApplication.PaySalary s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SalaryProperty_Validate(r);
+                }
+                private static void _SalaryProperty_OnValueChanged(global::LightSwitchApplication.PaySalary s)
+                {
+                    s.SalaryProperty_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, string>.Entry
+                    SalaryType = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, string>.Entry(
+                        "SalaryType",
+                        false,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryType_Stub,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryType_Validate,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryType_OnValueChanged);
+                private static void _SalaryType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PaySalary.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, string>.Data> c, global::LightSwitchApplication.PaySalary.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SalaryType, sf);
+                }
+                private static void _SalaryType_Validate(global::LightSwitchApplication.PaySalary s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SalaryType_Validate(r);
+                }
+                private static void _SalaryType_OnValueChanged(global::LightSwitchApplication.PaySalary s)
+                {
+                    s.SalaryType_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, int>.Entry
+                    EmployeeId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, int>.Entry(
+                        "EmployeeId",
+                        false,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._EmployeeId_Stub,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._EmployeeId_Validate,
+                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._EmployeeId_OnValueChanged);
+                private static void _EmployeeId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PaySalary.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, int>.Data> c, global::LightSwitchApplication.PaySalary.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmployeeId, sf);
+                }
+                private static void _EmployeeId_Validate(global::LightSwitchApplication.PaySalary s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EmployeeId_Validate(r);
+                }
+                private static void _EmployeeId_OnValueChanged(global::LightSwitchApplication.PaySalary s)
+                {
+                    s.EmployeeId_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     public sealed partial class PrintPurchase
         : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PrintPurchase, global::LightSwitchApplication.PrintPurchase.DetailsClass>
     {
@@ -4159,6 +4506,397 @@ namespace LightSwitchApplication
                 private static void _PurchaseItems_OnLoaded(global::LightSwitchApplication.PrintPurchase s, bool succeeded)
                 {
                     s.PurchaseItems_Loaded(succeeded);
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class PrintSale
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private PrintSale(int SaleId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:PrintSale")
+        {
+                this.SaleId = SaleId;
+            global::LightSwitchApplication.PrintSale.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static PrintSale CreateInstance(int SaleId)
+        {
+            return new global::LightSwitchApplication.PrintSale(
+                        SaleId
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PrintSale_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Sale_Changed();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sale_Loaded(bool succeeded);
+
+        partial void SaleId_Changed();
+
+        partial void SaleItems_SelectionChanged();
+
+        partial void SaleItems_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Loaded(bool succeeded);
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Sale Sale
+        {
+            get
+            {
+                return global::LightSwitchApplication.PrintSale.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.Sale);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Sale_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int SaleId
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PrintSale.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleId);
+            }
+            set
+            {
+                global::LightSwitchApplication.PrintSale.DetailsClass.SetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleId, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Gets the SaleItems visual collection. The collection contains all records currently shown on the respective list or grid control.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.SaleItem> SaleItems
+        {
+            get
+            {
+                return global::LightSwitchApplication.PrintSale.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleItems);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleItems_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySet, global::LightSwitchApplication.PrintSale.DetailsClass.CommandSet, global::LightSwitchApplication.PrintSale.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.Sale;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>.Entry
+                __PrintSaleEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeSavingEvent,
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeSavedEvent,
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeClosingEvent,
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeCreated,
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeActivated,
+                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeSaveErrorEvent);
+            private static void __PrintSale_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PrintSale s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.PrintSale_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __PrintSale_InvokeSavingEvent(global::LightSwitchApplication.PrintSale s)
+            {
+                bool handled = false;
+                s.PrintSale_Saving(ref handled);
+                return handled;
+            }
+            private static void __PrintSale_InvokeSavedEvent(global::LightSwitchApplication.PrintSale s)
+            {
+                s.PrintSale_Saved();
+            }
+            private static bool __PrintSale_InvokeClosingEvent(global::LightSwitchApplication.PrintSale s)
+            {
+                bool cancel = false;
+                s.PrintSale_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __PrintSale_InvokeCreated(global::LightSwitchApplication.PrintSale s)
+            {
+                s.PrintSale_Created();
+            }
+            private static void __PrintSale_InvokeActivated(global::LightSwitchApplication.PrintSale s)
+            {
+                s.PrintSale_Activated();
+            }
+            private static bool __PrintSale_InvokeSaveErrorEvent(global::LightSwitchApplication.PrintSale s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.PrintSale_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.PrintSale.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.PrintSale.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.PrintSale.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable SaleItemsQuery()
+            {
+                if (this.Screen.Sale == null)
+                {
+                    return null;
+                }
+
+                global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SaleItem> loader =
+                    (global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SaleItem>)((global::Microsoft.LightSwitch.Details.ILoadableProperty)this.Screen.Sale.Details.Properties.SaleItems).Loader;
+                if (loader == null)
+                {
+                    return null;
+                }
+
+                return loader;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Data _Sale;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Data _SaleId;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Data _SaleItems;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale> Sale
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>)base.GetItem(global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.Sale);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int> SaleId
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleId);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem> SaleItems
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>)base.GetItem(global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleItems);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Entry
+                    Sale = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Entry(
+                        "Sale",
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_Stub,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_Validate,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_CreateQuery,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_OnValueChanged,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_OnLoaded);
+                private static void _Sale_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintSale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Data> c, global::LightSwitchApplication.PrintSale.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Sale, sf);
+                }
+                private static void _Sale_Validate(global::LightSwitchApplication.PrintSale s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Sale_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Sale_CreateQuery(global::LightSwitchApplication.PrintSale.DetailsClass d, object[] args)
+                {
+                    return null;
+                }
+                private static void _Sale_OnValueChanged(global::LightSwitchApplication.PrintSale s)
+                {
+                    s.Sale_Changed();
+                }
+
+                private static void _Sale_OnLoaded(global::LightSwitchApplication.PrintSale s, bool succeeded)
+                {
+                    s.Sale_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Entry
+                    SaleId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Entry(
+                        "SaleId",
+                        false,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleId_Stub,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleId_Validate,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleId_OnValueChanged);
+                private static void _SaleId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintSale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Data> c, global::LightSwitchApplication.PrintSale.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SaleId, sf);
+                }
+                private static void _SaleId_Validate(global::LightSwitchApplication.PrintSale s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SaleId_Validate(r);
+                }
+                private static void _SaleId_OnValueChanged(global::LightSwitchApplication.PrintSale s)
+                {
+                    s.SaleId_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Entry
+                    SaleItems = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Entry(
+                        "SaleItems",
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_Stub,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_Validate,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_CreateQuery,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_SelectionChanged,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_OnCollectionChanged,
+                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_OnLoaded);
+                private static void _SaleItems_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintSale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Data> c, global::LightSwitchApplication.PrintSale.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SaleItems, sf);
+                }
+                private static void _SaleItems_Validate(global::LightSwitchApplication.PrintSale s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SaleItems_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _SaleItems_CreateQuery(global::LightSwitchApplication.PrintSale.DetailsClass d, object[] args)
+                {
+                    return d.SaleItemsQuery();
+                }
+                private static void _SaleItems_SelectionChanged(global::LightSwitchApplication.PrintSale s)
+                {
+                    s.SaleItems_SelectionChanged();
+                }
+                private static void _SaleItems_OnCollectionChanged(global::LightSwitchApplication.PrintSale s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.SaleItems_Changed(e);
+                }
+                private static void _SaleItems_OnLoaded(global::LightSwitchApplication.PrintSale s, bool succeeded)
+                {
+                    s.SaleItems_Loaded(succeeded);
                 }
 
             }
@@ -7463,41 +8201,41 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class PrintSale
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+    public sealed partial class MakePurchasePayment
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private PrintSale(int SaleId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:PrintSale")
+        private MakePurchasePayment(int PurchaseId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:MakePurchasePayment")
         {
-                this.SaleId = SaleId;
-            global::LightSwitchApplication.PrintSale.DetailsClass.Initialize(this);
+                this.PurchaseId = PurchaseId;
+            global::LightSwitchApplication.MakePurchasePayment.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static PrintSale CreateInstance(int SaleId)
+        public static MakePurchasePayment CreateInstance(int PurchaseId)
         {
-            return new global::LightSwitchApplication.PrintSale(
-                        SaleId
+            return new global::LightSwitchApplication.MakePurchasePayment(
+                        PurchaseId
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void MakePurchasePayment_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_Created();
+        partial void MakePurchasePayment_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_Activated();
+        partial void MakePurchasePayment_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_Saving(ref bool handled);
+        partial void MakePurchasePayment_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_Saved();
+        partial void MakePurchasePayment_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_Closing(ref bool cancel);
+        partial void MakePurchasePayment_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PrintSale_SaveError(global::System.Exception exception, ref bool handled);
+        partial void MakePurchasePayment_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -7529,117 +8267,96 @@ namespace LightSwitchApplication
         
         #endregion
  
-        partial void Sale_Changed();
+        partial void PurchasePaymentProperty_Changed();
 
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Sale_Loaded(bool succeeded);
-
-        partial void SaleId_Changed();
-
-        partial void SaleItems_SelectionChanged();
-
-        partial void SaleItems_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
-
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaleItems_Loaded(bool succeeded);
+        partial void PurchaseId_Changed();
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Sale Sale
-        {
-            get
-            {
-                return global::LightSwitchApplication.PrintSale.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.Sale);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Sale_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int SaleId
+        public global::LightSwitchApplication.PurchasePayment PurchasePaymentProperty
         {
             get 
             {
-                return global::LightSwitchApplication.PrintSale.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleId);
+                return global::LightSwitchApplication.MakePurchasePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchasePaymentProperty);
             }
             set
             {
-                global::LightSwitchApplication.PrintSale.DetailsClass.SetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleId, value);
+                global::LightSwitchApplication.MakePurchasePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchasePaymentProperty, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaleId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+        partial void PurchasePaymentProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
-        /// <summary>
-        /// Gets the SaleItems visual collection. The collection contains all records currently shown on the respective list or grid control.
-        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.SaleItem> SaleItems
+        public int PurchaseId
         {
-            get
+            get 
             {
-                return global::LightSwitchApplication.PrintSale.DetailsClass.GetValue(this, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleItems);
+                return global::LightSwitchApplication.MakePurchasePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchaseId);
+            }
+            set
+            {
+                global::LightSwitchApplication.MakePurchasePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchaseId, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaleItems_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+        partial void PurchaseId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.PrintSale.DetailsClass.PropertySet, global::LightSwitchApplication.PrintSale.DetailsClass.CommandSet, global::LightSwitchApplication.PrintSale.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySet, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.CommandSet, global::LightSwitchApplication.MakePurchasePayment.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.Sale;
+                var initializePropertyEntry = global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchasePaymentProperty;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>.Entry
-                __PrintSaleEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>.Entry(
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeSavingEvent,
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeSavedEvent,
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeClosingEvent,
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeCreated,
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeActivated,
-                    global::LightSwitchApplication.PrintSale.DetailsClass.__PrintSale_InvokeSaveErrorEvent);
-            private static void __PrintSale_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PrintSale s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass>.Entry
+                __MakePurchasePaymentEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass>.Entry(
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeSavingEvent,
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeSavedEvent,
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeClosingEvent,
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeCreated,
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeActivated,
+                    global::LightSwitchApplication.MakePurchasePayment.DetailsClass.__MakePurchasePayment_InvokeSaveErrorEvent);
+            private static void __MakePurchasePayment_InvokeInitializeDataWorkspace(global::LightSwitchApplication.MakePurchasePayment s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.PrintSale_InitializeDataWorkspace(saveChangesTo);
+                s.MakePurchasePayment_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __PrintSale_InvokeSavingEvent(global::LightSwitchApplication.PrintSale s)
+            private static bool __MakePurchasePayment_InvokeSavingEvent(global::LightSwitchApplication.MakePurchasePayment s)
             {
                 bool handled = false;
-                s.PrintSale_Saving(ref handled);
+                s.MakePurchasePayment_Saving(ref handled);
                 return handled;
             }
-            private static void __PrintSale_InvokeSavedEvent(global::LightSwitchApplication.PrintSale s)
+            private static void __MakePurchasePayment_InvokeSavedEvent(global::LightSwitchApplication.MakePurchasePayment s)
             {
-                s.PrintSale_Saved();
+                s.MakePurchasePayment_Saved();
             }
-            private static bool __PrintSale_InvokeClosingEvent(global::LightSwitchApplication.PrintSale s)
+            private static bool __MakePurchasePayment_InvokeClosingEvent(global::LightSwitchApplication.MakePurchasePayment s)
             {
                 bool cancel = false;
-                s.PrintSale_Closing(ref cancel);
+                s.MakePurchasePayment_Closing(ref cancel);
                 return cancel;
             }
-            private static void __PrintSale_InvokeCreated(global::LightSwitchApplication.PrintSale s)
+            private static void __MakePurchasePayment_InvokeCreated(global::LightSwitchApplication.MakePurchasePayment s)
             {
-                s.PrintSale_Created();
+                s.MakePurchasePayment_Created();
             }
-            private static void __PrintSale_InvokeActivated(global::LightSwitchApplication.PrintSale s)
+            private static void __MakePurchasePayment_InvokeActivated(global::LightSwitchApplication.MakePurchasePayment s)
             {
-                s.PrintSale_Activated();
+                s.MakePurchasePayment_Activated();
             }
-            private static bool __PrintSale_InvokeSaveErrorEvent(global::LightSwitchApplication.PrintSale s, global::System.Exception ex)
+            private static bool __MakePurchasePayment_InvokeSaveErrorEvent(global::LightSwitchApplication.MakePurchasePayment s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.PrintSale_SaveError(ex, ref handled);
+                s.MakePurchasePayment_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -7647,7 +8364,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.PrintSale.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -7655,7 +8372,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.PrintSale.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.MakePurchasePayment.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -7663,7 +8380,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.PrintSale.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.MakePurchasePayment.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -7671,60 +8388,32 @@ namespace LightSwitchApplication
                 }
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable SaleItemsQuery()
-            {
-                if (this.Screen.Sale == null)
-                {
-                    return null;
-                }
-
-                global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SaleItem> loader =
-                    (global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SaleItem>)((global::Microsoft.LightSwitch.Details.ILoadableProperty)this.Screen.Sale.Details.Properties.SaleItems).Loader;
-                if (loader == null)
-                {
-                    return null;
-                }
-
-                return loader;
-            }
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.PurchasePayment>.Data _PurchasePaymentProperty;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Data _Sale;
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Data _SaleId;
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Data _SaleItems;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, int>.Data _PurchaseId;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale> Sale
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.PurchasePayment> PurchasePaymentProperty
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>)base.GetItem(global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.Sale);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.PurchasePayment>)base.GetItem(global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchasePaymentProperty);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int> SaleId
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, int> PurchaseId
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleId);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem> SaleItems
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>)base.GetItem(global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties.SaleItems);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties.PurchaseId);
                     }
                 }
 
@@ -7734,7 +8423,7 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass>
             {
             }
 
@@ -7742,7 +8431,7 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass>
             {
             }
 
@@ -7752,88 +8441,44 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Entry
-                    Sale = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Entry(
-                        "Sale",
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_Stub,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_Validate,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_CreateQuery,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_OnValueChanged,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._Sale_OnLoaded);
-                private static void _Sale_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintSale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenReferenceProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.Sale>.Data> c, global::LightSwitchApplication.PrintSale.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Sale, sf);
-                }
-                private static void _Sale_Validate(global::LightSwitchApplication.PrintSale s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.Sale_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Sale_CreateQuery(global::LightSwitchApplication.PrintSale.DetailsClass d, object[] args)
-                {
-                    return null;
-                }
-                private static void _Sale_OnValueChanged(global::LightSwitchApplication.PrintSale s)
-                {
-                    s.Sale_Changed();
-                }
-
-                private static void _Sale_OnLoaded(global::LightSwitchApplication.PrintSale s, bool succeeded)
-                {
-                    s.Sale_Loaded(succeeded);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Entry
-                    SaleId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Entry(
-                        "SaleId",
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.PurchasePayment>.Entry
+                    PurchasePaymentProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.PurchasePayment>.Entry(
+                        "PurchasePaymentProperty",
                         false,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleId_Stub,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleId_Validate,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleId_OnValueChanged);
-                private static void _SaleId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintSale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, int>.Data> c, global::LightSwitchApplication.PrintSale.DetailsClass d, object sf)
+                        global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties._PurchasePaymentProperty_Stub,
+                        global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties._PurchasePaymentProperty_Validate,
+                        global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties._PurchasePaymentProperty_OnValueChanged);
+                private static void _PurchasePaymentProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::LightSwitchApplication.PurchasePayment>.Data> c, global::LightSwitchApplication.MakePurchasePayment.DetailsClass d, object sf)
                 {
-                    c(d, ref d._SaleId, sf);
+                    c(d, ref d._PurchasePaymentProperty, sf);
                 }
-                private static void _SaleId_Validate(global::LightSwitchApplication.PrintSale s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _PurchasePaymentProperty_Validate(global::LightSwitchApplication.MakePurchasePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
-                    s.SaleId_Validate(r);
+                    s.PurchasePaymentProperty_Validate(r);
                 }
-                private static void _SaleId_OnValueChanged(global::LightSwitchApplication.PrintSale s)
+                private static void _PurchasePaymentProperty_OnValueChanged(global::LightSwitchApplication.MakePurchasePayment s)
                 {
-                    s.SaleId_Changed();
+                    s.PurchasePaymentProperty_Changed();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Entry
-                    SaleItems = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Entry(
-                        "SaleItems",
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_Stub,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_Validate,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_CreateQuery,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_SelectionChanged,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_OnCollectionChanged,
-                        global::LightSwitchApplication.PrintSale.DetailsClass.PropertySetProperties._SaleItems_OnLoaded);
-                private static void _SaleItems_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PrintSale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PrintSale, global::LightSwitchApplication.PrintSale.DetailsClass, global::LightSwitchApplication.SaleItem>.Data> c, global::LightSwitchApplication.PrintSale.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, int>.Entry
+                    PurchaseId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, int>.Entry(
+                        "PurchaseId",
+                        false,
+                        global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties._PurchaseId_Stub,
+                        global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties._PurchaseId_Validate,
+                        global::LightSwitchApplication.MakePurchasePayment.DetailsClass.PropertySetProperties._PurchaseId_OnValueChanged);
+                private static void _PurchaseId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.MakePurchasePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.MakePurchasePayment, global::LightSwitchApplication.MakePurchasePayment.DetailsClass, int>.Data> c, global::LightSwitchApplication.MakePurchasePayment.DetailsClass d, object sf)
                 {
-                    c(d, ref d._SaleItems, sf);
+                    c(d, ref d._PurchaseId, sf);
                 }
-                private static void _SaleItems_Validate(global::LightSwitchApplication.PrintSale s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _PurchaseId_Validate(global::LightSwitchApplication.MakePurchasePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
-                    s.SaleItems_Validate(r);
+                    s.PurchaseId_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _SaleItems_CreateQuery(global::LightSwitchApplication.PrintSale.DetailsClass d, object[] args)
+                private static void _PurchaseId_OnValueChanged(global::LightSwitchApplication.MakePurchasePayment s)
                 {
-                    return d.SaleItemsQuery();
-                }
-                private static void _SaleItems_SelectionChanged(global::LightSwitchApplication.PrintSale s)
-                {
-                    s.SaleItems_SelectionChanged();
-                }
-                private static void _SaleItems_OnCollectionChanged(global::LightSwitchApplication.PrintSale s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-                {
-                    s.SaleItems_Changed(e);
-                }
-                private static void _SaleItems_OnLoaded(global::LightSwitchApplication.PrintSale s, bool succeeded)
-                {
-                    s.SaleItems_Loaded(succeeded);
+                    s.PurchaseId_Changed();
                 }
 
             }
@@ -7854,39 +8499,41 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class PaySalary
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+    public sealed partial class AddSalePayment
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private PaySalary() : base("LightSwitchApplication.YardManagementSystem.DesktopClient:PaySalary")
+        private AddSalePayment(int SaleId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:AddSalePayment")
         {
-            global::LightSwitchApplication.PaySalary.DetailsClass.Initialize(this);
+                this.SaleId = SaleId;
+            global::LightSwitchApplication.AddSalePayment.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static PaySalary CreateInstance()
+        public static AddSalePayment CreateInstance(int SaleId)
         {
-            return new global::LightSwitchApplication.PaySalary(
+            return new global::LightSwitchApplication.AddSalePayment(
+                        SaleId
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void AddSalePayment_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_Created();
+        partial void AddSalePayment_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_Activated();
+        partial void AddSalePayment_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_Saving(ref bool handled);
+        partial void AddSalePayment_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_Saved();
+        partial void AddSalePayment_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_Closing(ref bool cancel);
+        partial void AddSalePayment_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaySalary_SaveError(global::System.Exception exception, ref bool handled);
+        partial void AddSalePayment_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -7918,78 +8565,96 @@ namespace LightSwitchApplication
         
         #endregion
  
-        partial void SalaryProperty_Changed();
+        partial void SalePaymentProperty_Changed();
+
+        partial void SaleId_Changed();
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Salary SalaryProperty
+        public global::LightSwitchApplication.SalePayment SalePaymentProperty
         {
             get 
             {
-                return global::LightSwitchApplication.PaySalary.DetailsClass.GetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty);
+                return global::LightSwitchApplication.AddSalePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty);
             }
             set
             {
-                global::LightSwitchApplication.PaySalary.DetailsClass.SetValue(this, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty, value);
+                global::LightSwitchApplication.AddSalePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SalaryProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+        partial void SalePaymentProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int SaleId
+        {
+            get 
+            {
+                return global::LightSwitchApplication.AddSalePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId);
+            }
+            set
+            {
+                global::LightSwitchApplication.AddSalePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.PaySalary.DetailsClass.PropertySet, global::LightSwitchApplication.PaySalary.DetailsClass.CommandSet, global::LightSwitchApplication.PaySalary.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySet, global::LightSwitchApplication.AddSalePayment.DetailsClass.CommandSet, global::LightSwitchApplication.AddSalePayment.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty;
+                var initializePropertyEntry = global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>.Entry
-                __PaySalaryEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>.Entry(
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeSavingEvent,
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeSavedEvent,
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeClosingEvent,
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeCreated,
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeActivated,
-                    global::LightSwitchApplication.PaySalary.DetailsClass.__PaySalary_InvokeSaveErrorEvent);
-            private static void __PaySalary_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PaySalary s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>.Entry
+                __AddSalePaymentEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>.Entry(
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSavingEvent,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSavedEvent,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeClosingEvent,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeCreated,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeActivated,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSaveErrorEvent);
+            private static void __AddSalePayment_InvokeInitializeDataWorkspace(global::LightSwitchApplication.AddSalePayment s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.PaySalary_InitializeDataWorkspace(saveChangesTo);
+                s.AddSalePayment_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __PaySalary_InvokeSavingEvent(global::LightSwitchApplication.PaySalary s)
+            private static bool __AddSalePayment_InvokeSavingEvent(global::LightSwitchApplication.AddSalePayment s)
             {
                 bool handled = false;
-                s.PaySalary_Saving(ref handled);
+                s.AddSalePayment_Saving(ref handled);
                 return handled;
             }
-            private static void __PaySalary_InvokeSavedEvent(global::LightSwitchApplication.PaySalary s)
+            private static void __AddSalePayment_InvokeSavedEvent(global::LightSwitchApplication.AddSalePayment s)
             {
-                s.PaySalary_Saved();
+                s.AddSalePayment_Saved();
             }
-            private static bool __PaySalary_InvokeClosingEvent(global::LightSwitchApplication.PaySalary s)
+            private static bool __AddSalePayment_InvokeClosingEvent(global::LightSwitchApplication.AddSalePayment s)
             {
                 bool cancel = false;
-                s.PaySalary_Closing(ref cancel);
+                s.AddSalePayment_Closing(ref cancel);
                 return cancel;
             }
-            private static void __PaySalary_InvokeCreated(global::LightSwitchApplication.PaySalary s)
+            private static void __AddSalePayment_InvokeCreated(global::LightSwitchApplication.AddSalePayment s)
             {
-                s.PaySalary_Created();
+                s.AddSalePayment_Created();
             }
-            private static void __PaySalary_InvokeActivated(global::LightSwitchApplication.PaySalary s)
+            private static void __AddSalePayment_InvokeActivated(global::LightSwitchApplication.AddSalePayment s)
             {
-                s.PaySalary_Activated();
+                s.AddSalePayment_Activated();
             }
-            private static bool __PaySalary_InvokeSaveErrorEvent(global::LightSwitchApplication.PaySalary s, global::System.Exception ex)
+            private static bool __AddSalePayment_InvokeSaveErrorEvent(global::LightSwitchApplication.AddSalePayment s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.PaySalary_SaveError(ex, ref handled);
+                s.AddSalePayment_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -7997,7 +8662,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.PaySalary.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -8005,7 +8670,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.PaySalary.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -8013,7 +8678,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.PaySalary.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -8022,20 +8687,31 @@ namespace LightSwitchApplication
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Data _SalaryProperty;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Data _SalePaymentProperty;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Data _SaleId;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary> SalaryProperty
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment> SalePaymentProperty
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>)base.GetItem(global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties.SalaryProperty);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>)base.GetItem(global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int> SaleId
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId);
                     }
                 }
 
@@ -8045,7 +8721,7 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
             {
             }
 
@@ -8053,7 +8729,7 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
             {
             }
 
@@ -8063,24 +8739,44 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Entry
-                    SalaryProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Entry(
-                        "SalaryProperty",
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Entry
+                    SalePaymentProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Entry(
+                        "SalePaymentProperty",
                         false,
-                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryProperty_Stub,
-                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryProperty_Validate,
-                        global::LightSwitchApplication.PaySalary.DetailsClass.PropertySetProperties._SalaryProperty_OnValueChanged);
-                private static void _SalaryProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PaySalary.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PaySalary, global::LightSwitchApplication.PaySalary.DetailsClass, global::LightSwitchApplication.Salary>.Data> c, global::LightSwitchApplication.PaySalary.DetailsClass d, object sf)
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_Stub,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_Validate,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_OnValueChanged);
+                private static void _SalePaymentProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddSalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Data> c, global::LightSwitchApplication.AddSalePayment.DetailsClass d, object sf)
                 {
-                    c(d, ref d._SalaryProperty, sf);
+                    c(d, ref d._SalePaymentProperty, sf);
                 }
-                private static void _SalaryProperty_Validate(global::LightSwitchApplication.PaySalary s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _SalePaymentProperty_Validate(global::LightSwitchApplication.AddSalePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
-                    s.SalaryProperty_Validate(r);
+                    s.SalePaymentProperty_Validate(r);
                 }
-                private static void _SalaryProperty_OnValueChanged(global::LightSwitchApplication.PaySalary s)
+                private static void _SalePaymentProperty_OnValueChanged(global::LightSwitchApplication.AddSalePayment s)
                 {
-                    s.SalaryProperty_Changed();
+                    s.SalePaymentProperty_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Entry
+                    SaleId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Entry(
+                        "SaleId",
+                        false,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_Stub,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_Validate,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_OnValueChanged);
+                private static void _SaleId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddSalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Data> c, global::LightSwitchApplication.AddSalePayment.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SaleId, sf);
+                }
+                private static void _SaleId_Validate(global::LightSwitchApplication.AddSalePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SaleId_Validate(r);
+                }
+                private static void _SaleId_OnValueChanged(global::LightSwitchApplication.AddSalePayment s)
+                {
+                    s.SaleId_Changed();
                 }
 
             }
