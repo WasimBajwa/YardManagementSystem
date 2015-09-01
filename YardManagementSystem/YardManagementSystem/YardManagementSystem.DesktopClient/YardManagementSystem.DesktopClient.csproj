@@ -379,8 +379,8 @@
     <LightSwitchModel Include="Screens\PrintPurchase.lsml" />
     <LightSwitchModel Include="Screens\PrintSale.lsml" />
     <LightSwitchModel Include="Screens\PaySalary.lsml" />
-    <LightSwitchModel Include="Screens\MakePurchasePayment.lsml" />
     <LightSwitchModel Include="Screens\AddSalePayment.lsml" />
+    <LightSwitchModel Include="Screens\MakePurchasePayment.lsml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PurchasePrint\PurchasePrint.csproj">

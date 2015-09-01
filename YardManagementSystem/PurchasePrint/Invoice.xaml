@@ -37,7 +37,7 @@
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="43,644,0,0" TextWrapping="Wrap" Text="Paid Amount :" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="156,644,0,0" TextWrapping="Wrap" Text="{Binding Screen.Purchase.PaidAmount}" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,677,0,0" TextWrapping="Wrap" Text="Due Amount :" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="156,677,0,0" TextWrapping="Wrap" Text="{Binding Screen.Purchase.Id}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="156,677,0,0" TextWrapping="Wrap" Text="{Binding Screen.Purchase.DueAmount}" VerticalAlignment="Top"/>
         <Button Content="Print" HorizontalAlignment="Left" Margin="464,769,0,0" VerticalAlignment="Top" Width="75" Click="PrintButton" />
         <Viewbox HorizontalAlignment="Left" Height="74" Margin="80,112,0,0" VerticalAlignment="Top" Width="379">
             <Image Source="image.jpg" Stretch="Fill" Height="75" Width="433"/>
@@ -45,6 +45,6 @@
         <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Height="29" Margin="186,403,0,0" TextWrapping="Wrap" Text="Purchase  Items  " VerticalAlignment="Top" Width="202"/>
         <TextBlock FontSize="30" FontWeight="ExtraBlack" HorizontalAlignment="Left" Height="57" Margin="110,215,0,0" TextWrapping="Wrap" Text="Purchase #" VerticalAlignment="Top" Width="219"/>
         <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Height="38" Margin="314,215,0,0" TextWrapping="Wrap" Text="{Binding Screen.Purchase.Id}" VerticalAlignment="Top" Width="100"/>
-
+        <Rectangle  HorizontalAlignment="Left" Height="658" Margin="10,95,0,0" Stroke="Black" VerticalAlignment="Top" Width="548"/>
     </Grid>
 </UserControl>

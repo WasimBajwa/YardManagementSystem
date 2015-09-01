@@ -1911,6 +1911,304 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class AddSalePayment
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private AddSalePayment(int SaleId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:AddSalePayment")
+        {
+                this.SaleId = SaleId;
+            global::LightSwitchApplication.AddSalePayment.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static AddSalePayment CreateInstance(int SaleId)
+        {
+            return new global::LightSwitchApplication.AddSalePayment(
+                        SaleId
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void SalePaymentProperty_Changed();
+
+        partial void SaleId_Changed();
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.SalePayment SalePaymentProperty
+        {
+            get 
+            {
+                return global::LightSwitchApplication.AddSalePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty);
+            }
+            set
+            {
+                global::LightSwitchApplication.AddSalePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SalePaymentProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int SaleId
+        {
+            get 
+            {
+                return global::LightSwitchApplication.AddSalePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId);
+            }
+            set
+            {
+                global::LightSwitchApplication.AddSalePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaleId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySet, global::LightSwitchApplication.AddSalePayment.DetailsClass.CommandSet, global::LightSwitchApplication.AddSalePayment.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>.Entry
+                __AddSalePaymentEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>.Entry(
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSavingEvent,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSavedEvent,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeClosingEvent,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeCreated,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeActivated,
+                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSaveErrorEvent);
+            private static void __AddSalePayment_InvokeInitializeDataWorkspace(global::LightSwitchApplication.AddSalePayment s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.AddSalePayment_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __AddSalePayment_InvokeSavingEvent(global::LightSwitchApplication.AddSalePayment s)
+            {
+                bool handled = false;
+                s.AddSalePayment_Saving(ref handled);
+                return handled;
+            }
+            private static void __AddSalePayment_InvokeSavedEvent(global::LightSwitchApplication.AddSalePayment s)
+            {
+                s.AddSalePayment_Saved();
+            }
+            private static bool __AddSalePayment_InvokeClosingEvent(global::LightSwitchApplication.AddSalePayment s)
+            {
+                bool cancel = false;
+                s.AddSalePayment_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __AddSalePayment_InvokeCreated(global::LightSwitchApplication.AddSalePayment s)
+            {
+                s.AddSalePayment_Created();
+            }
+            private static void __AddSalePayment_InvokeActivated(global::LightSwitchApplication.AddSalePayment s)
+            {
+                s.AddSalePayment_Activated();
+            }
+            private static bool __AddSalePayment_InvokeSaveErrorEvent(global::LightSwitchApplication.AddSalePayment s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.AddSalePayment_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Data _SalePaymentProperty;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Data _SaleId;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment> SalePaymentProperty
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>)base.GetItem(global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int> SaleId
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Entry
+                    SalePaymentProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Entry(
+                        "SalePaymentProperty",
+                        false,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_Stub,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_Validate,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_OnValueChanged);
+                private static void _SalePaymentProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddSalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Data> c, global::LightSwitchApplication.AddSalePayment.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SalePaymentProperty, sf);
+                }
+                private static void _SalePaymentProperty_Validate(global::LightSwitchApplication.AddSalePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SalePaymentProperty_Validate(r);
+                }
+                private static void _SalePaymentProperty_OnValueChanged(global::LightSwitchApplication.AddSalePayment s)
+                {
+                    s.SalePaymentProperty_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Entry
+                    SaleId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Entry(
+                        "SaleId",
+                        false,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_Stub,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_Validate,
+                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_OnValueChanged);
+                private static void _SaleId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddSalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Data> c, global::LightSwitchApplication.AddSalePayment.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SaleId, sf);
+                }
+                private static void _SaleId_Validate(global::LightSwitchApplication.AddSalePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.SaleId_Validate(r);
+                }
+                private static void _SaleId_OnValueChanged(global::LightSwitchApplication.AddSalePayment s)
+                {
+                    s.SaleId_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     public sealed partial class CompanyDetail
         : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.CompanyDetail, global::LightSwitchApplication.CompanyDetail.DetailsClass>
     {
@@ -8479,304 +8777,6 @@ namespace LightSwitchApplication
                 private static void _PurchaseId_OnValueChanged(global::LightSwitchApplication.MakePurchasePayment s)
                 {
                     s.PurchaseId_Changed();
-                }
-
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class CommandSetProperties
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class MethodSetProperties
-            {
-            }
-        }
-    }
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class AddSalePayment
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
-    {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private AddSalePayment(int SaleId) : base("LightSwitchApplication.YardManagementSystem.DesktopClient:AddSalePayment")
-        {
-                this.SaleId = SaleId;
-            global::LightSwitchApplication.AddSalePayment.DetailsClass.Initialize(this);
-        }
-
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static AddSalePayment CreateInstance(int SaleId)
-        {
-            return new global::LightSwitchApplication.AddSalePayment(
-                        SaleId
-            );
-        }
-
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_Created();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_Activated();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_Saving(ref bool handled);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_Saved();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_Closing(ref bool cancel);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_SaveError(global::System.Exception exception, ref bool handled);
-     
-        #region Private Properties
-        
-        /// <summary>
-        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.Application Application
-        {
-            get
-            {
-                return global::LightSwitchApplication.Application.Current;
-            }
-        }
-        
-        /// <summary>
-        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.DataWorkspace DataWorkspace
-        {
-            get
-            {
-                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
-            }
-        }
-        
-        #endregion
- 
-        partial void SalePaymentProperty_Changed();
-
-        partial void SaleId_Changed();
-
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.SalePayment SalePaymentProperty
-        {
-            get 
-            {
-                return global::LightSwitchApplication.AddSalePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty);
-            }
-            set
-            {
-                global::LightSwitchApplication.AddSalePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty, value);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SalePaymentProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int SaleId
-        {
-            get 
-            {
-                return global::LightSwitchApplication.AddSalePayment.DetailsClass.GetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId);
-            }
-            set
-            {
-                global::LightSwitchApplication.AddSalePayment.DetailsClass.SetValue(this, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId, value);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaleId_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySet, global::LightSwitchApplication.AddSalePayment.DetailsClass.CommandSet, global::LightSwitchApplication.AddSalePayment.DetailsClass.MethodSet>
-        {
-
-            static DetailsClass()
-            {
-                var initializePropertyEntry = global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty;
-            }
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>.Entry
-                __AddSalePaymentEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>.Entry(
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSavingEvent,
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSavedEvent,
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeClosingEvent,
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeCreated,
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeActivated,
-                    global::LightSwitchApplication.AddSalePayment.DetailsClass.__AddSalePayment_InvokeSaveErrorEvent);
-            private static void __AddSalePayment_InvokeInitializeDataWorkspace(global::LightSwitchApplication.AddSalePayment s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
-            {
-                s.AddSalePayment_InitializeDataWorkspace(saveChangesTo);
-            }
-            private static bool __AddSalePayment_InvokeSavingEvent(global::LightSwitchApplication.AddSalePayment s)
-            {
-                bool handled = false;
-                s.AddSalePayment_Saving(ref handled);
-                return handled;
-            }
-            private static void __AddSalePayment_InvokeSavedEvent(global::LightSwitchApplication.AddSalePayment s)
-            {
-                s.AddSalePayment_Saved();
-            }
-            private static bool __AddSalePayment_InvokeClosingEvent(global::LightSwitchApplication.AddSalePayment s)
-            {
-                bool cancel = false;
-                s.AddSalePayment_Closing(ref cancel);
-                return cancel;
-            }
-            private static void __AddSalePayment_InvokeCreated(global::LightSwitchApplication.AddSalePayment s)
-            {
-                s.AddSalePayment_Created();
-            }
-            private static void __AddSalePayment_InvokeActivated(global::LightSwitchApplication.AddSalePayment s)
-            {
-                s.AddSalePayment_Activated();
-            }
-            private static bool __AddSalePayment_InvokeSaveErrorEvent(global::LightSwitchApplication.AddSalePayment s, global::System.Exception ex)
-            {
-                bool handled = false;
-                s.AddSalePayment_SaveError(ex, ref handled);
-                return handled;
-            }
-
-            public DetailsClass() : base()
-            {
-            }
-
-            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySet Properties
-            {
-                get
-                {
-                    return base.Properties;
-                }
-            }
-
-            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.CommandSet Commands
-            {
-                get
-                {
-                    return base.Commands;
-                }
-            }
-
-            public new global::LightSwitchApplication.AddSalePayment.DetailsClass.MethodSet Methods
-            {
-                get
-                {
-                    return base.Methods;
-                }
-            }
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Data _SalePaymentProperty;
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Data _SaleId;
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
-            {
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment> SalePaymentProperty
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>)base.GetItem(global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SalePaymentProperty);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int> SaleId
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>)base.GetItem(global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties.SaleId);
-                    }
-                }
-
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass>
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class PropertySetProperties
-            {
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Entry
-                    SalePaymentProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Entry(
-                        "SalePaymentProperty",
-                        false,
-                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_Stub,
-                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_Validate,
-                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SalePaymentProperty_OnValueChanged);
-                private static void _SalePaymentProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddSalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, global::LightSwitchApplication.SalePayment>.Data> c, global::LightSwitchApplication.AddSalePayment.DetailsClass d, object sf)
-                {
-                    c(d, ref d._SalePaymentProperty, sf);
-                }
-                private static void _SalePaymentProperty_Validate(global::LightSwitchApplication.AddSalePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.SalePaymentProperty_Validate(r);
-                }
-                private static void _SalePaymentProperty_OnValueChanged(global::LightSwitchApplication.AddSalePayment s)
-                {
-                    s.SalePaymentProperty_Changed();
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Entry
-                    SaleId = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Entry(
-                        "SaleId",
-                        false,
-                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_Stub,
-                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_Validate,
-                        global::LightSwitchApplication.AddSalePayment.DetailsClass.PropertySetProperties._SaleId_OnValueChanged);
-                private static void _SaleId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddSalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddSalePayment, global::LightSwitchApplication.AddSalePayment.DetailsClass, int>.Data> c, global::LightSwitchApplication.AddSalePayment.DetailsClass d, object sf)
-                {
-                    c(d, ref d._SaleId, sf);
-                }
-                private static void _SaleId_Validate(global::LightSwitchApplication.AddSalePayment s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.SaleId_Validate(r);
-                }
-                private static void _SaleId_OnValueChanged(global::LightSwitchApplication.AddSalePayment s)
-                {
-                    s.SaleId_Changed();
                 }
 
             }

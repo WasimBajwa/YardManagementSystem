@@ -28,7 +28,7 @@ namespace LightSwitchApplication
         partial void MakePurchasePayment_Activated()
         {
             // Write your code here.
-            int Id= this.PurchaseId;
+            int Id = this.PurchaseId;
             Purchase obj = this.DataWorkspace.ApplicationData.Purchases.Where(x => x.Id == Id).Select(x => x).First();
             this.PurchasePaymentProperty.Purchase = obj;
         }

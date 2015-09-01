@@ -142,6 +142,21 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_CanRun(ref bool result, int SaleId);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AddSalePayment_Run(ref bool handled, int SaleId);
+    
+        /// <summary>
+        /// Opens a new instance of the ShowAddSalePayment screen.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowAddSalePayment(int SaleId)
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowAddSalePayment, SaleId);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void CompanyDetail_CanRun(ref bool result, int CompanyId);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void CompanyDetail_Run(ref bool handled, int CompanyId);
@@ -411,21 +426,6 @@ namespace LightSwitchApplication
             ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMakePurchasePayment, PurchaseId);
         }
         
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_CanRun(ref bool result, int SaleId);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AddSalePayment_Run(ref bool handled, int SaleId);
-    
-        /// <summary>
-        /// Opens a new instance of the ShowAddSalePayment screen.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowAddSalePayment(int SaleId)
-        {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowAddSalePayment, SaleId);
-        }
-        
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -499,6 +499,8 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.AddPurchase.CreateInstance();
                     case "AddSale":
                         return global::LightSwitchApplication.AddSale.CreateInstance();
+                    case "AddSalePayment":
+                        return global::LightSwitchApplication.AddSalePayment.CreateInstance((int)args[0]);
                     case "CompanyDetail":
                         return global::LightSwitchApplication.CompanyDetail.CreateInstance((int)args[0]);
                     case "EmployeeDetail":
@@ -535,8 +537,6 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.SearchSales.CreateInstance();
                     case "MakePurchasePayment":
                         return global::LightSwitchApplication.MakePurchasePayment.CreateInstance((int)args[0]);
-                    case "AddSalePayment":
-                        return global::LightSwitchApplication.AddSalePayment.CreateInstance((int)args[0]);
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -756,6 +756,15 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowAddSalePayment
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowAddSalePayment);
+                    }
+                }
+
                 public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowCompanyDetail
                 {
                     get
@@ -915,15 +924,6 @@ namespace LightSwitchApplication
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
                                base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMakePurchasePayment);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowAddSalePayment
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowAddSalePayment);
                     }
                 }
 
@@ -1326,6 +1326,32 @@ namespace LightSwitchApplication
                     if (!handled)
                     {
                         d.ShowScreen("LightSwitchApplication.YardManagementSystem.DesktopClient:AddSale", () => global::LightSwitchApplication.AddSale.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowAddSalePayment = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowAddSalePayment",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowAddSalePayment_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowAddSalePayment_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowAddSalePayment_InvokeMethod);
+                private static void _ShowAddSalePayment_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowAddSalePaymentMethod, sf);
+                }
+                private static global::System.Exception _ShowAddSalePayment_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.AddSalePayment_CanRun(ref result, (int)args[0]);
+                    return result ? null : ex;
+                }
+                private static void _ShowAddSalePayment_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.AddSalePayment_Run(ref handled, (int)args[0]);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication.YardManagementSystem.DesktopClient:AddSalePayment", () => global::LightSwitchApplication.AddSalePayment.CreateInstance((int)args[0]), args);
                     }
                 }
  
@@ -1797,32 +1823,6 @@ namespace LightSwitchApplication
                     }
                 }
  
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowAddSalePayment = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowAddSalePayment",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowAddSalePayment_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowAddSalePayment_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowAddSalePayment_InvokeMethod);
-                private static void _ShowAddSalePayment_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowAddSalePaymentMethod, sf);
-                }
-                private static global::System.Exception _ShowAddSalePayment_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
-                {
-                    bool result = true;
-                    d.Application.AddSalePayment_CanRun(ref result, (int)args[0]);
-                    return result ? null : ex;
-                }
-                private static void _ShowAddSalePayment_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
-                {
-                    bool handled = false;
-                    d.Application.AddSalePayment_Run(ref handled, (int)args[0]);
-                    if (!handled)
-                    {
-                        d.ShowScreen("LightSwitchApplication.YardManagementSystem.DesktopClient:AddSalePayment", () => global::LightSwitchApplication.AddSalePayment.CreateInstance((int)args[0]), args);
-                    }
-                }
- 
             }
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddCompanyMethod;
@@ -1838,6 +1838,8 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddPurchaseMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddSaleMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddSalePaymentMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowCompanyDetailMethod;
 
@@ -1874,8 +1876,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSearchSalesMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMakePurchasePaymentMethod;
-
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddSalePaymentMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddCompanyCommand;
 

@@ -27,7 +27,7 @@ namespace LightSwitchApplication
                 dynamic arr2 = this.DataWorkspace.ApplicationData.Exports.Where(x => x.Item.Id == this.Id).Select(x => x);
                 foreach (dynamic a1 in arr2)
                 {
-                    result -= a1.ItemWeight;
+                    result -= a1.Weight;
                 }
             }
         }
