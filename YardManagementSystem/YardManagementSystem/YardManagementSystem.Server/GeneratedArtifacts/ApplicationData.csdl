@@ -26,6 +26,7 @@
     <Property Name="HireDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="EmailId" Type="Edm.String" MaxLength="255" />
+    <Property Name="Gender" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="PhoneNo" Type="Edm.String" MaxLength="255" />
     <Property Name="Address" Type="Edm.String" MaxLength="255" />
     <Property Name="SalaryType" Type="Edm.String" Nullable="false" MaxLength="255" />

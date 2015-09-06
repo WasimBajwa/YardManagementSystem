@@ -24,6 +24,7 @@
           <ScalarProperty Name="HireDate" ColumnName="HireDate" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="SalaryType" ColumnName="SalaryType" />

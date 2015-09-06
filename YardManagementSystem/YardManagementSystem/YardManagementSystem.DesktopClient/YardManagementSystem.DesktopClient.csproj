@@ -328,8 +328,8 @@
     <Compile Include="Screens\SearchEmployees.lsml.cs">
       <DependentUpon>SearchEmployees.lsml</DependentUpon>
     </Compile>
-    <Compile Include="Screens\SearchPurchases.lsml.cs">
-      <DependentUpon>SearchPurchases.lsml</DependentUpon>
+    <Compile Include="Screens\SearchPurchase.lsml.cs">
+      <DependentUpon>SearchPurchase.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\SearchSales.lsml.cs">
       <DependentUpon>SearchSales.lsml</DependentUpon>
@@ -372,15 +372,15 @@
     <LightSwitchModel Include="Screens\SearchCompany.lsml" />
     <LightSwitchModel Include="Screens\SearchEmployees.lsml" />
     <LightSwitchModel Include="Screens\SearchExpenses.lsml" />
-    <LightSwitchModel Include="Screens\SearchExports.lsml" />
     <LightSwitchModel Include="Screens\SearchItems.lsml" />
-    <LightSwitchModel Include="Screens\SearchPurchases.lsml" />
-    <LightSwitchModel Include="Screens\SearchSales.lsml" />
     <LightSwitchModel Include="Screens\PrintPurchase.lsml" />
     <LightSwitchModel Include="Screens\PrintSale.lsml" />
     <LightSwitchModel Include="Screens\PaySalary.lsml" />
     <LightSwitchModel Include="Screens\AddSalePayment.lsml" />
     <LightSwitchModel Include="Screens\MakePurchasePayment.lsml" />
+    <LightSwitchModel Include="Screens\SearchPurchase.lsml" />
+    <LightSwitchModel Include="Screens\SearchSales.lsml" />
+    <LightSwitchModel Include="Screens\SearchExports.lsml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PurchasePrint\PurchasePrint.csproj">
@@ -404,6 +404,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Screensh.png" />
+    <Resource Include="Resources\Screenshot %2886%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />

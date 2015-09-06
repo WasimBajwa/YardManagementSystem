@@ -17,7 +17,52 @@
         View="Microsoft.LightSwitch.RichClient:Screen">
         <ContentItem
           Name="ScreenLayout"
-          Kind="Group">
+          Kind="Group"
+          View="Microsoft.LightSwitch.RichClient:RowsLayout">
+          <ContentItem
+            Name="ExportFromDate"
+            Kind="Value"
+            DataType=":Date?">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchExports/Properties[ExportFromDate]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="130"
+                    ResultType=":Double" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Width]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="130"
+                    ResultType=":Double" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="ExportToDate"
+            Kind="Value"
+            DataType=":Date?">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchExports/Properties[ExportToDate]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
           <ContentItem
             Name="grid"
             Kind="Collection"
@@ -26,7 +71,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="SearchExports/Properties[Exports]" />
+                    Member="SearchExports/Properties[ExportFilter]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -40,14 +85,14 @@
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="BookingDate"
+                Name="ExportDate"
                 Kind="Value"
                 DataType=":Date">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="Export/Properties[BookingDate]" />
+                        Member="Export/Properties[ExportDate]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -61,6 +106,19 @@
                     </ScreenExpressionTree>
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="BookingDate"
+                Kind="Value"
+                DataType=":Date">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Export/Properties[BookingDate]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
                 Name="Company"
@@ -109,27 +167,27 @@
                 </ContentItem>
               </ContentItem>
               <ContentItem
-                Name="LoadingDate"
+                Name="Weight"
                 Kind="Value"
-                DataType=":Date">
+                DataType=":Double">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="Export/Properties[LoadingDate]" />
+                        Member="Export/Properties[Weight]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
-                Name="Port"
+                Name="Country"
                 Kind="Value"
-                DataType=":String">
+                DataType=":String?">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="Export/Properties[Port]" />
+                        Member="Export/Properties[Country]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -149,7 +207,7 @@
               </ContentItem>
               <ContentItem.CommandItems>
                 <ContentItem
-                  Name="Command"
+                  Name="Delete"
                   Kind="Command">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -233,6 +291,18 @@
               </ScreenExpressionTree>
             </ContentItem.DataSource>
           </ContentItem>
+          <ContentItem
+            Name="Close"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SearchExports/Methods[Close]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
         </ContentItem.CommandItems>
       </ContentItem>
     </Screen.RootContentItem>
@@ -268,12 +338,12 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="Exports"
+        Name="ExportFilter"
         PageSize="45"
         PropertyType="CollectionView$Export">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="ExportsQuery"
+            Name="ExportFilterQuery"
             ReturnType="Export*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
@@ -281,7 +351,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="ApplicationData/Members[Exports]" />
+                  Member="ApplicationData/Members[ExportFilter]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -289,10 +359,31 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="SearchExports/Properties[Exports]/Query" />
+              Target="SearchExports/Properties[ExportFilter]/Query">
+              <ArgumentExpression
+                Parameter="FromDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchExports/Properties[ExportFromDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ToDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchExports/Properties[ExportToDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="ExportFromDate"
+        PropertyType=":Date?" />
+      <ScreenProperty
+        Name="ExportToDate"
+        PropertyType=":Date?" />
     </Screen.Properties>
   </Screen>
   <Application.Methods>

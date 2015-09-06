@@ -175,6 +175,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("EmailId");
         }
         
+        partial void OnGenderChanged()
+        {
+            this.___OnPropertyChanged("Gender");
+        }
+        
         partial void OnPhoneNoChanged()
         {
             this.___OnPropertyChanged("PhoneNo");

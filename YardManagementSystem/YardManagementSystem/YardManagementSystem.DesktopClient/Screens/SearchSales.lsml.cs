@@ -14,19 +14,19 @@ namespace LightSwitchApplication
         partial void Print_Execute()
         {
             // Write your code here.
-            this.Application.ShowPrintSale(this.Sales.SelectedItem.Id);
+            this.Application.ShowPrintSale(this.SalesFilter.SelectedItem.Id);
         }
 
         partial void Payment_Execute()
         {
-            // Write your cod
-            if(this.Sales.SelectedItem.Status=="Cleared")
+            // Write your code here.
+            if (this.SalesFilter.SelectedItem.Status == "Cleared")
             {
                 this.ShowMessageBox("Invoice Payment has been cleared.");
             }
             else
             {
-                this.Application.ShowAddSalePayment(this.Sales.SelectedItem.Id);
+                this.Application.ShowAddSalePayment(this.SalesFilter.SelectedItem.Id);
             }
         }
     }

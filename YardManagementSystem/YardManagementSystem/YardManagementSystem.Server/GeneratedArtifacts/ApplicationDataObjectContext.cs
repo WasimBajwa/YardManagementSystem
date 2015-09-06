@@ -743,14 +743,16 @@ namespace LightSwitchApplication.Implementation
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="hireDate">Initial value of the HireDate property.</param>
         /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="gender">Initial value of the Gender property.</param>
         /// <param name="salaryType">Initial value of the SalaryType property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static Employee CreateEmployee(global::System.Int32 id, global::System.DateTime hireDate, global::System.String name, global::System.String salaryType, global::System.Byte[] rowVersion)
+        public static Employee CreateEmployee(global::System.Int32 id, global::System.DateTime hireDate, global::System.String name, global::System.String gender, global::System.String salaryType, global::System.Byte[] rowVersion)
         {
             Employee employee = new Employee();
             employee.Id = id;
             employee.HireDate = hireDate;
             employee.Name = name;
+            employee.Gender = gender;
             employee.SalaryType = salaryType;
             employee.RowVersion = rowVersion;
             return employee;
@@ -858,6 +860,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _EmailId;
         partial void OnEmailIdChanging(global::System.String value);
         partial void OnEmailIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Gender
+        {
+            get
+            {
+                return _Gender;
+            }
+            set
+            {
+                OnGenderChanging(value);
+                ReportPropertyChanging("Gender");
+                _Gender = value;
+                ReportPropertyChanged("Gender");
+                OnGenderChanged();
+            }
+        }
+        private global::System.String _Gender;
+        partial void OnGenderChanging(global::System.String value);
+        partial void OnGenderChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

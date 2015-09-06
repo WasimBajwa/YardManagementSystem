@@ -152,3 +152,5 @@ E:\Development 2015\YardManagementSystem\YardManagementSystem\PurchasePrint\Bin\
 E:\Development 2015\YardManagementSystem\YardManagementSystem\PurchasePrint\Bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\PurchasePrint\Bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\PurchasePrint\obj\Debug\PurchasePrint.csprojResolveAssemblyReference.cache
+E:\Development 2015\YardManagementSystem\YardManagementSystem\PurchasePrint\Bin\Debug\SalePrint.dll
+E:\Development 2015\YardManagementSystem\YardManagementSystem\PurchasePrint\Bin\Debug\SalePrint.pdb

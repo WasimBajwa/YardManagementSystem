@@ -2,7 +2,7 @@
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Companies.lsml" Checksum="E8FAD7EDF538A9B5BAC560B0AF505C22791F151E5B682BDB944BA62A67C53A08" />
-    <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Employees.lsml" Checksum="35086CF85D96E88E03674BE63E1170B689FC1E07E1584D5C7D851957AC25CD8C" />
+    <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Employees.lsml" Checksum="1ED3060088DBFEA0CAFFDB39FD8909F5BB0AC56DECE36C011257A9128C85AF3C" />
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Expenses.lsml" Checksum="54364B4F47C6A22D2AB8326FF165023E4BB57D107A8F763C757CA5D7C26E1996" />
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Exports.lsml" Checksum="6FCB1F678FAB9DE7886D74678049F8039C50FB3A3D48858EC5951823A392B5C7" />
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Items.lsml" Checksum="BC530F6E02DF920E229F5C50BBC96011DB36115DE9FAEA0CDC7210423895AE84" />
@@ -15,5 +15,8 @@
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\Sales.lsml" Checksum="110F221CB94770617A9F138A56E3A7C25289539B561D56C99AD361E8210B5320" />
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\Properties\DataSources\ApplicationData.lsml" Checksum="E6FEEAC3B4A850AAC5F0029259A0B9F8C1BD45F2950D17BD8D6664B9422E6AD6" />
     <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\Properties\Service.lsml" Checksum="679C78F29C5AF23E9956A773B0E46DF90F7B86CADA0B79571E5896A1C79F5B70" />
+    <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\PurchaseFilter.lsml" Checksum="D9171F62D25BC9CBA8A612B33F30CA37A90CD4C37F0C6BBFCE8038E3E83C3B30" />
+    <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\SalesFilter.lsml" Checksum="60CCAEA335532D27C275179B0E918118CF91B8180DD0A56815CF87B09CDF8F7A" />
+    <Document FullPath="E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\YardManagementSystem.Server\DataSources\ApplicationData\ExportFilter.lsml" Checksum="E9A37845300D51BE55CCEF2F5FFD249720FE555837E51EC81B482471ACBE4B6F" />
   </Documents>
 </ModelDocumentManifest>

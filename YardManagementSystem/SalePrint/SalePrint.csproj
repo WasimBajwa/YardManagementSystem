@@ -76,6 +76,9 @@
   <ItemGroup>
     <Resource Include="image.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Screenshot %2886%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

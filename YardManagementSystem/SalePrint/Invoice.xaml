@@ -5,10 +5,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="SalePrint.Invoice"
     mc:Ignorable="d"
-     Width="565" Height="751.5">
+     Width="578" Height="756">
 
     <Grid x:Name="LayoutRoot" Background="White" Margin="0,-83,-27,-142">
-        <TextBlock HorizontalAlignment="Left" Height="23" Margin="156,283,0,0" TextWrapping="Wrap" Text="{Binding Screen.Sale.Date}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="156,283,0,0" TextWrapping="Wrap" Text="{Binding Screen.Sale.SaleDate}" VerticalAlignment="Top" Width="120"/>
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="37,285,0,0" TextWrapping="Wrap" Text="Date :" VerticalAlignment="Top"/>
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="37,306,0,0" TextWrapping="Wrap" Text="Company :" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="156,306,0,0" TextWrapping="Wrap" Text="{Binding Screen.Sale.Company.Name}" VerticalAlignment="Top"/>
@@ -39,9 +39,9 @@
         <TextBlock HorizontalAlignment="Left" Margin="156,644,0,0" TextWrapping="Wrap" Text="{Binding Screen.Sale.PaidAmount}" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,677,0,0" TextWrapping="Wrap" Text="Due Amount :" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="156,677,0,0" TextWrapping="Wrap" Text="{Binding Screen.Sale.DueAmount}" VerticalAlignment="Top"/>
-        <Button Name="btn" Content="Print" HorizontalAlignment="Left" Margin="464,769,0,0" VerticalAlignment="Top" Width="75" Click="PrintButton" />
-        <Viewbox HorizontalAlignment="Left" Height="74" Margin="80,112,0,0" VerticalAlignment="Top" Width="379">
-            <Image Source="image.jpg" Stretch="Fill" Height="75" Width="433"/>
+        <Button Name="btn" Content="Print" HorizontalAlignment="Left" Margin="447,781,0,0" VerticalAlignment="Top" Width="75" Click="PrintButton" />
+        <Viewbox HorizontalAlignment="Left" Height="93" Margin="36,117,0,0" VerticalAlignment="Top" Width="524">
+        	<Image Height="182" Source="Screenshot (86).png" Stretch="Fill" Width="1026"/>
         </Viewbox>
         <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Height="29" Margin="186,403,0,0" TextWrapping="Wrap" Text="Sale Items  " VerticalAlignment="Top" Width="202"/>
         <TextBlock FontSize="30" FontWeight="ExtraBlack" HorizontalAlignment="Left" Height="57" Margin="149,215,0,0" TextWrapping="Wrap" Text="Sale #" VerticalAlignment="Top" Width="134">
@@ -53,8 +53,19 @@
             </TextBlock.Foreground>
         </TextBlock>
         <TextBlock FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Height="38" Margin="288,215,0,0" TextWrapping="Wrap" Text="{Binding Screen.Sale.Id}" VerticalAlignment="Top" Width="100"/>
-        <Rectangle HorizontalAlignment="Left" Height="655" Margin="10,92,0,0" Stroke="Black" VerticalAlignment="Top" Width="552"/>
-        
+        <Line
+    X1="210" Y1="760"
+    X2="340" Y2="760"
+    Stroke="Black"
+    StrokeThickness="2" />
+	 <Line
+    X1="400" Y1="760"
+    X2="520" Y2="760"
+    Stroke="Black"
+    StrokeThickness="2" />
+        <TextBlock FontWeight="Light" HorizontalAlignment="Left" Height="35" Margin="211,720,0,0" TextWrapping="Wrap" Text="Customer Signature" VerticalAlignment="Top" Width="134"/>
+        <TextBlock FontWeight="Light" HorizontalAlignment="Left" Margin="401,720,0,0" TextWrapping="Wrap" Text="Receipt Signature" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="716" Margin="10,117,0,0" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" Width="561"/>
     </Grid>
 
 </UserControl>

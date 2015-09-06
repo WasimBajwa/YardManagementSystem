@@ -12,3 +12,6 @@ YardManagementSystem.Server.DataSources.ApplicationData.Sales.lsml
 YardManagementSystem.Server.DataSources.ApplicationData.SalePayments.lsml
 YardManagementSystem.Server.DataSources.ApplicationData.PurchasePayments.lsml
 YardManagementSystem.Server.DataSources.ApplicationData.Exports.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.PurchaseFilter.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.SalesFilter.lsml
+YardManagementSystem.Server.DataSources.ApplicationData.ExportFilter.lsml

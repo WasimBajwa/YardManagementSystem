@@ -77,6 +77,15 @@
   <ItemGroup>
     <Resource Include="image.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Screenshot %2886%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SalePrint\SalePrint.csproj">
+      <Project>{126E0614-F40F-4E96-A821-998F4C49F6D7}</Project>
+      <Name>SalePrint</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

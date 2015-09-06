@@ -179,6 +179,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Gender
+        {
+            get
+            {
+                return global::LightSwitchApplication.Employee.DetailsClass.GetValue(this, global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties.Gender);
+            }
+            set
+            {
+                global::LightSwitchApplication.Employee.DetailsClass.SetValue(this, global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties.Gender, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Gender_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Gender_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Gender_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string PhoneNo
         {
             get
@@ -488,6 +512,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string> Gender
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties.Gender) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string> PhoneNo
                 {
                     get
@@ -570,6 +602,7 @@ namespace LightSwitchApplication
                 new global::System.DateTime HireDate { get; set; }
                 new string Name { get; set; }
                 new string EmailId { get; set; }
+                new string Gender { get; set; }
                 new string PhoneNo { get; set; }
                 new string Address { get; set; }
                 new string SalaryType { get; set; }
@@ -734,6 +767,43 @@ namespace LightSwitchApplication
                 private static void _EmailId_OnValueChanged(global::LightSwitchApplication.Employee e)
                 {
                     e.EmailId_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Entry
+                    Gender = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Entry(
+                        "Gender",
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._Gender_Stub,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._Gender_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._Gender_Validate,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._Gender_GetImplementationValue,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._Gender_SetImplementationValue,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._Gender_OnValueChanged);
+                private static void _Gender_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Employee.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data> c, global::LightSwitchApplication.Employee.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Gender, sf);
+                }
+                private static bool _Gender_ComputeIsReadOnly(global::LightSwitchApplication.Employee e)
+                {
+                    bool result = false;
+                    e.Gender_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Gender_Validate(global::LightSwitchApplication.Employee e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Gender_Validate(r);
+                }
+                private static string _Gender_GetImplementationValue(global::LightSwitchApplication.Employee.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Gender;
+                }
+                private static void _Gender_SetImplementationValue(global::LightSwitchApplication.Employee.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Gender = v;
+                }
+                private static void _Gender_OnValueChanged(global::LightSwitchApplication.Employee e)
+                {
+                    e.Gender_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1049,6 +1119,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data _EmailId;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data _Gender;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data _PhoneNo;

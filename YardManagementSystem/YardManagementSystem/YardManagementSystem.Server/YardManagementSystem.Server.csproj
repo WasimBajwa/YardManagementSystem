@@ -249,6 +249,15 @@
     <LightSwitchModel Include="DataSources\ApplicationData\SalePayments.lsml" />
     <LightSwitchModel Include="DataSources\ApplicationData\PurchasePayments.lsml" />
     <LightSwitchModel Include="DataSources\ApplicationData\Exports.lsml" />
+    <LightSwitchModel Include="DataSources\ApplicationData\PurchaseFilter.lsml">
+      <DependentUpon>Purchases.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\SalesFilter.lsml">
+      <DependentUpon>Sales.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\ApplicationData\ExportFilter.lsml">
+      <DependentUpon>Exports.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

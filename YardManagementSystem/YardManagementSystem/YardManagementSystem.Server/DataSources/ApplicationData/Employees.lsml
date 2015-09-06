@@ -52,6 +52,21 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
+        Name="Gender"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <SupportedValue
+            DisplayName="Male"
+            Value="Male" />
+          <SupportedValue
+            DisplayName="Female"
+            Value="Female" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="PhoneNo"
         PropertyType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
         <EntityProperty.Attributes>

@@ -118,6 +118,19 @@
               </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
+              Name="Gender"
+              Kind="Value"
+              DataType=":String">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Employee/Properties[Gender]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="PhoneNo"
               Kind="Value"
               DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">

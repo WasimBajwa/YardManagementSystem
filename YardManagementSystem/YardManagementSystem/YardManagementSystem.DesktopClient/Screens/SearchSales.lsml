@@ -19,6 +19,32 @@
           Name="ScreenLayout"
           Kind="Group">
           <ContentItem
+            Name="SaleFromDate"
+            Kind="Value"
+            DataType=":Date?">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchSales/Properties[SaleFromDate]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="SaleToDate"
+            Kind="Value"
+            DataType=":Date?">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchSales/Properties[SaleToDate]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
             Name="grid"
             Kind="Collection"
             DataType="CollectionView$Sale">
@@ -26,7 +52,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="SearchSales/Properties[Sales]" />
+                    Member="SearchSales/Properties[SalesFilter]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -99,6 +125,19 @@
                 </ContentItem.DataSource>
               </ContentItem>
               <ContentItem
+                Name="VehicleNo"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Sale/Properties[VehicleNo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
                 Name="TotalAmount"
                 Kind="Value"
                 DataType=":Double">
@@ -139,7 +178,7 @@
               </ContentItem>
               <ContentItem.CommandItems>
                 <ContentItem
-                  Name="Command"
+                  Name="Delete"
                   Kind="Command">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -151,7 +190,7 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Command1"
+                  Name="Print"
                   Kind="Command">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -282,18 +321,16 @@
       <ScreenMethod
         Name="Print" />
       <ScreenMethod
-        Name="Method" />
-      <ScreenMethod
         Name="Payment" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="Sales"
+        Name="SalesFilter"
         PageSize="45"
         PropertyType="CollectionView$Sale">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="SalesQuery"
+            Name="SalesFilterQuery"
             ReturnType="Sale*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
@@ -301,7 +338,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="ApplicationData/Members[Sales]" />
+                  Member="ApplicationData/Members[SalesFilter]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -309,10 +346,31 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="SearchSales/Properties[Sales]/Query" />
+              Target="SearchSales/Properties[SalesFilter]/Query">
+              <ArgumentExpression
+                Parameter="FromDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchSales/Properties[SaleFromDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="ToDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SearchSales/Properties[SaleToDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="SaleFromDate"
+        PropertyType=":Date?" />
+      <ScreenProperty
+        Name="SaleToDate"
+        PropertyType=":Date?" />
     </Screen.Properties>
   </Screen>
   <Application.Methods>

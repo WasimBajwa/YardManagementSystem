@@ -2,7 +2,7 @@
 <Application
   Name="LightSwitchApplication.YardManagementSystem.DesktopClient"
   TargetPlatform="RichClient"
-  Logo="Microsoft.LightSwitch.UserImageResources::Resources\images (2).jpg"
+  Logo="Microsoft.LightSwitch.UserImageResources::Resources\Screenshot (86).png"
   Version="1.0.0.0"
   DefaultNavigationItem="!module/NavigationItems[Administration]"
   Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
@@ -68,17 +68,17 @@
       Name="ScreenCommandShowSearchExpenses"
       Target="!module/Methods[ShowSearchExpenses]" />
     <ApplicationCommand
-      Name="ScreenCommandShowSearchExports"
-      Target="!module/Methods[ShowSearchExports]" />
-    <ApplicationCommand
       Name="ScreenCommandShowSearchItems"
       Target="!module/Methods[ShowSearchItems]" />
     <ApplicationCommand
-      Name="ScreenCommandShowSearchPurchases"
-      Target="!module/Methods[ShowSearchPurchases]" />
+      Name="ScreenCommandShowSearchPurchase"
+      Target="!module/Methods[ShowSearchPurchase]" />
     <ApplicationCommand
       Name="ScreenCommandShowSearchSales"
       Target="!module/Methods[ShowSearchSales]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSearchExports"
+      Target="!module/Methods[ShowSearchExports]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -156,8 +156,8 @@
         Name="link4"
         Command="!module/Commands[ScreenCommandShowAddPurchase]" />
       <ApplicationNavigationLink
-        Name="link11"
-        Command="!module/Commands[ScreenCommandShowSearchPurchases]" />
+        Name="link12"
+        Command="!module/Commands[ScreenCommandShowSearchPurchase]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="group5">
@@ -169,7 +169,7 @@
         Name="link5"
         Command="!module/Commands[ScreenCommandShowAddSale]" />
       <ApplicationNavigationLink
-        Name="link12"
+        Name="link11"
         Command="!module/Commands[ScreenCommandShowSearchSales]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup

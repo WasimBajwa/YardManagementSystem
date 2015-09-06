@@ -8,7 +8,9 @@
       <OutOfBrowserSettings.SecuritySettings>
         <SecuritySettings ElevatedPermissions="Required" />
       </OutOfBrowserSettings.SecuritySettings>
-      <OutOfBrowserSettings.Icons />
+      <OutOfBrowserSettings.Icons>
+        <Icon Size="32,32">Resources/Screensh.png</Icon>
+      </OutOfBrowserSettings.Icons>
     </OutOfBrowserSettings>
   </Deployment.OutOfBrowserSettings>
   <Deployment.Parts>

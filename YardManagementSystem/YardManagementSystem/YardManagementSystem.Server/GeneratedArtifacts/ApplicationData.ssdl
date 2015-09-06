@@ -81,6 +81,7 @@
     <Property Name="HireDate" Type="datetime" Nullable="false" />
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="EmailId" Type="nvarchar" MaxLength="255" />
+    <Property Name="Gender" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="PhoneNo" Type="nvarchar" MaxLength="255" />
     <Property Name="Address" Type="nvarchar" MaxLength="255" />
     <Property Name="SalaryType" Type="nvarchar" Nullable="false" MaxLength="255" />
