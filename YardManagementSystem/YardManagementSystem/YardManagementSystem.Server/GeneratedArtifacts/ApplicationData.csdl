@@ -25,6 +25,7 @@
     <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HireDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="IqamaNo" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="EmailId" Type="Edm.String" MaxLength="255" />
     <Property Name="Gender" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="PhoneNo" Type="Edm.String" MaxLength="255" />
@@ -60,7 +61,7 @@
     <Property Name="Export_Company" Type="Edm.Int32" Nullable="false" />
     <Property Name="Export_Item" Type="Edm.Int32" Nullable="false" />
     <Property Name="Weight" Type="Edm.Double" Nullable="false" />
-    <Property Name="Rate" Type="Edm.Double" Nullable="false" />
+    <Property Name="Rate" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="BookingDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="LoadingDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="Container" Type="Edm.String" MaxLength="255" />
@@ -100,7 +101,7 @@
     <Property Name="PurchaseItem_Item" Type="Edm.Int32" Nullable="false" />
     <Property Name="GrossWeight" Type="Edm.Double" Nullable="false" />
     <Property Name="TearWeight" Type="Edm.Double" Nullable="false" />
-    <Property Name="Rate" Type="Edm.Double" Nullable="false" />
+    <Property Name="Rate" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Purchase_PurchaseItem" Type="Edm.Int32" Nullable="false" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
     <Property Name="Created" Type="Edm.DateTimeOffset" />
@@ -116,7 +117,7 @@
     </Key>
     <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PurchasePayment_Purchase" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Deposit" Type="Edm.Double" Nullable="false" />
+    <Property Name="Deposit" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="PaymentDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
     <Property Name="Created" Type="Edm.DateTimeOffset" />
@@ -167,7 +168,7 @@
     <Property Name="SaleItem_Item" Type="Edm.Int32" Nullable="false" />
     <Property Name="GrossWeight" Type="Edm.Double" Nullable="false" />
     <Property Name="TearWeight" Type="Edm.Double" Nullable="false" />
-    <Property Name="Rate" Type="Edm.Double" Nullable="false" />
+    <Property Name="Rate" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Sale_SaleItem" Type="Edm.Int32" Nullable="false" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
     <Property Name="Created" Type="Edm.DateTimeOffset" />
@@ -183,7 +184,7 @@
     </Key>
     <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="SalePayment_Sale" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Deposit" Type="Edm.Double" Nullable="false" />
+    <Property Name="Deposit" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="PaymentDate" Type="Edm.DateTime" Nullable="false" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
     <Property Name="Created" Type="Edm.DateTimeOffset" />

@@ -131,7 +131,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double Rate
+        public decimal Rate
         {
             get
             {
@@ -428,7 +428,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double TotalAmount
+        public decimal TotalAmount
         {
             get
             {
@@ -437,7 +437,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TotalAmount_Compute(ref double result);
+        partial void TotalAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TotalAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -587,11 +587,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double> Rate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal> Rate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties.Rate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties.Rate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>;
                     }
                 }
                 
@@ -691,11 +691,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double> TotalAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal> TotalAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties.TotalAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties.TotalAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>;
                     }
                 }
                 
@@ -723,7 +723,7 @@ namespace LightSwitchApplication
             {
                 new int Id { get; set; }
                 new double Weight { get; set; }
-                new double Rate { get; set; }
+                new decimal Rate { get; set; }
                 new global::System.DateTime BookingDate { get; set; }
                 new global::System.DateTime LoadingDate { get; set; }
                 new string Container { get; set; }
@@ -822,8 +822,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Entry
-                    Rate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Entry
+                    Rate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Entry(
                         "Rate",
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._Rate_Stub,
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._Rate_ComputeIsReadOnly,
@@ -831,7 +831,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._Rate_GetImplementationValue,
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._Rate_SetImplementationValue,
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._Rate_OnValueChanged);
-                private static void _Rate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Export.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Data> c, global::LightSwitchApplication.Export.DetailsClass d, object sf)
+                private static void _Rate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Export.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Export.DetailsClass d, object sf)
                 {
                     c(d, ref d._Rate, sf);
                 }
@@ -845,11 +845,11 @@ namespace LightSwitchApplication
                 {
                     e.Rate_Validate(r);
                 }
-                private static double _Rate_GetImplementationValue(global::LightSwitchApplication.Export.DetailsClass d)
+                private static decimal _Rate_GetImplementationValue(global::LightSwitchApplication.Export.DetailsClass d)
                 {
                     return d.ImplementationEntity.Rate;
                 }
-                private static void _Rate_SetImplementationValue(global::LightSwitchApplication.Export.DetailsClass d, double v)
+                private static void _Rate_SetImplementationValue(global::LightSwitchApplication.Export.DetailsClass d, decimal v)
                 {
                     d.ImplementationEntity.Rate = v;
                 }
@@ -1287,13 +1287,13 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Entry
-                    TotalAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Entry
+                    TotalAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Entry(
                         "TotalAmount",
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._TotalAmount_Stub,
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._TotalAmount_Validate,
                         global::LightSwitchApplication.Export.DetailsClass.PropertySetProperties._TotalAmount_ComputeValue);
-                private static void _TotalAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Export.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Data> c, global::LightSwitchApplication.Export.DetailsClass d, object sf)
+                private static void _TotalAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Export.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Export.DetailsClass d, object sf)
                 {
                     c(d, ref d._TotalAmount, sf);
                 }
@@ -1301,9 +1301,9 @@ namespace LightSwitchApplication
                 {
                     e.TotalAmount_Validate(r);
                 }
-                private static double _TotalAmount_ComputeValue(global::LightSwitchApplication.Export e)
+                private static decimal _TotalAmount_ComputeValue(global::LightSwitchApplication.Export e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.TotalAmount_Compute(ref value);
                     return value;
                 }
@@ -1411,7 +1411,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Data _Weight;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Data _Rate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Data _Rate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, global::System.DateTime>.Data _BookingDate;
@@ -1450,7 +1450,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, byte[]>.Data _RowVersion;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, double>.Data _TotalAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, decimal>.Data _TotalAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Export, global::LightSwitchApplication.Export.DetailsClass, global::LightSwitchApplication.Company>.Data _Company;

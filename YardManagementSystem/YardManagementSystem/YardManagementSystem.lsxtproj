@@ -20,8 +20,8 @@
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Desktop</ApplicationClientType>
     <ApplicationServerType>LocalHost</ApplicationServerType>
-    <AuthenticationType>None</AuthenticationType>
-    <ApplicationName>YardManagementSystem</ApplicationName>
+    <AuthenticationType>Forms</AuthenticationType>
+    <ApplicationName>Saudi YMS</ApplicationName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
@@ -126,6 +126,20 @@
       <Client>X360LIGHTNING.THEME.CLIENT;X360LIGHTNING.THEME.COMMON;SYSTEM.XML.SERIALIZATION;X360LIGHTNING.THEME.CLIENT.DESIGN</Client>
       <Server>X360LIGHTNING.THEME.COMMON;X360LIGHTNING.THEME.SERVER</Server>
     </LightSwitchExtension>
+  </ItemGroup>
+  <ItemGroup Condition="'$(AuthenticationType)' == 'Forms'">
+    <_BuildFile Include="YardManagementSystem.Server\LogIn.aspx">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+    <_BuildFile Include="YardManagementSystem.Server\LogOut.aspx">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
 </Project>

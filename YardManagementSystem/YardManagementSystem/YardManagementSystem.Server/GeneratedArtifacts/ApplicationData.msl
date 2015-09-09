@@ -23,6 +23,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="HireDate" ColumnName="HireDate" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IqamaNo" ColumnName="IqamaNo" />
           <ScalarProperty Name="EmailId" ColumnName="EmailId" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />

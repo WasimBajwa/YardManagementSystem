@@ -230,7 +230,7 @@
                   <ContentItem
                     Name="Rate1"
                     Kind="Value"
-                    DataType=":Double">
+                    DataType="Microsoft.LightSwitch.Extensions:Money">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -318,7 +318,7 @@
                   <ContentItem
                     Name="Price1"
                     Kind="Value"
-                    DataType=":Double">
+                    DataType="Microsoft.LightSwitch.Extensions:Money">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -370,7 +370,7 @@
                 <ContentItem
                   Name="Rate"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -458,7 +458,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -597,7 +597,7 @@
                   <ContentItem
                     Name="Rate3"
                     Kind="Value"
-                    DataType=":Double">
+                    DataType="Microsoft.LightSwitch.Extensions:Money">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -685,7 +685,7 @@
                   <ContentItem
                     Name="Price3"
                     Kind="Value"
-                    DataType=":Double">
+                    DataType="Microsoft.LightSwitch.Extensions:Money">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -737,7 +737,7 @@
                 <ContentItem
                   Name="Rate2"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -825,7 +825,7 @@
                 <ContentItem
                   Name="Price2"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -974,7 +974,7 @@
                   <ContentItem
                     Name="Rate5"
                     Kind="Value"
-                    DataType=":Double">
+                    DataType="Microsoft.LightSwitch.Extensions:Money">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1104,7 +1104,7 @@
                   <ContentItem
                     Name="TotalAmount1"
                     Kind="Value"
-                    DataType=":Double">
+                    DataType="Microsoft.LightSwitch.Extensions:Money">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1166,7 +1166,7 @@
                 <ContentItem
                   Name="Rate4"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1296,7 +1296,7 @@
                 <ContentItem
                   Name="TotalAmount"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1402,6 +1402,42 @@
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\index.jpg"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="Close"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="ItemDetail/Methods[Close]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\close_button_red.png"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
           </ContentItem>
         </ContentItem.CommandItems>
       </ContentItem>

@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddSalePayment_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.SalePaymentProperty);
+            this.ShowMessageBox("Payment has been added successfully.");
+            this.Close(true);
         }
 
         partial void AddSalePayment_Activated()

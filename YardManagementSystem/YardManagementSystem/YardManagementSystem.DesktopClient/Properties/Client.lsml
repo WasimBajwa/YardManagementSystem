@@ -2,9 +2,8 @@
 <Application
   Name="LightSwitchApplication.YardManagementSystem.DesktopClient"
   TargetPlatform="RichClient"
-  Logo="Microsoft.LightSwitch.UserImageResources::Resources\Screenshot (86).png"
+  Logo=""
   Version="1.0.0.0"
-  DefaultNavigationItem="!module/NavigationItems[Administration]"
   Shell="Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell"
   Theme="Microsoft.LightSwitch.RichClient:Blue" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
   <Application.Attributes>
@@ -79,6 +78,9 @@
     <ApplicationCommand
       Name="ScreenCommandShowSearchExports"
       Target="!module/Methods[ShowSearchExports]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowHome"
+      Target="!module/Methods[ShowHome]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup

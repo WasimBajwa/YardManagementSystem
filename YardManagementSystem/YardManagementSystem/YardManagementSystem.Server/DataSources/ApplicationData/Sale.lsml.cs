@@ -7,7 +7,7 @@ namespace LightSwitchApplication
 {
     public partial class Sale
     {
-        partial void TotalAmount_Compute(ref double result)
+        partial void TotalAmount_Compute(ref decimal result)
         {
             // Set result to the desired field value
             result = 0;
@@ -22,7 +22,7 @@ namespace LightSwitchApplication
             }
         }
 
-        partial void PaidAmount_Compute(ref double result)
+        partial void PaidAmount_Compute(ref decimal result)
         {
             // Set result to the desired field value
             result = 0;
@@ -37,7 +37,7 @@ namespace LightSwitchApplication
             }
         }
 
-        partial void DueAmount_Compute(ref double result)
+        partial void DueAmount_Compute(ref decimal result)
         {
             // Set result to the desired field value
             result = this.TotalAmount - this.PaidAmount;

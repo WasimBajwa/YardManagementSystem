@@ -3521,6 +3521,201 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class Home
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private Home() : base("LightSwitchApplication.YardManagementSystem.DesktopClient:Home")
+        {
+            global::LightSwitchApplication.Home.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static Home CreateInstance()
+        {
+            return new global::LightSwitchApplication.Home(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Home_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass, global::LightSwitchApplication.Home.DetailsClass.PropertySet, global::LightSwitchApplication.Home.DetailsClass.CommandSet, global::LightSwitchApplication.Home.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass>.Entry
+                __HomeEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeSavingEvent,
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeSavedEvent,
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeClosingEvent,
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeCreated,
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeActivated,
+                    global::LightSwitchApplication.Home.DetailsClass.__Home_InvokeSaveErrorEvent);
+            private static void __Home_InvokeInitializeDataWorkspace(global::LightSwitchApplication.Home s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.Home_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __Home_InvokeSavingEvent(global::LightSwitchApplication.Home s)
+            {
+                bool handled = false;
+                s.Home_Saving(ref handled);
+                return handled;
+            }
+            private static void __Home_InvokeSavedEvent(global::LightSwitchApplication.Home s)
+            {
+                s.Home_Saved();
+            }
+            private static bool __Home_InvokeClosingEvent(global::LightSwitchApplication.Home s)
+            {
+                bool cancel = false;
+                s.Home_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __Home_InvokeCreated(global::LightSwitchApplication.Home s)
+            {
+                s.Home_Created();
+            }
+            private static void __Home_InvokeActivated(global::LightSwitchApplication.Home s)
+            {
+                s.Home_Activated();
+            }
+            private static bool __Home_InvokeSaveErrorEvent(global::LightSwitchApplication.Home s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.Home_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.Home.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.Home.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.Home.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.Home, global::LightSwitchApplication.Home.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     public sealed partial class ItemDetail
         : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.ItemDetail, global::LightSwitchApplication.ItemDetail.DetailsClass>
     {
@@ -7352,6 +7547,378 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    public sealed partial class SearchExports
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private SearchExports() : base("LightSwitchApplication.YardManagementSystem.DesktopClient:SearchExports")
+        {
+            global::LightSwitchApplication.SearchExports.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static SearchExports CreateInstance()
+        {
+            return new global::LightSwitchApplication.SearchExports(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SearchExports_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void ExportFilter_SelectionChanged();
+
+        partial void ExportFilter_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExportFilter_Loaded(bool succeeded);
+
+        partial void ExportFromDate_Changed();
+
+        partial void ExportToDate_Changed();
+
+        /// <summary>
+        /// Gets the ExportFilter visual collection. The collection contains all records currently shown on the respective list or grid control.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Export> ExportFilter
+        {
+            get
+            {
+                return global::LightSwitchApplication.SearchExports.DetailsClass.GetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFilter);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExportFilter_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<global::System.DateTime> ExportFromDate
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SearchExports.DetailsClass.GetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFromDate);
+            }
+            set
+            {
+                global::LightSwitchApplication.SearchExports.DetailsClass.SetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFromDate, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExportFromDate_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<global::System.DateTime> ExportToDate
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SearchExports.DetailsClass.GetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportToDate);
+            }
+            set
+            {
+                global::LightSwitchApplication.SearchExports.DetailsClass.SetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportToDate, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExportToDate_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySet, global::LightSwitchApplication.SearchExports.DetailsClass.CommandSet, global::LightSwitchApplication.SearchExports.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFilter;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>.Entry
+                __SearchExportsEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeSavingEvent,
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeSavedEvent,
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeClosingEvent,
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeCreated,
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeActivated,
+                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeSaveErrorEvent);
+            private static void __SearchExports_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SearchExports s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.SearchExports_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __SearchExports_InvokeSavingEvent(global::LightSwitchApplication.SearchExports s)
+            {
+                bool handled = false;
+                s.SearchExports_Saving(ref handled);
+                return handled;
+            }
+            private static void __SearchExports_InvokeSavedEvent(global::LightSwitchApplication.SearchExports s)
+            {
+                s.SearchExports_Saved();
+            }
+            private static bool __SearchExports_InvokeClosingEvent(global::LightSwitchApplication.SearchExports s)
+            {
+                bool cancel = false;
+                s.SearchExports_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __SearchExports_InvokeCreated(global::LightSwitchApplication.SearchExports s)
+            {
+                s.SearchExports_Created();
+            }
+            private static void __SearchExports_InvokeActivated(global::LightSwitchApplication.SearchExports s)
+            {
+                s.SearchExports_Activated();
+            }
+            private static bool __SearchExports_InvokeSaveErrorEvent(global::LightSwitchApplication.SearchExports s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.SearchExports_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.SearchExports.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.SearchExports.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.SearchExports.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable ExportFilterQuery(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate)
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                        this.Screen.DataWorkspace.ApplicationData.ExportFilter(FromDate, ToDate),
+                        "Company"),
+                    "Item");
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Data _ExportFilter;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ExportFromDate;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ExportToDate;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export> ExportFilter
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>)base.GetItem(global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFilter);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>> ExportFromDate
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>)base.GetItem(global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFromDate);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>> ExportToDate
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>)base.GetItem(global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportToDate);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Entry
+                    ExportFilter = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Entry(
+                        "ExportFilter",
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_Stub,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_Validate,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_CreateQuery,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_SelectionChanged,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_OnCollectionChanged,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_OnLoaded);
+                private static void _ExportFilter_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchExports.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Data> c, global::LightSwitchApplication.SearchExports.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ExportFilter, sf);
+                }
+                private static void _ExportFilter_Validate(global::LightSwitchApplication.SearchExports s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.ExportFilter_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _ExportFilter_CreateQuery(global::LightSwitchApplication.SearchExports.DetailsClass d, object[] args)
+                {
+                    return d.ExportFilterQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1]);
+                }
+                private static void _ExportFilter_SelectionChanged(global::LightSwitchApplication.SearchExports s)
+                {
+                    s.ExportFilter_SelectionChanged();
+                }
+                private static void _ExportFilter_OnCollectionChanged(global::LightSwitchApplication.SearchExports s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.ExportFilter_Changed(e);
+                }
+                private static void _ExportFilter_OnLoaded(global::LightSwitchApplication.SearchExports s, bool succeeded)
+                {
+                    s.ExportFilter_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    ExportFromDate = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "ExportFromDate",
+                        false,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFromDate_Stub,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFromDate_Validate,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFromDate_OnValueChanged);
+                private static void _ExportFromDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchExports.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.SearchExports.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ExportFromDate, sf);
+                }
+                private static void _ExportFromDate_Validate(global::LightSwitchApplication.SearchExports s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.ExportFromDate_Validate(r);
+                }
+                private static void _ExportFromDate_OnValueChanged(global::LightSwitchApplication.SearchExports s)
+                {
+                    s.ExportFromDate_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    ExportToDate = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "ExportToDate",
+                        false,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportToDate_Stub,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportToDate_Validate,
+                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportToDate_OnValueChanged);
+                private static void _ExportToDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchExports.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.SearchExports.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ExportToDate, sf);
+                }
+                private static void _ExportToDate_Validate(global::LightSwitchApplication.SearchExports s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.ExportToDate_Validate(r);
+                }
+                private static void _ExportToDate_OnValueChanged(global::LightSwitchApplication.SearchExports s)
+                {
+                    s.ExportToDate_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     public sealed partial class SearchItems
         : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SearchItems, global::LightSwitchApplication.SearchItems.DetailsClass>
     {
@@ -8784,378 +9351,6 @@ namespace LightSwitchApplication
                     d.Screen.Payment_Execute();
                 }
 
-            }
-        }
-    }
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class SearchExports
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
-    {
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private SearchExports() : base("LightSwitchApplication.YardManagementSystem.DesktopClient:SearchExports")
-        {
-            global::LightSwitchApplication.SearchExports.DetailsClass.Initialize(this);
-        }
-
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static SearchExports CreateInstance()
-        {
-            return new global::LightSwitchApplication.SearchExports(
-            );
-        }
-
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_Created();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_Activated();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_Saving(ref bool handled);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_Saved();
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_Closing(ref bool cancel);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SearchExports_SaveError(global::System.Exception exception, ref bool handled);
-     
-        #region Private Properties
-        
-        /// <summary>
-        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.Application Application
-        {
-            get
-            {
-                return global::LightSwitchApplication.Application.Current;
-            }
-        }
-        
-        /// <summary>
-        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.DataWorkspace DataWorkspace
-        {
-            get
-            {
-                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
-            }
-        }
-        
-        #endregion
- 
-        partial void ExportFilter_SelectionChanged();
-
-        partial void ExportFilter_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
-
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ExportFilter_Loaded(bool succeeded);
-
-        partial void ExportFromDate_Changed();
-
-        partial void ExportToDate_Changed();
-
-        /// <summary>
-        /// Gets the ExportFilter visual collection. The collection contains all records currently shown on the respective list or grid control.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Export> ExportFilter
-        {
-            get
-            {
-                return global::LightSwitchApplication.SearchExports.DetailsClass.GetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFilter);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ExportFilter_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTime> ExportFromDate
-        {
-            get 
-            {
-                return global::LightSwitchApplication.SearchExports.DetailsClass.GetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFromDate);
-            }
-            set
-            {
-                global::LightSwitchApplication.SearchExports.DetailsClass.SetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFromDate, value);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ExportFromDate_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTime> ExportToDate
-        {
-            get 
-            {
-                return global::LightSwitchApplication.SearchExports.DetailsClass.GetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportToDate);
-            }
-            set
-            {
-                global::LightSwitchApplication.SearchExports.DetailsClass.SetValue(this, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportToDate, value);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ExportToDate_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.SearchExports.DetailsClass.PropertySet, global::LightSwitchApplication.SearchExports.DetailsClass.CommandSet, global::LightSwitchApplication.SearchExports.DetailsClass.MethodSet>
-        {
-
-            static DetailsClass()
-            {
-                var initializePropertyEntry = global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFilter;
-            }
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>.Entry
-                __SearchExportsEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>.Entry(
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeSavingEvent,
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeSavedEvent,
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeClosingEvent,
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeCreated,
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeActivated,
-                    global::LightSwitchApplication.SearchExports.DetailsClass.__SearchExports_InvokeSaveErrorEvent);
-            private static void __SearchExports_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SearchExports s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
-            {
-                s.SearchExports_InitializeDataWorkspace(saveChangesTo);
-            }
-            private static bool __SearchExports_InvokeSavingEvent(global::LightSwitchApplication.SearchExports s)
-            {
-                bool handled = false;
-                s.SearchExports_Saving(ref handled);
-                return handled;
-            }
-            private static void __SearchExports_InvokeSavedEvent(global::LightSwitchApplication.SearchExports s)
-            {
-                s.SearchExports_Saved();
-            }
-            private static bool __SearchExports_InvokeClosingEvent(global::LightSwitchApplication.SearchExports s)
-            {
-                bool cancel = false;
-                s.SearchExports_Closing(ref cancel);
-                return cancel;
-            }
-            private static void __SearchExports_InvokeCreated(global::LightSwitchApplication.SearchExports s)
-            {
-                s.SearchExports_Created();
-            }
-            private static void __SearchExports_InvokeActivated(global::LightSwitchApplication.SearchExports s)
-            {
-                s.SearchExports_Activated();
-            }
-            private static bool __SearchExports_InvokeSaveErrorEvent(global::LightSwitchApplication.SearchExports s, global::System.Exception ex)
-            {
-                bool handled = false;
-                s.SearchExports_SaveError(ex, ref handled);
-                return handled;
-            }
-
-            public DetailsClass() : base()
-            {
-            }
-
-            public new global::LightSwitchApplication.SearchExports.DetailsClass.PropertySet Properties
-            {
-                get
-                {
-                    return base.Properties;
-                }
-            }
-
-            public new global::LightSwitchApplication.SearchExports.DetailsClass.CommandSet Commands
-            {
-                get
-                {
-                    return base.Commands;
-                }
-            }
-
-            public new global::LightSwitchApplication.SearchExports.DetailsClass.MethodSet Methods
-            {
-                get
-                {
-                    return base.Methods;
-                }
-            }
-
-            private global::Microsoft.LightSwitch.IDataServiceQueryable ExportFilterQuery(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate)
-            {
-                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                    global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                        this.Screen.DataWorkspace.ApplicationData.ExportFilter(FromDate, ToDate),
-                        "Company"),
-                    "Item");
-            }
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Data _ExportFilter;
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ExportFromDate;
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ExportToDate;
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
-            {
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export> ExportFilter
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>)base.GetItem(global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFilter);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>> ExportFromDate
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>)base.GetItem(global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportFromDate);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>> ExportToDate
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>)base.GetItem(global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties.ExportToDate);
-                    }
-                }
-
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass>
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class PropertySetProperties
-            {
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Entry
-                    ExportFilter = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Entry(
-                        "ExportFilter",
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_Stub,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_Validate,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_CreateQuery,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_SelectionChanged,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_OnCollectionChanged,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFilter_OnLoaded);
-                private static void _ExportFilter_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchExports.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::LightSwitchApplication.Export>.Data> c, global::LightSwitchApplication.SearchExports.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ExportFilter, sf);
-                }
-                private static void _ExportFilter_Validate(global::LightSwitchApplication.SearchExports s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.ExportFilter_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _ExportFilter_CreateQuery(global::LightSwitchApplication.SearchExports.DetailsClass d, object[] args)
-                {
-                    return d.ExportFilterQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1]);
-                }
-                private static void _ExportFilter_SelectionChanged(global::LightSwitchApplication.SearchExports s)
-                {
-                    s.ExportFilter_SelectionChanged();
-                }
-                private static void _ExportFilter_OnCollectionChanged(global::LightSwitchApplication.SearchExports s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-                {
-                    s.ExportFilter_Changed(e);
-                }
-                private static void _ExportFilter_OnLoaded(global::LightSwitchApplication.SearchExports s, bool succeeded)
-                {
-                    s.ExportFilter_Loaded(succeeded);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    ExportFromDate = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
-                        "ExportFromDate",
-                        false,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFromDate_Stub,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFromDate_Validate,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportFromDate_OnValueChanged);
-                private static void _ExportFromDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchExports.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.SearchExports.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ExportFromDate, sf);
-                }
-                private static void _ExportFromDate_Validate(global::LightSwitchApplication.SearchExports s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.ExportFromDate_Validate(r);
-                }
-                private static void _ExportFromDate_OnValueChanged(global::LightSwitchApplication.SearchExports s)
-                {
-                    s.ExportFromDate_Changed();
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    ExportToDate = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
-                        "ExportToDate",
-                        false,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportToDate_Stub,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportToDate_Validate,
-                        global::LightSwitchApplication.SearchExports.DetailsClass.PropertySetProperties._ExportToDate_OnValueChanged);
-                private static void _ExportToDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchExports.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SearchExports, global::LightSwitchApplication.SearchExports.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.SearchExports.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ExportToDate, sf);
-                }
-                private static void _ExportToDate_Validate(global::LightSwitchApplication.SearchExports s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.ExportToDate_Validate(r);
-                }
-                private static void _ExportToDate_OnValueChanged(global::LightSwitchApplication.SearchExports s)
-                {
-                    s.ExportToDate_Changed();
-                }
-
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class CommandSetProperties
-            {
-            }
-
-            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            internal sealed class MethodSetProperties
-            {
             }
         }
     }

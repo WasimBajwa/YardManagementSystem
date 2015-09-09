@@ -743,15 +743,17 @@ namespace LightSwitchApplication.Implementation
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="hireDate">Initial value of the HireDate property.</param>
         /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="iqamaNo">Initial value of the IqamaNo property.</param>
         /// <param name="gender">Initial value of the Gender property.</param>
         /// <param name="salaryType">Initial value of the SalaryType property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static Employee CreateEmployee(global::System.Int32 id, global::System.DateTime hireDate, global::System.String name, global::System.String gender, global::System.String salaryType, global::System.Byte[] rowVersion)
+        public static Employee CreateEmployee(global::System.Int32 id, global::System.DateTime hireDate, global::System.String name, global::System.String iqamaNo, global::System.String gender, global::System.String salaryType, global::System.Byte[] rowVersion)
         {
             Employee employee = new Employee();
             employee.Id = id;
             employee.HireDate = hireDate;
             employee.Name = name;
+            employee.IqamaNo = iqamaNo;
             employee.Gender = gender;
             employee.SalaryType = salaryType;
             employee.RowVersion = rowVersion;
@@ -836,6 +838,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _Name;
         partial void OnNameChanging(global::System.String value);
         partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String IqamaNo
+        {
+            get
+            {
+                return _IqamaNo;
+            }
+            set
+            {
+                OnIqamaNoChanging(value);
+                ReportPropertyChanging("IqamaNo");
+                _IqamaNo = value;
+                ReportPropertyChanged("IqamaNo");
+                OnIqamaNoChanged();
+            }
+        }
+        private global::System.String _IqamaNo;
+        partial void OnIqamaNoChanging(global::System.String value);
+        partial void OnIqamaNoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1412,7 +1438,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="port">Initial value of the Port property.</param>
         /// <param name="exportDate">Initial value of the ExportDate property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static Export CreateExport(global::System.Int32 id, global::System.Int32 export_Company, global::System.Int32 export_Item, global::System.Double weight, global::System.Double rate, global::System.DateTime bookingDate, global::System.DateTime loadingDate, global::System.String port, global::System.DateTime exportDate, global::System.Byte[] rowVersion)
+        public static Export CreateExport(global::System.Int32 id, global::System.Int32 export_Company, global::System.Int32 export_Item, global::System.Double weight, global::System.Decimal rate, global::System.DateTime bookingDate, global::System.DateTime loadingDate, global::System.String port, global::System.DateTime exportDate, global::System.Byte[] rowVersion)
         {
             Export export = new Export();
             export.Id = id;
@@ -1536,7 +1562,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Double Rate
+        public global::System.Decimal Rate
         {
             get
             {
@@ -1551,8 +1577,8 @@ namespace LightSwitchApplication.Implementation
                 OnRateChanged();
             }
         }
-        private global::System.Double _Rate;
-        partial void OnRateChanging(global::System.Double value);
+        private global::System.Decimal _Rate;
+        partial void OnRateChanging(global::System.Decimal value);
         partial void OnRateChanged();
     
         /// <summary>
@@ -2636,7 +2662,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="rate">Initial value of the Rate property.</param>
         /// <param name="purchase_PurchaseItem">Initial value of the Purchase_PurchaseItem property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static PurchaseItem CreatePurchaseItem(global::System.Int32 id, global::System.Int32 purchaseItem_Item, global::System.Double grossWeight, global::System.Double tearWeight, global::System.Double rate, global::System.Int32 purchase_PurchaseItem, global::System.Byte[] rowVersion)
+        public static PurchaseItem CreatePurchaseItem(global::System.Int32 id, global::System.Int32 purchaseItem_Item, global::System.Double grossWeight, global::System.Double tearWeight, global::System.Decimal rate, global::System.Int32 purchase_PurchaseItem, global::System.Byte[] rowVersion)
         {
             PurchaseItem purchaseItem = new PurchaseItem();
             purchaseItem.Id = id;
@@ -2757,7 +2783,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Double Rate
+        public global::System.Decimal Rate
         {
             get
             {
@@ -2772,8 +2798,8 @@ namespace LightSwitchApplication.Implementation
                 OnRateChanged();
             }
         }
-        private global::System.Double _Rate;
-        partial void OnRateChanging(global::System.Double value);
+        private global::System.Decimal _Rate;
+        partial void OnRateChanging(global::System.Decimal value);
         partial void OnRateChanged();
     
         /// <summary>
@@ -3023,7 +3049,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="deposit">Initial value of the Deposit property.</param>
         /// <param name="paymentDate">Initial value of the PaymentDate property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static PurchasePayment CreatePurchasePayment(global::System.Int32 id, global::System.Int32 purchasePayment_Purchase, global::System.Double deposit, global::System.DateTime paymentDate, global::System.Byte[] rowVersion)
+        public static PurchasePayment CreatePurchasePayment(global::System.Int32 id, global::System.Int32 purchasePayment_Purchase, global::System.Decimal deposit, global::System.DateTime paymentDate, global::System.Byte[] rowVersion)
         {
             PurchasePayment purchasePayment = new PurchasePayment();
             purchasePayment.Id = id;
@@ -3094,7 +3120,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Double Deposit
+        public global::System.Decimal Deposit
         {
             get
             {
@@ -3109,8 +3135,8 @@ namespace LightSwitchApplication.Implementation
                 OnDepositChanged();
             }
         }
-        private global::System.Double _Deposit;
-        partial void OnDepositChanging(global::System.Double value);
+        private global::System.Decimal _Deposit;
+        partial void OnDepositChanging(global::System.Decimal value);
         partial void OnDepositChanged();
     
         /// <summary>
@@ -4012,7 +4038,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="rate">Initial value of the Rate property.</param>
         /// <param name="sale_SaleItem">Initial value of the Sale_SaleItem property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static SaleItem CreateSaleItem(global::System.Int32 id, global::System.Int32 saleItem_Item, global::System.Double grossWeight, global::System.Double tearWeight, global::System.Double rate, global::System.Int32 sale_SaleItem, global::System.Byte[] rowVersion)
+        public static SaleItem CreateSaleItem(global::System.Int32 id, global::System.Int32 saleItem_Item, global::System.Double grossWeight, global::System.Double tearWeight, global::System.Decimal rate, global::System.Int32 sale_SaleItem, global::System.Byte[] rowVersion)
         {
             SaleItem saleItem = new SaleItem();
             saleItem.Id = id;
@@ -4133,7 +4159,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Double Rate
+        public global::System.Decimal Rate
         {
             get
             {
@@ -4148,8 +4174,8 @@ namespace LightSwitchApplication.Implementation
                 OnRateChanged();
             }
         }
-        private global::System.Double _Rate;
-        partial void OnRateChanging(global::System.Double value);
+        private global::System.Decimal _Rate;
+        partial void OnRateChanging(global::System.Decimal value);
         partial void OnRateChanged();
     
         /// <summary>
@@ -4399,7 +4425,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="deposit">Initial value of the Deposit property.</param>
         /// <param name="paymentDate">Initial value of the PaymentDate property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
-        public static SalePayment CreateSalePayment(global::System.Int32 id, global::System.Int32 salePayment_Sale, global::System.Double deposit, global::System.DateTime paymentDate, global::System.Byte[] rowVersion)
+        public static SalePayment CreateSalePayment(global::System.Int32 id, global::System.Int32 salePayment_Sale, global::System.Decimal deposit, global::System.DateTime paymentDate, global::System.Byte[] rowVersion)
         {
             SalePayment salePayment = new SalePayment();
             salePayment.Id = id;
@@ -4470,7 +4496,7 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Double Deposit
+        public global::System.Decimal Deposit
         {
             get
             {
@@ -4485,8 +4511,8 @@ namespace LightSwitchApplication.Implementation
                 OnDepositChanged();
             }
         }
-        private global::System.Double _Deposit;
-        partial void OnDepositChanging(global::System.Double value);
+        private global::System.Decimal _Deposit;
+        partial void OnDepositChanging(global::System.Decimal value);
         partial void OnDepositChanged();
     
         /// <summary>

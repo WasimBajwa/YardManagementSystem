@@ -7,17 +7,9 @@ namespace LightSwitchApplication
 {
     public partial class PurchasePayment
     {
-        partial void TotalAmount_Compute(ref double result)
-        {
-            // Set result to the desired field value
-            if (this.Purchase != null)
-            {
-                double amount = this.Purchase.TotalAmount;
-                result = amount;
-            }
-        }
+       
 
-        partial void PaidAmount_Compute(ref double result)
+        partial void PaidAmount_Compute(ref decimal result)
         {
             // Set result to the desired field value
             if (this.Purchase != null)
@@ -26,20 +18,29 @@ namespace LightSwitchApplication
             }
         }
 
-        partial void DueAmount_Compute(ref double result)
+        partial void DueAmount_Compute(ref decimal result)
         {
             // Set result to the desired field value
             result = 0;
-            result = TotalAmount - this.PaidAmount;
+            result = this.TotalAmount - this.PaidAmount;
         }
 
 
         partial void Deposit_Validate(EntityValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Error-Message>");
-            if(this.Deposit>this.DueAmount)
+            if(this.Deposit>this.DueAmount || this.Deposit<=0)
             {
                 results.AddPropertyError("Invalid payment.");
+            }
+        }
+
+        partial void TotalAmount_Compute(ref decimal result)
+        {
+            // Set result to the desired field value
+            if (this.Purchase != null)
+            {
+                result = this.Purchase.TotalAmount;
             }
         }
     }

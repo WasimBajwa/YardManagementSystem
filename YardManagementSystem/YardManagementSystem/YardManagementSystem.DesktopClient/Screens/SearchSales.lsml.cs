@@ -22,7 +22,7 @@ namespace LightSwitchApplication
             // Write your code here.
             if (this.SalesFilter.SelectedItem.Status == "Cleared")
             {
-                this.ShowMessageBox("Invoice Payment has been cleared.");
+                this.ShowMessageBox("Payment is not allowed as sale has Due Amount= 0.");
             }
             else
             {

@@ -7,6 +7,8 @@ E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSyst
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\web.config
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\default.aspx
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\diagnostics.wadcfg
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\LogIn.aspx
+E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\LogOut.aspx
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\Web\Manifests\Microsoft.LightSwitch.Server.Manifest.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\Microsoft.LightSwitch.Server.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\YardManagementSystem\bin\Debug\bin\System.ServiceModel.PollingDuplex.dll

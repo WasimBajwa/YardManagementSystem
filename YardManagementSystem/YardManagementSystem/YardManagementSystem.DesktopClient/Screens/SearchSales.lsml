@@ -140,7 +140,7 @@
               <ContentItem
                 Name="TotalAmount"
                 Kind="Value"
-                DataType=":Double">
+                DataType="Microsoft.LightSwitch.Extensions:Money">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -153,7 +153,7 @@
               <ContentItem
                 Name="PaidAmount"
                 Kind="Value"
-                DataType=":Double">
+                DataType="Microsoft.LightSwitch.Extensions:Money">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -285,6 +285,42 @@
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\index.jpg"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="Command"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SearchSales/Methods[Close]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\close_button_red.png"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
           </ContentItem>
         </ContentItem.CommandItems>
       </ContentItem>

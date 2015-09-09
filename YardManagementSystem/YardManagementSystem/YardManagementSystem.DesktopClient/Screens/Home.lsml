@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+  Name="LightSwitchApplication.YardManagementSystem.DesktopClient" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application.Attributes>
+    <Partial />
+  </Application.Attributes>
+  <Screen
+    Name="Home"
+    LaunchMode="Multiple">
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group"
+          View="Microsoft.LightSwitch.RichClient:PictureAndText">
+          <ContentItem
+            Name="Image"
+            Kind="ScreenContent"
+            View="Microsoft.LightSwitch.RichClient:StaticImage">
+            <ContentItem.Attributes>
+              <DisplayName />
+            </ContentItem.Attributes>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\w2.png"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="400"
+                    ResultType=":Double" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinHeight]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="400"
+                    ResultType=":Double" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="LeftAligned"
+                    ResultType=":String" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:StaticImage/Properties[Stretch]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="None"
+                    ResultType=":String" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="Image1"
+            Kind="ScreenContent"
+            Placement="Image"
+            View="Microsoft.LightSwitch.RichClient:StaticImage">
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\w5.jpg"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:StaticImage/Properties[Stretch]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    Value="Fill"
+                    ResultType=":String" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+              <ScreenExpressionTree>
+                <ConstantExpression
+                  Value="800"
+                  ResultType=":Double" />
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinHeight]">
+              <ScreenExpressionTree>
+                <ConstantExpression
+                  Value="800"
+                  ResultType=":Double" />
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[HorizontalAlignment]">
+              <ScreenExpressionTree>
+                <ConstantExpression
+                  Value="Stretch"
+                  ResultType=":String" />
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Close"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Home/Methods[Close]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\close_button_red.png"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+  </Screen>
+  <Application.Methods>
+    <ApplicationMethod
+      Name="ShowHome">
+      <ApplicationMethod.Attributes>
+        <ShowScreenMethod
+          TargetScreen="Home" />
+      </ApplicationMethod.Attributes>
+    </ApplicationMethod>
+  </Application.Methods>
+</Application>

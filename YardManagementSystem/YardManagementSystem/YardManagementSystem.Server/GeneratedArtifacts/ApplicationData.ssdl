@@ -80,6 +80,7 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="HireDate" Type="datetime" Nullable="false" />
     <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="IqamaNo" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="EmailId" Type="nvarchar" MaxLength="255" />
     <Property Name="Gender" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="PhoneNo" Type="nvarchar" MaxLength="255" />
@@ -112,7 +113,7 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Weight" Type="float" Nullable="false" />
-    <Property Name="Rate" Type="float" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="BookingDate" Type="datetime" Nullable="false" />
     <Property Name="LoadingDate" Type="datetime" Nullable="false" />
     <Property Name="Container" Type="nvarchar" MaxLength="255" />
@@ -148,7 +149,7 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="GrossWeight" Type="float" Nullable="false" />
     <Property Name="TearWeight" Type="float" Nullable="false" />
-    <Property Name="Rate" Type="float" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
     <Property Name="Created" Type="datetimeoffset" />
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
@@ -162,7 +163,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Deposit" Type="float" Nullable="false" />
+    <Property Name="Deposit" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="PaymentDate" Type="datetime" Nullable="false" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
     <Property Name="Created" Type="datetimeoffset" />
@@ -208,7 +209,7 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="GrossWeight" Type="float" Nullable="false" />
     <Property Name="TearWeight" Type="float" Nullable="false" />
-    <Property Name="Rate" Type="float" Nullable="false" />
+    <Property Name="Rate" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
     <Property Name="Created" Type="datetimeoffset" />
     <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
@@ -222,7 +223,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Deposit" Type="float" Nullable="false" />
+    <Property Name="Deposit" Type="decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="PaymentDate" Type="datetime" Nullable="false" />
     <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
     <Property Name="Created" Type="datetimeoffset" />

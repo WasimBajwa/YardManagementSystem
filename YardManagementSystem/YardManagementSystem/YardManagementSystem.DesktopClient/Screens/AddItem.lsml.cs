@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddItem_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.ItemProperty);
+            this.ShowMessageBox("Item has been added successfully.");
+            this.Close(true);
         }
     }
 }

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 9/6/2015 1:20:35 PM
+// Generation date: 9/9/2015 11:51:42 PM
 namespace LightSwitchApplication.Implementation
 {
     
@@ -390,261 +390,264 @@ namespace LightSwitchApplication.Implementation
                 "ty Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=" +
                 "\"Identity\" /><Property Name=\"HireDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><P" +
                 "roperty Name=\"Name\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Proper" +
-                "ty Name=\"EmailId\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Gender\" Ty" +
-                "pe=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property Name=\"PhoneNo\" Type" +
-                "=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLe" +
-                "ngth=\"255\" /><Property Name=\"SalaryType\" Type=\"Edm.String\" Nullable=\"false\" MaxL" +
-                "ength=\"255\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Pr" +
-                "operty Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Ty" +
-                "pe=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOf" +
-                "fset\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" Concurren" +
-                "cyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty" +
-                " Name=\"Salaries\" Relationship=\"LightSwitchApplication.Salary_Employee\" ToRole=\"S" +
-                "alary\" FromRole=\"Employee\" /></EntityType><EntityType Name=\"Expense\"><Key><Prope" +
-                "rtyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" a" +
-                "nnotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"ExpenseDate\" Type=\"" +
-                "Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Title\" Type=\"Edm.String\" Nullab" +
-                "le=\"false\" MaxLength=\"255\" /><Property Name=\"Description\" Type=\"Edm.String\" MaxL" +
-                "ength=\"255\" /><Property Name=\"Amount\" Type=\"Edm.Double\" Nullable=\"false\" /><Prop" +
-                "erty Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Create" +
-                "d\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" Max" +
-                "Length=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property N" +
-                "ame=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" anno" +
-                "tation:StoreGeneratedPattern=\"Computed\" /></EntityType><EntityType Name=\"Export\"" +
-                "><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullab" +
-                "le=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Export_" +
-                "Company\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Export_Item\" Type=\"" +
-                "Edm.Int32\" Nullable=\"false\" /><Property Name=\"Weight\" Type=\"Edm.Double\" Nullable" +
-                "=\"false\" /><Property Name=\"Rate\" Type=\"Edm.Double\" Nullable=\"false\" /><Property " +
-                "Name=\"BookingDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Loadin" +
-                "gDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Container\" Type=\"E" +
-                "dm.String\" MaxLength=\"255\" /><Property Name=\"Port\" Type=\"Edm.String\" Nullable=\"f" +
-                "alse\" MaxLength=\"255\" /><Property Name=\"Remarks\" Type=\"Edm.String\" MaxLength=\"25" +
-                "5\" /><Property Name=\"Country\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name" +
-                "=\"ExportDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"CreatedBy\" " +
-                "Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm.DateTimeO" +
-                "ffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Proper" +
-                "ty Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersion\" Type=" +
-                "\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedP" +
-                "attern=\"Computed\" /><NavigationProperty Name=\"Company\" Relationship=\"LightSwitch" +
-                "Application.Export_Company\" ToRole=\"Company\" FromRole=\"Export\" /><NavigationProp" +
-                "erty Name=\"Item\" Relationship=\"LightSwitchApplication.Export_Item\" ToRole=\"Item\"" +
-                " FromRole=\"Export\" /></EntityType><EntityType Name=\"Item\"><Key><PropertyRef Name" +
-                "=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:S" +
-                "toreGeneratedPattern=\"Identity\" /><Property Name=\"Title\" Type=\"Edm.String\" Nulla" +
-                "ble=\"false\" MaxLength=\"255\" /><Property Name=\"Description\" Type=\"Edm.String\" Max" +
-                "Length=\"255\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><P" +
-                "roperty Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" T" +
-                "ype=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeO" +
-                "ffset\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" Concurre" +
-                "ncyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationPropert" +
-                "y Name=\"PurchaseItems\" Relationship=\"LightSwitchApplication.PurchaseItem_Item\" T" +
-                "oRole=\"PurchaseItem\" FromRole=\"Item\" /><NavigationProperty Name=\"SaleItems\" Rela" +
-                "tionship=\"LightSwitchApplication.SaleItem_Item\" ToRole=\"SaleItem\" FromRole=\"Item" +
-                "\" /><NavigationProperty Name=\"Exports\" Relationship=\"LightSwitchApplication.Expo" +
-                "rt_Item\" ToRole=\"Export\" FromRole=\"Item\" /></EntityType><EntityType Name=\"Purcha" +
-                "seItem\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\"" +
-                " Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"" +
-                "PurchaseItem_Item\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"GrossWeig" +
-                "ht\" Type=\"Edm.Double\" Nullable=\"false\" /><Property Name=\"TearWeight\" Type=\"Edm.D" +
-                "ouble\" Nullable=\"false\" /><Property Name=\"Rate\" Type=\"Edm.Double\" Nullable=\"fals" +
-                "e\" /><Property Name=\"Purchase_PurchaseItem\" Type=\"Edm.Int32\" Nullable=\"false\" />" +
-                "<Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"C" +
-                "reated\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String" +
-                "\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Prope" +
-                "rty Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\"" +
-                " annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty Name=\"Item\" R" +
-                "elationship=\"LightSwitchApplication.PurchaseItem_Item\" ToRole=\"Item\" FromRole=\"P" +
-                "urchaseItem\" /><NavigationProperty Name=\"Purchase\" Relationship=\"LightSwitchAppl" +
-                "ication.Purchase_PurchaseItem\" ToRole=\"Purchase\" FromRole=\"PurchaseItem\" /></Ent" +
-                "ityType><EntityType Name=\"PurchasePayment\"><Key><PropertyRef Name=\"Id\" /></Key><" +
-                "Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPa" +
-                "ttern=\"Identity\" /><Property Name=\"PurchasePayment_Purchase";
+                "ty Name=\"IqamaNo\" Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property" +
+                " Name=\"EmailId\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Gender\" Type" +
+                "=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property Name=\"PhoneNo\" Type=\"" +
+                "Edm.String\" MaxLength=\"255\" /><Property Name=\"Address\" Type=\"Edm.String\" MaxLeng" +
+                "th=\"255\" /><Property Name=\"SalaryType\" Type=\"Edm.String\" Nullable=\"false\" MaxLen" +
+                "gth=\"255\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Prop" +
+                "erty Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type" +
+                "=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffs" +
+                "et\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" Concurrency" +
+                "Mode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty N" +
+                "ame=\"Salaries\" Relationship=\"LightSwitchApplication.Salary_Employee\" ToRole=\"Sal" +
+                "ary\" FromRole=\"Employee\" /></EntityType><EntityType Name=\"Expense\"><Key><Propert" +
+                "yRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" ann" +
+                "otation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"ExpenseDate\" Type=\"Ed" +
+                "m.DateTime\" Nullable=\"false\" /><Property Name=\"Title\" Type=\"Edm.String\" Nullable" +
+                "=\"false\" MaxLength=\"255\" /><Property Name=\"Description\" Type=\"Edm.String\" MaxLen" +
+                "gth=\"255\" /><Property Name=\"Amount\" Type=\"Edm.Double\" Nullable=\"false\" /><Proper" +
+                "ty Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\"" +
+                " Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLe" +
+                "ngth=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Nam" +
+                "e=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annota" +
+                "tion:StoreGeneratedPattern=\"Computed\" /></EntityType><EntityType Name=\"Export\"><" +
+                "Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable" +
+                "=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Export_Co" +
+                "mpany\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Export_Item\" Type=\"Ed" +
+                "m.Int32\" Nullable=\"false\" /><Property Name=\"Weight\" Type=\"Edm.Double\" Nullable=\"" +
+                "false\" /><Property Name=\"Rate\" Type=\"Edm.Decimal\" Nullable=\"false\" Precision=\"18" +
+                "\" Scale=\"2\" /><Property Name=\"BookingDate\" Type=\"Edm.DateTime\" Nullable=\"false\" " +
+                "/><Property Name=\"LoadingDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property " +
+                "Name=\"Container\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Port\" Type=" +
+                "\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property Name=\"Remarks\" Type=\"E" +
+                "dm.String\" MaxLength=\"255\" /><Property Name=\"Country\" Type=\"Edm.String\" MaxLengt" +
+                "h=\"255\" /><Property Name=\"ExportDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Pr" +
+                "operty Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Crea" +
+                "ted\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" M" +
+                "axLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property" +
+                " Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" an" +
+                "notation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty Name=\"Company\" R" +
+                "elationship=\"LightSwitchApplication.Export_Company\" ToRole=\"Company\" FromRole=\"E" +
+                "xport\" /><NavigationProperty Name=\"Item\" Relationship=\"LightSwitchApplication.Ex" +
+                "port_Item\" ToRole=\"Item\" FromRole=\"Export\" /></EntityType><EntityType Name=\"Item" +
+                "\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nulla" +
+                "ble=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Title\"" +
+                " Type=\"Edm.String\" Nullable=\"false\" MaxLength=\"255\" /><Property Name=\"Descriptio" +
+                "n\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"CreatedBy\" Type=\"Edm.Stri" +
+                "ng\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Prop" +
+                "erty Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modif" +
+                "ied\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" N" +
+                "ullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Comput" +
+                "ed\" /><NavigationProperty Name=\"PurchaseItems\" Relationship=\"LightSwitchApplicat" +
+                "ion.PurchaseItem_Item\" ToRole=\"PurchaseItem\" FromRole=\"Item\" /><NavigationProper" +
+                "ty Name=\"SaleItems\" Relationship=\"LightSwitchApplication.SaleItem_Item\" ToRole=\"" +
+                "SaleItem\" FromRole=\"Item\" /><NavigationProperty Name=\"Exports\" Relationship=\"Lig" +
+                "htSwitchApplication.Export_Item\" ToRole=\"Export\" FromRole=\"Item\" /></EntityType>" +
+                "<EntityType Name=\"PurchaseItem\"><Key><PropertyRef Name=\"Id\" /></Key><Property Na" +
+                "me=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Iden" +
+                "tity\" /><Property Name=\"PurchaseItem_Item\" Type=\"Edm.Int32\" Nullable=\"false\" /><" +
+                "Property Name=\"GrossWeight\" Type=\"Edm.Double\" Nullable=\"false\" /><Property Name=" +
+                "\"TearWeight\" Type=\"Edm.Double\" Nullable=\"false\" /><Property Name=\"Rate\" Type=\"Ed" +
+                "m.Decimal\" Nullable=\"false\" Precision=\"18\" Scale=\"2\" /><Property Name=\"Purchase_" +
+                "PurchaseItem\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"CreatedBy\" Typ" +
+                "e=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffs" +
+                "et\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property " +
+                "Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersion\" Type=\"Ed" +
+                "m.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedPatt" +
+                "ern=\"Computed\" /><NavigationProperty Name=\"Item\" Relationship=\"LightSwitchApplic" +
+                "ation.PurchaseItem_Item\" ToRole=\"Item\" FromRole=\"PurchaseItem\" /><NavigationProp" +
+                "erty Name=\"Purchase\" Relationship=\"LightSwitchApplication.Purchase_PurchaseItem\"" +
+                " ToRole=\"Purchase\" FromRole=\"PurchaseItem\" /></EntityType><EntityType Name=\"Purc" +
+                "hasePayment\"><Key><PropertyRef Name=\"Id\" /></Key><Property ";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart1 = "\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Deposit\" Type=\"Edm.Double\" " +
-                "Nullable=\"false\" /><Property Name=\"PaymentDate\" Type=\"Edm.DateTime\" Nullable=\"fa" +
-                "lse\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property " +
-                "Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm" +
-                ".String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /" +
-                "><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=" +
-                "\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty Name=\"" +
-                "Purchase\" Relationship=\"LightSwitchApplication.PurchasePayment_Purchase\" ToRole=" +
-                "\"Purchase\" FromRole=\"PurchasePayment\" /></EntityType><EntityType Name=\"Purchase\"" +
-                "><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullab" +
-                "le=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Purchas" +
-                "eDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"BookNo\" Type=\"Edm." +
-                "String\" MaxLength=\"255\" /><Property Name=\"Purchase_Company\" Type=\"Edm.Int32\" Nul" +
-                "lable=\"false\" /><Property Name=\"DriverName\" Type=\"Edm.String\" MaxLength=\"255\" />" +
-                "<Property Name=\"VehicleNo\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"C" +
-                "reatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm" +
-                ".DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\"" +
-                " /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVers" +
-                "ion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:Store" +
-                "GeneratedPattern=\"Computed\" /><NavigationProperty Name=\"Company\" Relationship=\"L" +
-                "ightSwitchApplication.Purchase_Company\" ToRole=\"Company\" FromRole=\"Purchase\" /><" +
-                "NavigationProperty Name=\"PurchaseItems\" Relationship=\"LightSwitchApplication.Pur" +
-                "chase_PurchaseItem\" ToRole=\"PurchaseItem\" FromRole=\"Purchase\" /><NavigationPrope" +
-                "rty Name=\"PurchasePayments\" Relationship=\"LightSwitchApplication.PurchasePayment" +
-                "_Purchase\" ToRole=\"PurchasePayment\" FromRole=\"Purchase\" /></EntityType><EntityTy" +
-                "pe Name=\"Salary\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"E" +
-                "dm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Proper" +
-                "ty Name=\"SalaryDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Sala" +
-                "ry_Employee\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Amount\" Type=\"E" +
-                "dm.Double\" Nullable=\"false\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLe" +
-                "ngth=\"255\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name" +
-                "=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type" +
-                "=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"" +
-                "false\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><Na" +
-                "vigationProperty Name=\"Employee\" Relationship=\"LightSwitchApplication.Salary_Emp" +
-                "loyee\" ToRole=\"Employee\" FromRole=\"Salary\" /></EntityType><EntityType Name=\"Sale" +
-                "Item\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" N" +
-                "ullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"Sa" +
-                "leItem_Item\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"GrossWeight\" Ty" +
-                "pe=\"Edm.Double\" Nullable=\"false\" /><Property Name=\"TearWeight\" Type=\"Edm.Double\"" +
-                " Nullable=\"false\" /><Property Name=\"Rate\" Type=\"Edm.Double\" Nullable=\"false\" /><" +
-                "Property Name=\"Sale_SaleItem\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name" +
-                "=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"" +
-                "Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"2" +
-                "55\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowV" +
-                "ersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:St" +
-                "oreGeneratedPattern=\"Computed\" /><NavigationProperty Name=\"Item\" Relationship=\"L" +
-                "ightSwitchApplication.SaleItem_Item\" ToRole=\"Item\" FromRole=\"SaleItem\" /><Naviga" +
-                "tionProperty Name=\"Sale\" Relationship=\"LightSwitchApplication.Sale_SaleItem\" ToR" +
-                "ole=\"Sale\" FromRole=\"SaleItem\" /></EntityType><EntityType Name=\"SalePayment\"><Ke" +
+            private const string ModelPart1 = "Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Ide" +
+                "ntity\" /><Property Name=\"PurchasePayment_Purchase\" Type=\"Edm.Int32\" Nullable=\"fa" +
+                "lse\" /><Property Name=\"Deposit\" Type=\"Edm.Decimal\" Nullable=\"false\" Precision=\"1" +
+                "8\" Scale=\"2\" /><Property Name=\"PaymentDate\" Type=\"Edm.DateTime\" Nullable=\"false\"" +
+                " /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name" +
+                "=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.Str" +
+                "ing\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Pr" +
+                "operty Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fix" +
+                "ed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty Name=\"Purc" +
+                "hase\" Relationship=\"LightSwitchApplication.PurchasePayment_Purchase\" ToRole=\"Pur" +
+                "chase\" FromRole=\"PurchasePayment\" /></EntityType><EntityType Name=\"Purchase\"><Ke" +
                 "y><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"" +
-                "false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"SalePayment" +
-                "_Sale\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Deposit\" Type=\"Edm.Do" +
-                "uble\" Nullable=\"false\" /><Property Name=\"PaymentDate\" Type=\"Edm.DateTime\" Nullab" +
-                "le=\"false\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Pro" +
-                "perty Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Typ" +
-                "e=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOff" +
-                "set\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" Concurrenc" +
-                "yMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty " +
-                "Name=\"Sale\" Relationship=\"LightSwitchApplication.SalePayment_Sale\" ToRole=\"Sale\"" +
-                " FromRole=\"SalePayment\" /></EntityType><EntityType Name=\"Sale\"><Key><PropertyRef" +
-                " Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotat" +
-                "ion:StoreGeneratedPattern=\"Identity\" /><Property Name=\"SaleDate\" Type=\"Edm.DateT" +
-                "ime\" Nullable=\"false\" /><Property Name=\"BookNo\" Type=\"Edm.String\" MaxLength=\"255" +
-                "\" /><Property Name=\"Sale_Company\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property " +
-                "Name=\"DriverName\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"VehicleNo\"" +
-                " Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"CreatedBy\" Type=\"Edm.String" +
-                "\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Proper" +
-                "ty Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modifie" +
-                "d\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nul" +
-                "lable=\"false\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed" +
-                "\" /><NavigationProperty Name=\"Company\" Relationship=\"LightSwitchApplication.Sale" +
-                "_Company\" ToRole=\"Company\" FromRole=\"Sale\" /><NavigationProperty Name=\"SaleItems" +
-                "\" Relationship=\"LightSwitchApplication.Sale_SaleItem\" ToRole=\"SaleItem\" FromRole" +
-                "=\"Sale\" /><NavigationProperty Name=\"SalePayments\" Relationship=\"LightSwitchAppli" +
-                "cation.SalePayment_Sale\" ToRole=\"SalePayment\" FromRole=\"Sale\" /></EntityType><As" +
-                "sociation Name=\"Purchase_Company\"><End Role=\"Company\" Type=\"LightSwitchApplicati" +
-                "on.Company\" Multiplicity=\"1\" /><End Role=\"Purchase\" Type=\"LightSwitchApplication" +
-                ".Purchase\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Company\"><" +
-                "PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Purchase\"><PropertyRef Name" +
-                "=\"Purchase_Company\" /></Dependent></ReferentialConstraint></Association><Associa" +
-                "tion Name=\"Sale_Company\"><End Role=\"Company\" Type=\"LightSwitchApplication.Compan" +
-                "y\" Multiplicity=\"1\" /><End Role=\"Sale\" Type=\"LightSwitchApplication.Sale\" Multip" +
-                "licity=\"*\" /><ReferentialConstraint><Principal Role=\"Company\"><PropertyRef Name=" +
-                "\"Id\" /></Principal><Dependent Role=\"Sale\"><PropertyRef Name=\"Sale_Company\" /></D" +
-                "ependent></ReferentialConstraint></Association><Association Name=\"Export_Company" +
+                "false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"PurchaseDat" +
+                "e\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"BookNo\" Type=\"Edm.Stri" +
+                "ng\" MaxLength=\"255\" /><Property Name=\"Purchase_Company\" Type=\"Edm.Int32\" Nullabl" +
+                "e=\"false\" /><Property Name=\"DriverName\" Type=\"Edm.String\" MaxLength=\"255\" /><Pro" +
+                "perty Name=\"VehicleNo\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Creat" +
+                "edBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm.Dat" +
+                "eTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><" +
+                "Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersion\"" +
+                " Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:StoreGene" +
+                "ratedPattern=\"Computed\" /><NavigationProperty Name=\"Company\" Relationship=\"Light" +
+                "SwitchApplication.Purchase_Company\" ToRole=\"Company\" FromRole=\"Purchase\" /><Navi" +
+                "gationProperty Name=\"PurchaseItems\" Relationship=\"LightSwitchApplication.Purchas" +
+                "e_PurchaseItem\" ToRole=\"PurchaseItem\" FromRole=\"Purchase\" /><NavigationProperty " +
+                "Name=\"PurchasePayments\" Relationship=\"LightSwitchApplication.PurchasePayment_Pur" +
+                "chase\" ToRole=\"PurchasePayment\" FromRole=\"Purchase\" /></EntityType><EntityType N" +
+                "ame=\"Salary\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.I" +
+                "nt32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property N" +
+                "ame=\"SalaryDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Salary_E" +
+                "mployee\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"Amount\" Type=\"Edm.D" +
+                "ouble\" Nullable=\"false\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength" +
+                "=\"255\" /><Property Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"Mo" +
+                "difiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Ed" +
+                "m.DateTimeOffset\" /><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"fals" +
+                "e\" ConcurrencyMode=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><Naviga" +
+                "tionProperty Name=\"Employee\" Relationship=\"LightSwitchApplication.Salary_Employe" +
+                "e\" ToRole=\"Employee\" FromRole=\"Salary\" /></EntityType><EntityType Name=\"SaleItem" +
+                "\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=\"Edm.Int32\" Nulla" +
+                "ble=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Property Name=\"SaleIt" +
+                "em_Item\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"GrossWeight\" Type=\"" +
+                "Edm.Double\" Nullable=\"false\" /><Property Name=\"TearWeight\" Type=\"Edm.Double\" Nul" +
+                "lable=\"false\" /><Property Name=\"Rate\" Type=\"Edm.Decimal\" Nullable=\"false\" Precis" +
+                "ion=\"18\" Scale=\"2\" /><Property Name=\"Sale_SaleItem\" Type=\"Edm.Int32\" Nullable=\"f" +
+                "alse\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property" +
+                " Name=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Ed" +
+                "m.String\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" " +
+                "/><Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode" +
+                "=\"Fixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty Name=" +
+                "\"Item\" Relationship=\"LightSwitchApplication.SaleItem_Item\" ToRole=\"Item\" FromRol" +
+                "e=\"SaleItem\" /><NavigationProperty Name=\"Sale\" Relationship=\"LightSwitchApplicat" +
+                "ion.Sale_SaleItem\" ToRole=\"Sale\" FromRole=\"SaleItem\" /></EntityType><EntityType " +
+                "Name=\"SalePayment\"><Key><PropertyRef Name=\"Id\" /></Key><Property Name=\"Id\" Type=" +
+                "\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Identity\" /><Prop" +
+                "erty Name=\"SalePayment_Sale\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=" +
+                "\"Deposit\" Type=\"Edm.Decimal\" Nullable=\"false\" Precision=\"18\" Scale=\"2\" /><Proper" +
+                "ty Name=\"PaymentDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Property Name=\"Cre" +
+                "atedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Created\" Type=\"Edm.D" +
+                "ateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.String\" MaxLength=\"255\" /" +
+                "><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"RowVersio" +
+                "n\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"Fixed\" annotation:StoreGe" +
+                "neratedPattern=\"Computed\" /><NavigationProperty Name=\"Sale\" Relationship=\"LightS" +
+                "witchApplication.SalePayment_Sale\" ToRole=\"Sale\" FromRole=\"SalePayment\" /></Enti" +
+                "tyType><EntityType Name=\"Sale\"><Key><PropertyRef Name=\"Id\" /></Key><Property Nam" +
+                "e=\"Id\" Type=\"Edm.Int32\" Nullable=\"false\" annotation:StoreGeneratedPattern=\"Ident" +
+                "ity\" /><Property Name=\"SaleDate\" Type=\"Edm.DateTime\" Nullable=\"false\" /><Propert" +
+                "y Name=\"BookNo\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Name=\"Sale_Company" +
+                "\" Type=\"Edm.Int32\" Nullable=\"false\" /><Property Name=\"DriverName\" Type=\"Edm.Stri" +
+                "ng\" MaxLength=\"255\" /><Property Name=\"VehicleNo\" Type=\"Edm.String\" MaxLength=\"25" +
+                "5\" /><Property Name=\"CreatedBy\" Type=\"Edm.String\" MaxLength=\"255\" /><Property Na" +
+                "me=\"Created\" Type=\"Edm.DateTimeOffset\" /><Property Name=\"ModifiedBy\" Type=\"Edm.S" +
+                "tring\" MaxLength=\"255\" /><Property Name=\"Modified\" Type=\"Edm.DateTimeOffset\" /><" +
+                "Property Name=\"RowVersion\" Type=\"Edm.Binary\" Nullable=\"false\" ConcurrencyMode=\"F" +
+                "ixed\" annotation:StoreGeneratedPattern=\"Computed\" /><NavigationProperty Name=\"Co" +
+                "mpany\" Relationship=\"LightSwitchApplication.Sale_Company\" ToRole=\"Company\" FromR" +
+                "ole=\"Sale\" /><NavigationProperty Name=\"SaleItems\" Relationship=\"LightSwitchAppli" +
+                "cation.Sale_SaleItem\" ToRole=\"SaleItem\" FromRole=\"Sale\" /><NavigationProperty Na" +
+                "me=\"SalePayments\" Relationship=\"LightSwitchApplication.SalePayment_Sale\" ToRole=" +
+                "\"SalePayment\" FromRole=\"Sale\" /></EntityType><Association Name=\"Purchase_Company" +
                 "\"><End Role=\"Company\" Type=\"LightSwitchApplication.Company\" Multiplicity=\"1\" /><" +
-                "End Role=\"Export\" Type=\"LightSwitchApplication.Export\" Multiplicity=\"*\" /><Refer" +
-                "entialConstraint><Principal Role=\"Company\"><PropertyRef Name=\"Id\" /></Principal>" +
-                "<Dependent Role=\"Export\"><PropertyRef Name=\"Export_Company\" /></Dependent></Refe" +
-                "rentialConstraint></Association><Association Name=\"Salary_Employee\"><End Role=\"E" +
-                "mployee\" Type=\"LightSwitchApplication.Employee\" Multiplicity=\"1\" /><End Role=\"Sa" +
-                "lary\" Type=\"LightSwitchApplication.Salary\" Multiplicity=\"*\" /><ReferentialConstr" +
-                "aint><Principal Role=\"Employee\"><PropertyRef Name=\"Id\" /></";
+                "End Role=\"Purchase\" Type=\"LightSwitchApplication.Purchase\" Multiplicity=\"*\" /><R" +
+                "eferentialConstraint><Principal Role=\"Company\"><PropertyRef Name=\"Id\" /></Princi" +
+                "pal><Dependent Role=\"Purchase\"><PropertyRef Name=\"Purchase_Company\" /></Dependen" +
+                "t></ReferentialConstraint></Association><Association Name=\"Sale_Company\"><End Ro" +
+                "le=\"Company\" Type=\"LightSwitchApplication.Company\" Multiplicity=\"1\" /><End Role=" +
+                "\"Sale\" Type=\"LightSwitchApplication.Sale\" Multiplicity=\"*\" /><ReferentialConstra" +
+                "int><Principal Role=\"Company\"><PropertyRef Name=\"Id\" /></Principal><Dependent Ro" +
+                "le=\"Sale\"><PropertyRef Name=\"Sale_Company\" /></Dependent></ReferentialConstraint" +
+                "></Association><Association Name=\"Export_Company\"><End Role=\"Company\" Type=\"Ligh" +
+                "tSwitchApplication.Company\" Multiplicity=\"1\" /><End Role=\"Export\" Type=\"LightSwi" +
+                "tchApplication.Export\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role" +
+                "=\"Company\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Export\"><Proper" +
+                "tyRef Name=\"Export_Company\" /></Dependent></ReferentialConstraint></Association>" +
+                "<Association Name=\"Salary_Employee\"><End Role=\"Employee\" Ty";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-            private const string ModelPart2 = "Principal><Dependent Role=\"Salary\"><PropertyRef Name=\"Salary_Employee\" /></Depend" +
-                "ent></ReferentialConstraint></Association><Association Name=\"PurchaseItem_Item\">" +
-                "<End Role=\"Item\" Type=\"LightSwitchApplication.Item\" Multiplicity=\"1\" /><End Role" +
-                "=\"PurchaseItem\" Type=\"LightSwitchApplication.PurchaseItem\" Multiplicity=\"*\" /><R" +
-                "eferentialConstraint><Principal Role=\"Item\"><PropertyRef Name=\"Id\" /></Principal" +
-                "><Dependent Role=\"PurchaseItem\"><PropertyRef Name=\"PurchaseItem_Item\" /></Depend" +
-                "ent></ReferentialConstraint></Association><Association Name=\"SaleItem_Item\"><End" +
-                " Role=\"Item\" Type=\"LightSwitchApplication.Item\" Multiplicity=\"1\" /><End Role=\"Sa" +
-                "leItem\" Type=\"LightSwitchApplication.SaleItem\" Multiplicity=\"*\" /><ReferentialCo" +
-                "nstraint><Principal Role=\"Item\"><PropertyRef Name=\"Id\" /></Principal><Dependent " +
-                "Role=\"SaleItem\"><PropertyRef Name=\"SaleItem_Item\" /></Dependent></ReferentialCon" +
-                "straint></Association><Association Name=\"Export_Item\"><End Role=\"Item\" Type=\"Lig" +
-                "htSwitchApplication.Item\" Multiplicity=\"1\" /><End Role=\"Export\" Type=\"LightSwitc" +
-                "hApplication.Export\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"" +
-                "Item\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Export\"><PropertyRef" +
-                " Name=\"Export_Item\" /></Dependent></ReferentialConstraint></Association><Associa" +
-                "tion Name=\"Purchase_PurchaseItem\"><End Role=\"Purchase\" Type=\"LightSwitchApplicat" +
-                "ion.Purchase\" Multiplicity=\"1\" /><End Role=\"PurchaseItem\" Type=\"LightSwitchAppli" +
-                "cation.PurchaseItem\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"" +
-                "Purchase\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"PurchaseItem\"><P" +
-                "ropertyRef Name=\"Purchase_PurchaseItem\" /></Dependent></ReferentialConstraint></" +
-                "Association><Association Name=\"PurchasePayment_Purchase\"><End Role=\"Purchase\" Ty" +
-                "pe=\"LightSwitchApplication.Purchase\" Multiplicity=\"1\" /><End Role=\"PurchasePayme" +
-                "nt\" Type=\"LightSwitchApplication.PurchasePayment\" Multiplicity=\"*\" /><Referentia" +
-                "lConstraint><Principal Role=\"Purchase\"><PropertyRef Name=\"Id\" /></Principal><Dep" +
-                "endent Role=\"PurchasePayment\"><PropertyRef Name=\"PurchasePayment_Purchase\" /></D" +
-                "ependent></ReferentialConstraint></Association><Association Name=\"Sale_SaleItem\"" +
-                "><End Role=\"Sale\" Type=\"LightSwitchApplication.Sale\" Multiplicity=\"1\" /><End Rol" +
-                "e=\"SaleItem\" Type=\"LightSwitchApplication.SaleItem\" Multiplicity=\"*\" /><Referent" +
-                "ialConstraint><Principal Role=\"Sale\"><PropertyRef Name=\"Id\" /></Principal><Depen" +
-                "dent Role=\"SaleItem\"><PropertyRef Name=\"Sale_SaleItem\" /></Dependent></Referenti" +
-                "alConstraint></Association><Association Name=\"SalePayment_Sale\"><End Role=\"Sale\"" +
-                " Type=\"LightSwitchApplication.Sale\" Multiplicity=\"1\" /><End Role=\"SalePayment\" T" +
-                "ype=\"LightSwitchApplication.SalePayment\" Multiplicity=\"*\" /><ReferentialConstrai" +
-                "nt><Principal Role=\"Sale\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"" +
-                "SalePayment\"><PropertyRef Name=\"SalePayment_Sale\" /></Dependent></ReferentialCon" +
-                "straint></Association><EntityContainer Name=\"ApplicationData\" m:IsDefaultEntityC" +
-                "ontainer=\"true\"><EntitySet Name=\"Companies\" EntityType=\"LightSwitchApplication.C" +
-                "ompany\" /><EntitySet Name=\"Employees\" EntityType=\"LightSwitchApplication.Employe" +
-                "e\" /><EntitySet Name=\"Expenses\" EntityType=\"LightSwitchApplication.Expense\" /><E" +
-                "ntitySet Name=\"Exports\" EntityType=\"LightSwitchApplication.Export\" /><EntitySet " +
-                "Name=\"Items\" EntityType=\"LightSwitchApplication.Item\" /><EntitySet Name=\"Purchas" +
-                "eItems\" EntityType=\"LightSwitchApplication.PurchaseItem\" /><EntitySet Name=\"Purc" +
-                "hasePayments\" EntityType=\"LightSwitchApplication.PurchasePayment\" /><EntitySet N" +
-                "ame=\"Purchases\" EntityType=\"LightSwitchApplication.Purchase\" /><EntitySet Name=\"" +
-                "Salaries\" EntityType=\"LightSwitchApplication.Salary\" /><EntitySet Name=\"SaleItem" +
-                "s\" EntityType=\"LightSwitchApplication.SaleItem\" /><EntitySet Name=\"SalePayments\"" +
-                " EntityType=\"LightSwitchApplication.SalePayment\" /><EntitySet Name=\"Sales\" Entit" +
-                "yType=\"LightSwitchApplication.Sale\" /><AssociationSet Name=\"Purchase_Company\" As" +
-                "sociation=\"LightSwitchApplication.Purchase_Company\"><End Role=\"Company\" EntitySe" +
-                "t=\"Companies\" /><End Role=\"Purchase\" EntitySet=\"Purchases\" /></AssociationSet><A" +
-                "ssociationSet Name=\"Sale_Company\" Association=\"LightSwitchApplication.Sale_Compa" +
-                "ny\"><End Role=\"Company\" EntitySet=\"Companies\" /><End Role=\"Sale\" EntitySet=\"Sale" +
-                "s\" /></AssociationSet><AssociationSet Name=\"Export_Company\" Association=\"LightSw" +
-                "itchApplication.Export_Company\"><End Role=\"Company\" EntitySet=\"Companies\" /><End" +
-                " Role=\"Export\" EntitySet=\"Exports\" /></AssociationSet><AssociationSet Name=\"Sala" +
-                "ry_Employee\" Association=\"LightSwitchApplication.Salary_Employee\"><End Role=\"Emp" +
-                "loyee\" EntitySet=\"Employees\" /><End Role=\"Salary\" EntitySet=\"Salaries\" /></Assoc" +
-                "iationSet><AssociationSet Name=\"PurchaseItem_Item\" Association=\"LightSwitchAppli" +
-                "cation.PurchaseItem_Item\"><End Role=\"Item\" EntitySet=\"Items\" /><End Role=\"Purcha" +
-                "seItem\" EntitySet=\"PurchaseItems\" /></AssociationSet><AssociationSet Name=\"SaleI" +
-                "tem_Item\" Association=\"LightSwitchApplication.SaleItem_Item\"><End Role=\"Item\" En" +
-                "titySet=\"Items\" /><End Role=\"SaleItem\" EntitySet=\"SaleItems\" /></AssociationSet>" +
-                "<AssociationSet Name=\"Export_Item\" Association=\"LightSwitchApplication.Export_It" +
-                "em\"><End Role=\"Item\" EntitySet=\"Items\" /><End Role=\"Export\" EntitySet=\"Exports\" " +
-                "/></AssociationSet><AssociationSet Name=\"Purchase_PurchaseItem\" Association=\"Lig" +
-                "htSwitchApplication.Purchase_PurchaseItem\"><End Role=\"Purchase\" EntitySet=\"Purch" +
-                "ases\" /><End Role=\"PurchaseItem\" EntitySet=\"PurchaseItems\" /></AssociationSet><A" +
-                "ssociationSet Name=\"PurchasePayment_Purchase\" Association=\"LightSwitchApplicatio" +
-                "n.PurchasePayment_Purchase\"><End Role=\"Purchase\" EntitySet=\"Purchases\" /><End Ro" +
-                "le=\"PurchasePayment\" EntitySet=\"PurchasePayments\" /></AssociationSet><Associatio" +
-                "nSet Name=\"Sale_SaleItem\" Association=\"LightSwitchApplication.Sale_SaleItem\"><En" +
-                "d Role=\"Sale\" EntitySet=\"Sales\" /><End Role=\"SaleItem\" EntitySet=\"SaleItems\" /><" +
-                "/AssociationSet><AssociationSet Name=\"SalePayment_Sale\" Association=\"LightSwitch" +
-                "Application.SalePayment_Sale\"><End Role=\"Sale\" EntitySet=\"Sales\" /><End Role=\"Sa" +
-                "lePayment\" EntitySet=\"SalePayments\" /></AssociationSet><FunctionImport Name=\"Pur" +
-                "chaseFilter\" ReturnType=\"Collection(LightSwitchApplication.Purchase)\" EntitySet=" +
-                "\"Purchases\" m:HttpMethod=\"GET\"><Parameter Name=\"FromDate\" Type=\"Edm.DateTime\" Mo" +
-                "de=\"In\" /><Parameter Name=\"ToDate\" Type=\"Edm.DateTime\" Mode=\"In\" /></FunctionImp" +
-                "ort><FunctionImport Name=\"SalesFilter\" ReturnType=\"Collection(LightSwitchApplica" +
-                "tion.Sale)\" EntitySet=\"Sales\" m:HttpMethod=\"GET\"><Parameter Name=\"FromDate\" Type" +
-                "=\"Edm.DateTime\" Mode=\"In\" /><Parameter Name=\"ToDate\" Type=\"Edm.DateTime\" Mode=\"I" +
-                "n\" /></FunctionImport><FunctionImport Name=\"ExportFilter\" ReturnType=\"Collection" +
-                "(LightSwitchApplication.Export)\" EntitySet=\"Exports\" m:HttpMethod=\"GET\"><Paramet" +
-                "er Name=\"FromDate\" Type=\"Edm.DateTime\" Mode=\"In\" /><Parameter Name=\"ToDate\" Type" +
-                "=\"Edm.DateTime\" Mode=\"In\" /></FunctionImport><FunctionImport Name=\"Microsoft_Lig" +
-                "htSwitch_GetCanInformation\" ReturnType=\"Edm.String\" m:HttpMethod=\"GET\"><Paramete" +
-                "r Name=\"dataServiceMembers\" Type=\"Edm.String\" Mode=\"In\" /></FunctionImport></Ent" +
-                "ityContainer></Schema></edmx:DataServices></edmx:Edmx>";
+            private const string ModelPart2 = "pe=\"LightSwitchApplication.Employee\" Multiplicity=\"1\" /><End Role=\"Salary\" Type=\"" +
+                "LightSwitchApplication.Salary\" Multiplicity=\"*\" /><ReferentialConstraint><Princi" +
+                "pal Role=\"Employee\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"Salary" +
+                "\"><PropertyRef Name=\"Salary_Employee\" /></Dependent></ReferentialConstraint></As" +
+                "sociation><Association Name=\"PurchaseItem_Item\"><End Role=\"Item\" Type=\"LightSwit" +
+                "chApplication.Item\" Multiplicity=\"1\" /><End Role=\"PurchaseItem\" Type=\"LightSwitc" +
+                "hApplication.PurchaseItem\" Multiplicity=\"*\" /><ReferentialConstraint><Principal " +
+                "Role=\"Item\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"PurchaseItem\">" +
+                "<PropertyRef Name=\"PurchaseItem_Item\" /></Dependent></ReferentialConstraint></As" +
+                "sociation><Association Name=\"SaleItem_Item\"><End Role=\"Item\" Type=\"LightSwitchAp" +
+                "plication.Item\" Multiplicity=\"1\" /><End Role=\"SaleItem\" Type=\"LightSwitchApplica" +
+                "tion.SaleItem\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Item\">" +
+                "<PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"SaleItem\"><PropertyRef Nam" +
+                "e=\"SaleItem_Item\" /></Dependent></ReferentialConstraint></Association><Associati" +
+                "on Name=\"Export_Item\"><End Role=\"Item\" Type=\"LightSwitchApplication.Item\" Multip" +
+                "licity=\"1\" /><End Role=\"Export\" Type=\"LightSwitchApplication.Export\" Multiplicit" +
+                "y=\"*\" /><ReferentialConstraint><Principal Role=\"Item\"><PropertyRef Name=\"Id\" /><" +
+                "/Principal><Dependent Role=\"Export\"><PropertyRef Name=\"Export_Item\" /></Dependen" +
+                "t></ReferentialConstraint></Association><Association Name=\"Purchase_PurchaseItem" +
+                "\"><End Role=\"Purchase\" Type=\"LightSwitchApplication.Purchase\" Multiplicity=\"1\" /" +
+                "><End Role=\"PurchaseItem\" Type=\"LightSwitchApplication.PurchaseItem\" Multiplicit" +
+                "y=\"*\" /><ReferentialConstraint><Principal Role=\"Purchase\"><PropertyRef Name=\"Id\"" +
+                " /></Principal><Dependent Role=\"PurchaseItem\"><PropertyRef Name=\"Purchase_Purcha" +
+                "seItem\" /></Dependent></ReferentialConstraint></Association><Association Name=\"P" +
+                "urchasePayment_Purchase\"><End Role=\"Purchase\" Type=\"LightSwitchApplication.Purch" +
+                "ase\" Multiplicity=\"1\" /><End Role=\"PurchasePayment\" Type=\"LightSwitchApplication" +
+                ".PurchasePayment\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Pur" +
+                "chase\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"PurchasePayment\"><P" +
+                "ropertyRef Name=\"PurchasePayment_Purchase\" /></Dependent></ReferentialConstraint" +
+                "></Association><Association Name=\"Sale_SaleItem\"><End Role=\"Sale\" Type=\"LightSwi" +
+                "tchApplication.Sale\" Multiplicity=\"1\" /><End Role=\"SaleItem\" Type=\"LightSwitchAp" +
+                "plication.SaleItem\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"S" +
+                "ale\"><PropertyRef Name=\"Id\" /></Principal><Dependent Role=\"SaleItem\"><PropertyRe" +
+                "f Name=\"Sale_SaleItem\" /></Dependent></ReferentialConstraint></Association><Asso" +
+                "ciation Name=\"SalePayment_Sale\"><End Role=\"Sale\" Type=\"LightSwitchApplication.Sa" +
+                "le\" Multiplicity=\"1\" /><End Role=\"SalePayment\" Type=\"LightSwitchApplication.Sale" +
+                "Payment\" Multiplicity=\"*\" /><ReferentialConstraint><Principal Role=\"Sale\"><Prope" +
+                "rtyRef Name=\"Id\" /></Principal><Dependent Role=\"SalePayment\"><PropertyRef Name=\"" +
+                "SalePayment_Sale\" /></Dependent></ReferentialConstraint></Association><EntityCon" +
+                "tainer Name=\"ApplicationData\" m:IsDefaultEntityContainer=\"true\"><EntitySet Name=" +
+                "\"Companies\" EntityType=\"LightSwitchApplication.Company\" /><EntitySet Name=\"Emplo" +
+                "yees\" EntityType=\"LightSwitchApplication.Employee\" /><EntitySet Name=\"Expenses\" " +
+                "EntityType=\"LightSwitchApplication.Expense\" /><EntitySet Name=\"Exports\" EntityTy" +
+                "pe=\"LightSwitchApplication.Export\" /><EntitySet Name=\"Items\" EntityType=\"LightSw" +
+                "itchApplication.Item\" /><EntitySet Name=\"PurchaseItems\" EntityType=\"LightSwitchA" +
+                "pplication.PurchaseItem\" /><EntitySet Name=\"PurchasePayments\" EntityType=\"LightS" +
+                "witchApplication.PurchasePayment\" /><EntitySet Name=\"Purchases\" EntityType=\"Ligh" +
+                "tSwitchApplication.Purchase\" /><EntitySet Name=\"Salaries\" EntityType=\"LightSwitc" +
+                "hApplication.Salary\" /><EntitySet Name=\"SaleItems\" EntityType=\"LightSwitchApplic" +
+                "ation.SaleItem\" /><EntitySet Name=\"SalePayments\" EntityType=\"LightSwitchApplicat" +
+                "ion.SalePayment\" /><EntitySet Name=\"Sales\" EntityType=\"LightSwitchApplication.Sa" +
+                "le\" /><AssociationSet Name=\"Purchase_Company\" Association=\"LightSwitchApplicatio" +
+                "n.Purchase_Company\"><End Role=\"Company\" EntitySet=\"Companies\" /><End Role=\"Purch" +
+                "ase\" EntitySet=\"Purchases\" /></AssociationSet><AssociationSet Name=\"Sale_Company" +
+                "\" Association=\"LightSwitchApplication.Sale_Company\"><End Role=\"Company\" EntitySe" +
+                "t=\"Companies\" /><End Role=\"Sale\" EntitySet=\"Sales\" /></AssociationSet><Associati" +
+                "onSet Name=\"Export_Company\" Association=\"LightSwitchApplication.Export_Company\">" +
+                "<End Role=\"Company\" EntitySet=\"Companies\" /><End Role=\"Export\" EntitySet=\"Export" +
+                "s\" /></AssociationSet><AssociationSet Name=\"Salary_Employee\" Association=\"LightS" +
+                "witchApplication.Salary_Employee\"><End Role=\"Employee\" EntitySet=\"Employees\" /><" +
+                "End Role=\"Salary\" EntitySet=\"Salaries\" /></AssociationSet><AssociationSet Name=\"" +
+                "PurchaseItem_Item\" Association=\"LightSwitchApplication.PurchaseItem_Item\"><End R" +
+                "ole=\"Item\" EntitySet=\"Items\" /><End Role=\"PurchaseItem\" EntitySet=\"PurchaseItems" +
+                "\" /></AssociationSet><AssociationSet Name=\"SaleItem_Item\" Association=\"LightSwit" +
+                "chApplication.SaleItem_Item\"><End Role=\"Item\" EntitySet=\"Items\" /><End Role=\"Sal" +
+                "eItem\" EntitySet=\"SaleItems\" /></AssociationSet><AssociationSet Name=\"Export_Ite" +
+                "m\" Association=\"LightSwitchApplication.Export_Item\"><End Role=\"Item\" EntitySet=\"" +
+                "Items\" /><End Role=\"Export\" EntitySet=\"Exports\" /></AssociationSet><AssociationS" +
+                "et Name=\"Purchase_PurchaseItem\" Association=\"LightSwitchApplication.Purchase_Pur" +
+                "chaseItem\"><End Role=\"Purchase\" EntitySet=\"Purchases\" /><End Role=\"PurchaseItem\"" +
+                " EntitySet=\"PurchaseItems\" /></AssociationSet><AssociationSet Name=\"PurchasePaym" +
+                "ent_Purchase\" Association=\"LightSwitchApplication.PurchasePayment_Purchase\"><End" +
+                " Role=\"Purchase\" EntitySet=\"Purchases\" /><End Role=\"PurchasePayment\" EntitySet=\"" +
+                "PurchasePayments\" /></AssociationSet><AssociationSet Name=\"Sale_SaleItem\" Associ" +
+                "ation=\"LightSwitchApplication.Sale_SaleItem\"><End Role=\"Sale\" EntitySet=\"Sales\" " +
+                "/><End Role=\"SaleItem\" EntitySet=\"SaleItems\" /></AssociationSet><AssociationSet " +
+                "Name=\"SalePayment_Sale\" Association=\"LightSwitchApplication.SalePayment_Sale\"><E" +
+                "nd Role=\"Sale\" EntitySet=\"Sales\" /><End Role=\"SalePayment\" EntitySet=\"SalePaymen" +
+                "ts\" /></AssociationSet><FunctionImport Name=\"ExportFilter\" ReturnType=\"Collectio" +
+                "n(LightSwitchApplication.Export)\" EntitySet=\"Exports\" m:HttpMethod=\"GET\"><Parame" +
+                "ter Name=\"FromDate\" Type=\"Edm.DateTime\" Mode=\"In\" /><Parameter Name=\"ToDate\" Typ" +
+                "e=\"Edm.DateTime\" Mode=\"In\" /></FunctionImport><FunctionImport Name=\"PurchaseFilt" +
+                "er\" ReturnType=\"Collection(LightSwitchApplication.Purchase)\" EntitySet=\"Purchase" +
+                "s\" m:HttpMethod=\"GET\"><Parameter Name=\"FromDate\" Type=\"Edm.DateTime\" Mode=\"In\" /" +
+                "><Parameter Name=\"ToDate\" Type=\"Edm.DateTime\" Mode=\"In\" /></FunctionImport><Func" +
+                "tionImport Name=\"SalesFilter\" ReturnType=\"Collection(LightSwitchApplication.Sale" +
+                ")\" EntitySet=\"Sales\" m:HttpMethod=\"GET\"><Parameter Name=\"FromDate\" Type=\"Edm.Dat" +
+                "eTime\" Mode=\"In\" /><Parameter Name=\"ToDate\" Type=\"Edm.DateTime\" Mode=\"In\" /></Fu" +
+                "nctionImport><FunctionImport Name=\"Microsoft_LightSwitch_GetCanInformation\" Retu" +
+                "rnType=\"Edm.String\" m:HttpMethod=\"GET\"><Parameter Name=\"dataServiceMembers\" Type" +
+                "=\"Edm.String\" Mode=\"In\" /></FunctionImport></EntityContainer></Schema></edmx:Dat" +
+                "aServices></edmx:Edmx>";
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
             private static string GetConcatenatedEdmxString()
             {
@@ -1054,16 +1057,18 @@ namespace LightSwitchApplication.Implementation
         /// <param name="ID">Initial value of Id.</param>
         /// <param name="hireDate">Initial value of HireDate.</param>
         /// <param name="name">Initial value of Name.</param>
+        /// <param name="iqamaNo">Initial value of IqamaNo.</param>
         /// <param name="gender">Initial value of Gender.</param>
         /// <param name="salaryType">Initial value of SalaryType.</param>
         /// <param name="rowVersion">Initial value of RowVersion.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Employee CreateEmployee(int ID, global::System.DateTime hireDate, string name, string gender, string salaryType, byte[] rowVersion)
+        public static Employee CreateEmployee(int ID, global::System.DateTime hireDate, string name, string iqamaNo, string gender, string salaryType, byte[] rowVersion)
         {
             Employee employee = new Employee();
             employee.Id = ID;
             employee.HireDate = hireDate;
             employee.Name = name;
+            employee.IqamaNo = iqamaNo;
             employee.Gender = gender;
             employee.SalaryType = salaryType;
             employee.RowVersion = rowVersion;
@@ -1147,6 +1152,32 @@ namespace LightSwitchApplication.Implementation
         private string _Name;
         partial void OnNameChanging(string value);
         partial void OnNameChanged();
+        /// <summary>
+        /// There are no comments for Property IqamaNo in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string IqamaNo
+        {
+            get
+            {
+                return this._IqamaNo;
+            }
+            set
+            {
+                this.OnIqamaNoChanging(value);
+                if (object.Equals(this.IqamaNo, value))
+                {
+                    return;
+                }
+                this._IqamaNo = value;
+                this.OnIqamaNoChanged();
+                this.OnPropertyChanged("IqamaNo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _IqamaNo;
+        partial void OnIqamaNoChanging(string value);
+        partial void OnIqamaNoChanged();
         /// <summary>
         /// There are no comments for Property EmailId in the schema.
         /// </summary>
@@ -1775,7 +1806,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="exportDate">Initial value of ExportDate.</param>
         /// <param name="rowVersion">Initial value of RowVersion.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Export CreateExport(int ID, int export_Company, int export_Item, double weight, double rate, global::System.DateTime bookingDate, global::System.DateTime loadingDate, string port, global::System.DateTime exportDate, byte[] rowVersion)
+        public static Export CreateExport(int ID, int export_Company, int export_Item, double weight, decimal rate, global::System.DateTime bookingDate, global::System.DateTime loadingDate, string port, global::System.DateTime exportDate, byte[] rowVersion)
         {
             Export export = new Export();
             export.Id = ID;
@@ -1898,7 +1929,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Rate in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public double Rate
+        public decimal Rate
         {
             get
             {
@@ -1917,8 +1948,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private double _Rate;
-        partial void OnRateChanging(double value);
+        private decimal _Rate;
+        partial void OnRateChanging(decimal value);
         partial void OnRateChanged();
         /// <summary>
         /// There are no comments for Property BookingDate in the schema.
@@ -2673,7 +2704,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="purchase_PurchaseItem">Initial value of Purchase_PurchaseItem.</param>
         /// <param name="rowVersion">Initial value of RowVersion.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static PurchaseItem CreatePurchaseItem(int ID, int purchaseItem_Item, double grossWeight, double tearWeight, double rate, int purchase_PurchaseItem, byte[] rowVersion)
+        public static PurchaseItem CreatePurchaseItem(int ID, int purchaseItem_Item, double grossWeight, double tearWeight, decimal rate, int purchase_PurchaseItem, byte[] rowVersion)
         {
             PurchaseItem purchaseItem = new PurchaseItem();
             purchaseItem.Id = ID;
@@ -2793,7 +2824,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Rate in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public double Rate
+        public decimal Rate
         {
             get
             {
@@ -2812,8 +2843,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private double _Rate;
-        partial void OnRateChanging(double value);
+        private decimal _Rate;
+        partial void OnRateChanging(decimal value);
         partial void OnRateChanged();
         /// <summary>
         /// There are no comments for Property Purchase_PurchaseItem in the schema.
@@ -3102,7 +3133,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="paymentDate">Initial value of PaymentDate.</param>
         /// <param name="rowVersion">Initial value of RowVersion.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static PurchasePayment CreatePurchasePayment(int ID, int purchasePayment_Purchase, double deposit, global::System.DateTime paymentDate, byte[] rowVersion)
+        public static PurchasePayment CreatePurchasePayment(int ID, int purchasePayment_Purchase, decimal deposit, global::System.DateTime paymentDate, byte[] rowVersion)
         {
             PurchasePayment purchasePayment = new PurchasePayment();
             purchasePayment.Id = ID;
@@ -3168,7 +3199,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Deposit in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public double Deposit
+        public decimal Deposit
         {
             get
             {
@@ -3187,8 +3218,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private double _Deposit;
-        partial void OnDepositChanging(double value);
+        private decimal _Deposit;
+        partial void OnDepositChanging(decimal value);
         partial void OnDepositChanged();
         /// <summary>
         /// There are no comments for Property PaymentDate in the schema.
@@ -4176,7 +4207,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sale_SaleItem">Initial value of Sale_SaleItem.</param>
         /// <param name="rowVersion">Initial value of RowVersion.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static SaleItem CreateSaleItem(int ID, int saleItem_Item, double grossWeight, double tearWeight, double rate, int sale_SaleItem, byte[] rowVersion)
+        public static SaleItem CreateSaleItem(int ID, int saleItem_Item, double grossWeight, double tearWeight, decimal rate, int sale_SaleItem, byte[] rowVersion)
         {
             SaleItem saleItem = new SaleItem();
             saleItem.Id = ID;
@@ -4296,7 +4327,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Rate in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public double Rate
+        public decimal Rate
         {
             get
             {
@@ -4315,8 +4346,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private double _Rate;
-        partial void OnRateChanging(double value);
+        private decimal _Rate;
+        partial void OnRateChanging(decimal value);
         partial void OnRateChanged();
         /// <summary>
         /// There are no comments for Property Sale_SaleItem in the schema.
@@ -4605,7 +4636,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="paymentDate">Initial value of PaymentDate.</param>
         /// <param name="rowVersion">Initial value of RowVersion.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static SalePayment CreateSalePayment(int ID, int salePayment_Sale, double deposit, global::System.DateTime paymentDate, byte[] rowVersion)
+        public static SalePayment CreateSalePayment(int ID, int salePayment_Sale, decimal deposit, global::System.DateTime paymentDate, byte[] rowVersion)
         {
             SalePayment salePayment = new SalePayment();
             salePayment.Id = ID;
@@ -4671,7 +4702,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Deposit in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public double Deposit
+        public decimal Deposit
         {
             get
             {
@@ -4690,8 +4721,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private double _Deposit;
-        partial void OnDepositChanging(double value);
+        private decimal _Deposit;
+        partial void OnDepositChanging(decimal value);
         partial void OnDepositChanged();
         /// <summary>
         /// There are no comments for Property PaymentDate in the schema.

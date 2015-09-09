@@ -155,6 +155,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string IqamaNo
+        {
+            get
+            {
+                return global::LightSwitchApplication.Employee.DetailsClass.GetValue(this, global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties.IqamaNo);
+            }
+            set
+            {
+                global::LightSwitchApplication.Employee.DetailsClass.SetValue(this, global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties.IqamaNo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IqamaNo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IqamaNo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IqamaNo_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string EmailId
         {
             get
@@ -520,6 +544,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string> IqamaNo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties.IqamaNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string> EmailId
                 {
                     get
@@ -617,6 +649,7 @@ namespace LightSwitchApplication
                 new int Id { get; set; }
                 new global::System.DateTime HireDate { get; set; }
                 new string Name { get; set; }
+                new string IqamaNo { get; set; }
                 new string EmailId { get; set; }
                 new string Gender { get; set; }
                 new string PhoneNo { get; set; }
@@ -746,6 +779,43 @@ namespace LightSwitchApplication
                 private static void _Name_OnValueChanged(global::LightSwitchApplication.Employee e)
                 {
                     e.Name_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Entry
+                    IqamaNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Entry(
+                        "IqamaNo",
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._IqamaNo_Stub,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._IqamaNo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._IqamaNo_Validate,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._IqamaNo_GetImplementationValue,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._IqamaNo_SetImplementationValue,
+                        global::LightSwitchApplication.Employee.DetailsClass.PropertySetProperties._IqamaNo_OnValueChanged);
+                private static void _IqamaNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Employee.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data> c, global::LightSwitchApplication.Employee.DetailsClass d, object sf)
+                {
+                    c(d, ref d._IqamaNo, sf);
+                }
+                private static bool _IqamaNo_ComputeIsReadOnly(global::LightSwitchApplication.Employee e)
+                {
+                    bool result = false;
+                    e.IqamaNo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _IqamaNo_Validate(global::LightSwitchApplication.Employee e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.IqamaNo_Validate(r);
+                }
+                private static string _IqamaNo_GetImplementationValue(global::LightSwitchApplication.Employee.DetailsClass d)
+                {
+                    return d.ImplementationEntity.IqamaNo;
+                }
+                private static void _IqamaNo_SetImplementationValue(global::LightSwitchApplication.Employee.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.IqamaNo = v;
+                }
+                private static void _IqamaNo_OnValueChanged(global::LightSwitchApplication.Employee e)
+                {
+                    e.IqamaNo_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1132,6 +1202,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data _Name;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data _IqamaNo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Employee, global::LightSwitchApplication.Employee.DetailsClass, string>.Data _EmailId;

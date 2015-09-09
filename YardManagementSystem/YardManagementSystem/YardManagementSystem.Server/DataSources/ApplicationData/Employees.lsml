@@ -44,6 +44,15 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
+        Name="IqamaNo"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="EmailId"
         PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
         <EntityProperty.Attributes>

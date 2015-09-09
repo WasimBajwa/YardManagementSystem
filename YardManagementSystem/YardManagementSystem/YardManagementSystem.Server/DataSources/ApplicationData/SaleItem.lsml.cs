@@ -7,12 +7,12 @@ namespace LightSwitchApplication
 {
     public partial class SaleItem
     {
-        partial void Price_Compute(ref double result)
+        partial void Price_Compute(ref decimal result)
         {
             // Set result to the desired field value
             if (Rate != 0 && GrossWeight != 0 && TearWeight != 0)
             {
-                result = (GrossWeight - TearWeight) * Rate;
+                result = Convert.ToInt32((GrossWeight - TearWeight) * (double)Rate);
             }
         }
 

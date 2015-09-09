@@ -40,6 +40,7 @@ namespace PurchasePrint
 
         private void PrintButton(object sender, RoutedEventArgs e)
         {
+            btn.Visibility= Visibility.Collapsed;
             pd.Print(string.Format("Invoice Date: {0}", DateTime.Today.ToShortDateString()));
         }
 

@@ -141,4 +141,3 @@ E:\Development 2015\YardManagementSystem\YardManagementSystem\SalePrint\obj\Debu
 E:\Development 2015\YardManagementSystem\YardManagementSystem\SalePrint\obj\Debug\SalePrint.g.resources
 E:\Development 2015\YardManagementSystem\YardManagementSystem\SalePrint\obj\Debug\SalePrint.dll
 E:\Development 2015\YardManagementSystem\YardManagementSystem\SalePrint\obj\Debug\SalePrint.pdb
-E:\Development 2015\YardManagementSystem\YardManagementSystem\SalePrint\obj\Debug\SalePrint.csprojResolveAssemblyReference.cache

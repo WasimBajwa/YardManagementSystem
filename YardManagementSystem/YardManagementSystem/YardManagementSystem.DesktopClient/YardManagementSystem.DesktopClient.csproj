@@ -42,6 +42,7 @@
     <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v5.2@InstallPath)</WCFRIASERVICESSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v5.2@InstallPath)</WCFRIASERVICESSDKPath>
+    <ApplicationName>Saudi YMS</ApplicationName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -240,6 +241,9 @@
     <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Company.lsml.cs">
       <Link>UserCode\Shared\Company.lsml.cs</Link>
     </Compile>
+    <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Expense.lsml.cs">
+      <Link>UserCode\Shared\Expense.lsml.cs</Link>
+    </Compile>
     <Compile Include="..\YardManagementSystem.Server\DataSources\ApplicationData\Export.lsml.cs">
       <Link>UserCode\Shared\Export.lsml.cs</Link>
     </Compile>
@@ -381,6 +385,7 @@
     <LightSwitchModel Include="Screens\SearchPurchase.lsml" />
     <LightSwitchModel Include="Screens\SearchSales.lsml" />
     <LightSwitchModel Include="Screens\SearchExports.lsml" />
+    <LightSwitchModel Include="Screens\Home.lsml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PurchasePrint\PurchasePrint.csproj">
@@ -403,9 +408,8 @@
     </_ClientBuildFile>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\images %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Resources\close_button_red.png" />
+    <Resource Include="Resources\index.jpg" />
     <Content Include="Resources\Screensh.png" />
     <Resource Include="Resources\Screenshot %2886%29.png" />
   </ItemGroup>

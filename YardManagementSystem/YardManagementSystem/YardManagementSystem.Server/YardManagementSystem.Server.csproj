@@ -200,6 +200,9 @@
     <Compile Include="DataSources\ApplicationData\Company.lsml.cs">
       <DependentUpon>Companies.lsml</DependentUpon>
     </Compile>
+    <Compile Include="DataSources\ApplicationData\Expense.lsml.cs">
+      <DependentUpon>Expenses.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\ApplicationData\Export.lsml.cs">
       <DependentUpon>Exports.lsml</DependentUpon>
     </Compile>
@@ -235,6 +238,8 @@
     </LightSwitchModel>
   </ItemGroup>
   <ItemGroup>
+    <_ServerFile Include="LogIn.aspx" />
+    <_ServerFile Include="LogOut.aspx" />
     <Content Include="Web.config" />
     <LightSwitchModel Include="Properties\DataSources\ApplicationData.lsml" />
     <LightSwitchModel Include="DataSources\ApplicationData\Items.lsml" />

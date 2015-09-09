@@ -203,7 +203,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double TotalAmount
+        public decimal TotalAmount
         {
             get
             {
@@ -212,7 +212,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TotalAmount_Compute(ref double result);
+        partial void TotalAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TotalAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -221,7 +221,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double PaidAmount
+        public decimal PaidAmount
         {
             get
             {
@@ -230,7 +230,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaidAmount_Compute(ref double result);
+        partial void PaidAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PaidAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -239,7 +239,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double DueAmount
+        public decimal DueAmount
         {
             get
             {
@@ -248,7 +248,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DueAmount_Compute(ref double result);
+        partial void DueAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void DueAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -583,27 +583,27 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double> TotalAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal> TotalAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties.TotalAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties.TotalAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double> PaidAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal> PaidAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties.PaidAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties.PaidAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double> DueAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal> DueAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties.DueAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties.DueAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>;
                     }
                 }
                 
@@ -893,13 +893,13 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Entry
-                    TotalAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Entry
+                    TotalAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Entry(
                         "TotalAmount",
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._TotalAmount_Stub,
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._TotalAmount_Validate,
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._TotalAmount_ComputeValue);
-                private static void _TotalAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Sale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Data> c, global::LightSwitchApplication.Sale.DetailsClass d, object sf)
+                private static void _TotalAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Sale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Sale.DetailsClass d, object sf)
                 {
                     c(d, ref d._TotalAmount, sf);
                 }
@@ -907,21 +907,21 @@ namespace LightSwitchApplication
                 {
                     e.TotalAmount_Validate(r);
                 }
-                private static double _TotalAmount_ComputeValue(global::LightSwitchApplication.Sale e)
+                private static decimal _TotalAmount_ComputeValue(global::LightSwitchApplication.Sale e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.TotalAmount_Compute(ref value);
                     return value;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Entry
-                    PaidAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Entry
+                    PaidAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Entry(
                         "PaidAmount",
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._PaidAmount_Stub,
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._PaidAmount_Validate,
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._PaidAmount_ComputeValue);
-                private static void _PaidAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Sale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Data> c, global::LightSwitchApplication.Sale.DetailsClass d, object sf)
+                private static void _PaidAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Sale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Sale.DetailsClass d, object sf)
                 {
                     c(d, ref d._PaidAmount, sf);
                 }
@@ -929,21 +929,21 @@ namespace LightSwitchApplication
                 {
                     e.PaidAmount_Validate(r);
                 }
-                private static double _PaidAmount_ComputeValue(global::LightSwitchApplication.Sale e)
+                private static decimal _PaidAmount_ComputeValue(global::LightSwitchApplication.Sale e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.PaidAmount_Compute(ref value);
                     return value;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Entry
-                    DueAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Entry
+                    DueAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Entry(
                         "DueAmount",
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._DueAmount_Stub,
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._DueAmount_Validate,
                         global::LightSwitchApplication.Sale.DetailsClass.PropertySetProperties._DueAmount_ComputeValue);
-                private static void _DueAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Sale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Data> c, global::LightSwitchApplication.Sale.DetailsClass d, object sf)
+                private static void _DueAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Sale.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Sale.DetailsClass d, object sf)
                 {
                     c(d, ref d._DueAmount, sf);
                 }
@@ -951,9 +951,9 @@ namespace LightSwitchApplication
                 {
                     e.DueAmount_Validate(r);
                 }
-                private static double _DueAmount_ComputeValue(global::LightSwitchApplication.Sale e)
+                private static decimal _DueAmount_ComputeValue(global::LightSwitchApplication.Sale e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.DueAmount_Compute(ref value);
                     return value;
                 }
@@ -1254,13 +1254,13 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, string>.Data _VehicleNo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Data _TotalAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Data _TotalAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Data _PaidAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Data _PaidAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, double>.Data _DueAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, decimal>.Data _DueAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Sale, global::LightSwitchApplication.Sale.DetailsClass, string>.Data _Status;

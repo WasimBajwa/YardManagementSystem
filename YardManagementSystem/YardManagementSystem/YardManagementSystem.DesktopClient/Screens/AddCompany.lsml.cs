@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddCompany_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.CompanyProperty);
+            this.ShowMessageBox("Company has been added successfully.");
+            this.Close(true);
         }
     }
 }

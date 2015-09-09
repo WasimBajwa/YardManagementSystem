@@ -5,6 +5,7 @@
     <ProjectView>ProjectFiles</ProjectView>
     <StartUpClientProject>YardManagementSystem.DesktopClient</StartUpClientProject>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastSsdlWriteTime>635771243104000068</SchemaManagementLastSsdlWriteTime>
+    <SchemaManagementLastSsdlWriteTime>635774214659333422</SchemaManagementLastSsdlWriteTime>
+    <SchemaManagementDatabaseIncludesSecurityObjects>True</SchemaManagementDatabaseIncludesSecurityObjects>
   </PropertyGroup>
 </Project>

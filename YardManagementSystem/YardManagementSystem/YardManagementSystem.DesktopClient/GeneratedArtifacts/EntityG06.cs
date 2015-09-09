@@ -155,7 +155,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double Rate
+        public decimal Rate
         {
             get
             {
@@ -284,7 +284,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double Price
+        public decimal Price
         {
             get
             {
@@ -293,7 +293,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Price_Compute(ref double result);
+        partial void Price_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Price_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -451,11 +451,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double> Rate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal> Rate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties.Rate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties.Rate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>;
                     }
                 }
                 
@@ -499,11 +499,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double> Price
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal> Price
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties.Price) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties.Price) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>;
                     }
                 }
                 
@@ -532,7 +532,7 @@ namespace LightSwitchApplication
                 new int Id { get; set; }
                 new double GrossWeight { get; set; }
                 new double TearWeight { get; set; }
-                new double Rate { get; set; }
+                new decimal Rate { get; set; }
                 new string CreatedBy { get; }
                 new global::System.Nullable<global::System.DateTimeOffset> Created { get; }
                 new string ModifiedBy { get; }
@@ -661,8 +661,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Entry
-                    Rate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Entry
+                    Rate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Entry(
                         "Rate",
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Rate_Stub,
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Rate_ComputeIsReadOnly,
@@ -670,7 +670,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Rate_GetImplementationValue,
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Rate_SetImplementationValue,
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Rate_OnValueChanged);
-                private static void _Rate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PurchaseItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Data> c, global::LightSwitchApplication.PurchaseItem.DetailsClass d, object sf)
+                private static void _Rate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PurchaseItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.PurchaseItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Rate, sf);
                 }
@@ -684,11 +684,11 @@ namespace LightSwitchApplication
                 {
                     e.Rate_Validate(r);
                 }
-                private static double _Rate_GetImplementationValue(global::LightSwitchApplication.PurchaseItem.DetailsClass d)
+                private static decimal _Rate_GetImplementationValue(global::LightSwitchApplication.PurchaseItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Rate;
                 }
-                private static void _Rate_SetImplementationValue(global::LightSwitchApplication.PurchaseItem.DetailsClass d, double v)
+                private static void _Rate_SetImplementationValue(global::LightSwitchApplication.PurchaseItem.DetailsClass d, decimal v)
                 {
                     d.ImplementationEntity.Rate = v;
                 }
@@ -867,13 +867,13 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Entry
-                    Price = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Entry
+                    Price = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Entry(
                         "Price",
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Price_Stub,
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Price_Validate,
                         global::LightSwitchApplication.PurchaseItem.DetailsClass.PropertySetProperties._Price_ComputeValue);
-                private static void _Price_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PurchaseItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Data> c, global::LightSwitchApplication.PurchaseItem.DetailsClass d, object sf)
+                private static void _Price_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PurchaseItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.PurchaseItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Price, sf);
                 }
@@ -881,9 +881,9 @@ namespace LightSwitchApplication
                 {
                     e.Price_Validate(r);
                 }
-                private static double _Price_ComputeValue(global::LightSwitchApplication.PurchaseItem e)
+                private static decimal _Price_ComputeValue(global::LightSwitchApplication.PurchaseItem e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.Price_Compute(ref value);
                     return value;
                 }
@@ -994,7 +994,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Data _TearWeight;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Data _Rate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Data _Rate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, string>.Data _CreatedBy;
@@ -1012,7 +1012,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, byte[]>.Data _RowVersion;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, double>.Data _Price;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, decimal>.Data _Price;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PurchaseItem, global::LightSwitchApplication.PurchaseItem.DetailsClass, global::LightSwitchApplication.Item>.Data _Item;

@@ -72,19 +72,19 @@
                 </ContentItem.DataSource>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
-                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
-                    <ScreenExpressionTree>
-                      <ConstantExpression
-                        Value="130"
-                        ResultType=":Double" />
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
                     Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[HorizontalAlignment]">
                     <ScreenExpressionTree>
                       <ConstantExpression
                         Value="Left"
                         ResultType=":String" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        Value="150"
+                        ResultType=":Double" />
                     </ScreenExpressionTree>
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
@@ -124,7 +124,7 @@
                     Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
                     <ScreenExpressionTree>
                       <ConstantExpression
-                        Value="130"
+                        Value="150"
                         ResultType=":Double" />
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -155,7 +155,7 @@
                     Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
                     <ScreenExpressionTree>
                       <ConstantExpression
-                        Value="130"
+                        Value="150"
                         ResultType=":Double" />
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -186,7 +186,7 @@
                     Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
                     <ScreenExpressionTree>
                       <ConstantExpression
-                        Value="130"
+                        Value="150"
                         ResultType=":Double" />
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -299,7 +299,7 @@
                 <ContentItem
                   Name="Rate"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -312,7 +312,7 @@
                 <ContentItem
                   Name="Price"
                   Kind="Value"
-                  DataType=":Double">
+                  DataType="Microsoft.LightSwitch.Extensions:Money">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -432,6 +432,42 @@
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\index.jpg"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="Close"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="AddSale/Methods[Close]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\close_button_red.png"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
           </ContentItem>
         </ContentItem.CommandItems>
       </ContentItem>

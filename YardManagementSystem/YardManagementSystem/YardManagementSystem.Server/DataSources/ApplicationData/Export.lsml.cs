@@ -7,12 +7,12 @@ namespace LightSwitchApplication
 {
     public partial class Export
     {
-        partial void TotalAmount_Compute(ref double result)
+        partial void TotalAmount_Compute(ref decimal result)
         {
             // Set result to the desired field value
             if (this.Rate != 0 && this.Weight != 0)
             {
-                result = this.Rate * this.Weight;
+                result = Convert.ToInt32((double)this.Rate * this.Weight);
             }
         }
 

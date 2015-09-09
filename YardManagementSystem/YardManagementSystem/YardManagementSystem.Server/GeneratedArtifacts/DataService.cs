@@ -504,6 +504,21 @@ namespace LightSwitchApplication
         partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExportFilter_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ExportFilter_Executing(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExportFilter_PreprocessQuery(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Export> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ExportFilter_Executed(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Export> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ExportFilter_ExecuteFailed(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PurchaseFilter_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -532,21 +547,6 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void SalesFilter_ExecuteFailed(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ExportFilter_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ExportFilter_Executing(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ExportFilter_PreprocessQuery(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Export> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ExportFilter_Executed(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Export> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ExportFilter_ExecuteFailed(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -1516,6 +1516,40 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Export>
+                __ExportFilterEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Export>(
+                    "ExportFilter",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_CanExecute,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_Executing,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_Executed,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_Failed,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_PreprocessQuery);
+            private static bool __ExportFilter_CanExecute(global::LightSwitchApplication.ApplicationDataService d, bool r)
+            {
+                d.ExportFilter_CanExecute(ref r);
+                return r;
+            }
+            private static void __ExportFilter_Executing(global::LightSwitchApplication.ApplicationDataService d, object[] args)
+            {
+                d.ExportFilter_Executing((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1]);
+            }
+            private static void __ExportFilter_Executed(global::LightSwitchApplication.ApplicationDataService d, object[] args)
+            {
+                d.ExportFilter_Executed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Export>)args[2]);
+            }
+            private static void __ExportFilter_Failed(global::LightSwitchApplication.ApplicationDataService d, object[] args, global::System.Exception ex)
+            {
+                d.ExportFilter_ExecuteFailed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __ExportFilter_PreprocessQuery(global::LightSwitchApplication.ApplicationDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Export> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Export>)args[2];
+                d.ExportFilter_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Purchase>
                 __PurchaseFilterEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Purchase>(
                     "PurchaseFilter",
@@ -1579,40 +1613,6 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.Sale> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Sale>)args[2];
                 d.SalesFilter_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Export>
-                __ExportFilterEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.Export>(
-                    "ExportFilter",
-                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_CanExecute,
-                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_Executing,
-                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_Executed,
-                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_Failed,
-                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ExportFilter_PreprocessQuery);
-            private static bool __ExportFilter_CanExecute(global::LightSwitchApplication.ApplicationDataService d, bool r)
-            {
-                d.ExportFilter_CanExecute(ref r);
-                return r;
-            }
-            private static void __ExportFilter_Executing(global::LightSwitchApplication.ApplicationDataService d, object[] args)
-            {
-                d.ExportFilter_Executing((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1]);
-            }
-            private static void __ExportFilter_Executed(global::LightSwitchApplication.ApplicationDataService d, object[] args)
-            {
-                d.ExportFilter_Executed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Export>)args[2]);
-            }
-            private static void __ExportFilter_Failed(global::LightSwitchApplication.ApplicationDataService d, object[] args, global::System.Exception ex)
-            {
-                d.ExportFilter_ExecuteFailed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], ex);
-            }
-            private static global::System.Linq.IQueryable __ExportFilter_PreprocessQuery(global::LightSwitchApplication.ApplicationDataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Export> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Export>)args[2];
-                d.ExportFilter_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], ref query);
                 return query;
             }
     

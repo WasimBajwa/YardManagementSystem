@@ -40,7 +40,7 @@ namespace SalePrint
 
         private void PrintButton(object sender, RoutedEventArgs e)
         {
-            //btn.Visibility=;
+            btn.Visibility=Visibility.Collapsed;
             pd.Print(string.Format("Invoice Date: {0}", DateTime.Today.ToShortDateString()));
         }
 

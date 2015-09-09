@@ -37,6 +37,15 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Export> ExportFilter(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Export> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Export>("Exports"),
+                (e) => (((FromDate.HasValue == false) || (FromDate.HasValue && (e.ExportDate >= FromDate))) && ((ToDate.HasValue == false) || (ToDate.HasValue && (e.ExportDate <= ToDate)))));
+            return query;
+        }
+    
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Purchase> PurchaseFilter(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Purchase> query;
@@ -52,15 +61,6 @@ namespace LightSwitchApplication.Implementation
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::LightSwitchApplication.Implementation.Sale>("Sales"),
                 (s) => (((FromDate.HasValue == false) || (FromDate.HasValue && (s.SaleDate >= FromDate))) && ((ToDate.HasValue == false) || (ToDate.HasValue && (s.SaleDate <= ToDate)))));
-            return query;
-        }
-    
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Export> ExportFilter(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate)
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Export> query;
-            query = global::System.Linq.Queryable.Where(
-                this.GetQuery<global::LightSwitchApplication.Implementation.Export>("Exports"),
-                (e) => (((FromDate.HasValue == false) || (FromDate.HasValue && (e.ExportDate >= FromDate))) && ((ToDate.HasValue == false) || (ToDate.HasValue && (e.ExportDate <= ToDate)))));
             return query;
         }
     

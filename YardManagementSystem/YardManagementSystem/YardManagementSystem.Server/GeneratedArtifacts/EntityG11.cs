@@ -107,7 +107,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double TotalAmount
+        public decimal TotalAmount
         {
             get
             {
@@ -116,7 +116,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TotalAmount_Compute(ref double result);
+        partial void TotalAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TotalAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -125,7 +125,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double PaidAmount
+        public decimal PaidAmount
         {
             get
             {
@@ -134,7 +134,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PaidAmount_Compute(ref double result);
+        partial void PaidAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PaidAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -143,7 +143,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double DueAmount
+        public decimal DueAmount
         {
             get
             {
@@ -152,7 +152,7 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DueAmount_Compute(ref double result);
+        partial void DueAmount_Compute(ref decimal result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void DueAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
 
@@ -161,7 +161,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public double Deposit
+        public decimal Deposit
         {
             get
             {
@@ -439,35 +439,35 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double> TotalAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal> TotalAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.TotalAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.TotalAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double> PaidAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal> PaidAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.PaidAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.PaidAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double> DueAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal> DueAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.DueAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.DueAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double> Deposit
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal> Deposit
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.Deposit) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>;
+                        return base.GetItem(global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties.Deposit) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>;
                     }
                 }
                 
@@ -534,7 +534,7 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int Id { get; set; }
-                new double Deposit { get; set; }
+                new decimal Deposit { get; set; }
                 new global::System.DateTime PaymentDate { get; set; }
                 new string CreatedBy { get; }
                 new global::System.Nullable<global::System.DateTimeOffset> Created { get; }
@@ -589,13 +589,13 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry
-                    TotalAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry
+                    TotalAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry(
                         "TotalAmount",
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._TotalAmount_Stub,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._TotalAmount_Validate,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._TotalAmount_ComputeValue);
-                private static void _TotalAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
+                private static void _TotalAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
                 {
                     c(d, ref d._TotalAmount, sf);
                 }
@@ -603,21 +603,21 @@ namespace LightSwitchApplication
                 {
                     e.TotalAmount_Validate(r);
                 }
-                private static double _TotalAmount_ComputeValue(global::LightSwitchApplication.SalePayment e)
+                private static decimal _TotalAmount_ComputeValue(global::LightSwitchApplication.SalePayment e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.TotalAmount_Compute(ref value);
                     return value;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry
-                    PaidAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry
+                    PaidAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry(
                         "PaidAmount",
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._PaidAmount_Stub,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._PaidAmount_Validate,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._PaidAmount_ComputeValue);
-                private static void _PaidAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
+                private static void _PaidAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
                 {
                     c(d, ref d._PaidAmount, sf);
                 }
@@ -625,21 +625,21 @@ namespace LightSwitchApplication
                 {
                     e.PaidAmount_Validate(r);
                 }
-                private static double _PaidAmount_ComputeValue(global::LightSwitchApplication.SalePayment e)
+                private static decimal _PaidAmount_ComputeValue(global::LightSwitchApplication.SalePayment e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.PaidAmount_Compute(ref value);
                     return value;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry
-                    DueAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry
+                    DueAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry(
                         "DueAmount",
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._DueAmount_Stub,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._DueAmount_Validate,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._DueAmount_ComputeValue);
-                private static void _DueAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
+                private static void _DueAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
                 {
                     c(d, ref d._DueAmount, sf);
                 }
@@ -647,16 +647,16 @@ namespace LightSwitchApplication
                 {
                     e.DueAmount_Validate(r);
                 }
-                private static double _DueAmount_ComputeValue(global::LightSwitchApplication.SalePayment e)
+                private static decimal _DueAmount_ComputeValue(global::LightSwitchApplication.SalePayment e)
                 {
-                    double value = default(double);
+                    decimal value = default(decimal);
                     e.DueAmount_Compute(ref value);
                     return value;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry
-                    Deposit = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry
+                    Deposit = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Entry(
                         "Deposit",
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._Deposit_Stub,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._Deposit_ComputeIsReadOnly,
@@ -664,7 +664,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._Deposit_GetImplementationValue,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._Deposit_SetImplementationValue,
                         global::LightSwitchApplication.SalePayment.DetailsClass.PropertySetProperties._Deposit_OnValueChanged);
-                private static void _Deposit_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
+                private static void _Deposit_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SalePayment.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.SalePayment.DetailsClass d, object sf)
                 {
                     c(d, ref d._Deposit, sf);
                 }
@@ -678,11 +678,11 @@ namespace LightSwitchApplication
                 {
                     e.Deposit_Validate(r);
                 }
-                private static double _Deposit_GetImplementationValue(global::LightSwitchApplication.SalePayment.DetailsClass d)
+                private static decimal _Deposit_GetImplementationValue(global::LightSwitchApplication.SalePayment.DetailsClass d)
                 {
                     return d.ImplementationEntity.Deposit;
                 }
-                private static void _Deposit_SetImplementationValue(global::LightSwitchApplication.SalePayment.DetailsClass d, double v)
+                private static void _Deposit_SetImplementationValue(global::LightSwitchApplication.SalePayment.DetailsClass d, decimal v)
                 {
                     d.ImplementationEntity.Deposit = v;
                 }
@@ -950,16 +950,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, int>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data _TotalAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data _TotalAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data _PaidAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data _PaidAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data _DueAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data _DueAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, double>.Data _Deposit;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, decimal>.Data _Deposit;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SalePayment, global::LightSwitchApplication.SalePayment.DetailsClass, global::System.DateTime>.Data _PaymentDate;

@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddPurchase_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.PurchaseProperty);
+            this.ShowMessageBox("Purchase has been added successfully.");
+            this.Close(true);
         }
     }
 }

@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddEmployee_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.EmployeeProperty);
+            this.ShowMessageBox("Employee has been added successfully.");
+            this.Close(true);
         }
     }
 }

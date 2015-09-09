@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddExpense_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.ExpenseProperty);
+            this.ShowMessageBox("Expense has been added successfully.");
+            this.Close(true);
         }
     }
 }

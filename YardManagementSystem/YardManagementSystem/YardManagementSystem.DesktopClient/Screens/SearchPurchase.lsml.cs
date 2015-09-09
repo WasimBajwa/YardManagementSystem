@@ -16,7 +16,7 @@ namespace LightSwitchApplication
             // Write your code here.
             if (this.PurchaseFilter.SelectedItem.Status == "Cleared")
             {
-                this.ShowMessageBox("Invoice Payment has been cleared.");
+                this.ShowMessageBox("Payment is not allowed as Purchase Due Amount= 0.");
             }
             else
             {

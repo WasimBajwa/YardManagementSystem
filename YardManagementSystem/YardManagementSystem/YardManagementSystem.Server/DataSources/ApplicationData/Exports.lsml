@@ -46,10 +46,22 @@
       </EntityProperty>
       <EntityProperty
         Name="Rate"
-        PropertyType=":Double">
+        PropertyType="Microsoft.LightSwitch.Extensions:Money">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
+            <Property
+              Name="DecimalDigits"
+              Value="0" />
+            <Property
+              Name="CurrencySymbol"
+              Value="SAR " />
+          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -95,9 +107,19 @@
       </EntityProperty>
       <EntityProperty
         Name="TotalAmount"
-        PropertyType=":Double">
+        PropertyType="Microsoft.LightSwitch.Extensions:Money">
         <EntityProperty.Attributes>
           <Computed />
+          <NotSearchable />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@MoneyProperties">
+            <Property
+              Name="DecimalDigits"
+              Value="0" />
+            <Property
+              Name="CurrencySymbol"
+              Value="SAR " />
+          </Attribute>
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty

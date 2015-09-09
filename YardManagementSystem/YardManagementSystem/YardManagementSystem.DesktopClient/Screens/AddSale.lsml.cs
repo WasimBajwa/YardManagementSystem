@@ -21,8 +21,8 @@ namespace LightSwitchApplication
         partial void AddSale_Saved()
         {
             // Write your code here.
-            this.Close(false);
-            Application.Current.ShowDefaultScreen(this.SaleProperty);
+            this.ShowMessageBox("Sale has been added successfully.");
+            this.Close(true);
         }
     }
 }
